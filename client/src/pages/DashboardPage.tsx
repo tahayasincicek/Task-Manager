@@ -13,15 +13,15 @@ function isOverdue(dueDate: string | null, status: string): boolean {
 }
 
 function formatDate(d: string) {
-  return new Date(d).toLocaleDateString('tr-TR');
+  return new Date(d).toLocaleDateString('en-US');
 }
 
 function priorityLabel(p: string) {
   switch (p) {
-    case 'urgent': return 'Acil';
-    case 'high': return 'Yüksek';
-    case 'medium': return 'Orta';
-    case 'low': return 'Düşük';
+    case 'urgent': return 'Urgent';
+    case 'high': return 'High';
+    case 'medium': return 'Medium';
+    case 'low': return 'Low';
     default: return p;
   }
 }
@@ -77,7 +77,7 @@ export default function DashboardPage() {
           Dashboard
         </h2>
         <div className="header-actions">
-          <span className="text-muted text-sm">Hoş geldin, bugünün özeti aşağıda.</span>
+          <span className="text-muted text-sm">Welcome, here is your daily summary.</span>
         </div>
       </div>
 
@@ -89,7 +89,7 @@ export default function DashboardPage() {
           </div>
           <div className="dash-card-content">
             <div className="dash-card-number-modern">{mainTasks.length}</div>
-            <div className="dash-card-label-modern">Toplam Görev</div>
+            <div className="dash-card-label-modern">Total Tasks</div>
           </div>
           <Zap className="dash-card-bg-icon" size={80} />
         </div>
@@ -99,7 +99,7 @@ export default function DashboardPage() {
           </div>
           <div className="dash-card-content">
             <div className="dash-card-number-modern">{todoTasks.length + inProgressTasks.length}</div>
-            <div className="dash-card-label-modern">Aktif Görev</div>
+            <div className="dash-card-label-modern">Active Tasks</div>
           </div>
           <Activity className="dash-card-bg-icon" size={80} />
         </div>
@@ -108,8 +108,8 @@ export default function DashboardPage() {
             <TrendingUp size={24} />
           </div>
           <div className="dash-card-content">
-            <div className="dash-card-number-modern">%{completionRate}</div>
-            <div className="dash-card-label-modern">Tamamlanma</div>
+            <div className="dash-card-number-modern">{completionRate}%</div>
+            <div className="dash-card-label-modern">Completion</div>
           </div>
           <CheckCircle2 className="dash-card-bg-icon" size={80} />
         </div>
@@ -119,7 +119,7 @@ export default function DashboardPage() {
           </div>
           <div className="dash-card-content">
             <div className="dash-card-number-modern text-white">{overdueTasks.length}</div>
-            <div className="dash-card-label-modern">Geciken</div>
+            <div className="dash-card-label-modern">Overdue</div>
           </div>
           <Clock className="dash-card-bg-icon" size={80} />
         </div>
@@ -130,13 +130,13 @@ export default function DashboardPage() {
         <div className="dash-section-modern">
           <h3 className="dash-section-title-modern">
             <AlertTriangle size={18} className="text-red" />
-            Geciken Görevler
+            Overdue Tasks
           </h3>
           {overdueTasks.length === 0 ? (
             <div className="empty-state-modern-small">
               <CheckCircle2 size={40} className="text-success opacity-30" />
-              <h4>Geciken görev yok</h4>
-              <p>Harika gidiyorsun, her şey yolunda!</p>
+              <h4>No overdue tasks</h4>
+              <p>Great job, everything is on track!</p>
             </div>
           ) : (
             <div className="dash-list-modern">
@@ -160,13 +160,13 @@ export default function DashboardPage() {
         <div className="dash-section-modern">
           <h3 className="dash-section-title-modern">
             <Calendar size={18} className="text-blue" />
-            Yaklaşan Görevler (Bugün/Yarın)
+            Upcoming Tasks (Today/Tomorrow)
           </h3>
           {upcomingTasks.length === 0 ? (
             <div className="empty-state-modern-small">
               <Clock size={40} className="text-muted opacity-30" />
-              <h4>Yaklaşan görev yok</h4>
-              <p>Bugün ve yarın için planlanmış bir şey yok.</p>
+              <h4>No upcoming tasks</h4>
+              <p>Nothing planned for today or tomorrow.</p>
             </div>
           ) : (
             <div className="dash-list-modern">
@@ -191,7 +191,7 @@ export default function DashboardPage() {
       <div className="dash-section-modern full-width" style={{ marginTop: '1.5rem' }}>
         <h3 className="dash-section-title-modern">
           <BarChart3 size={18} className="text-purple" />
-          Öncelik Dağılımı (Aktif)
+          Priority Distribution (Active)
         </h3>
         <div className="priority-distribution-modern">
           {priorityGroups.map(pg => (
@@ -203,7 +203,7 @@ export default function DashboardPage() {
                   style={{ width: `${mainTasks.length > 0 ? (pg.count / mainTasks.length) * 100 : 0}%` }}
                 />
               </div>
-              <span className="priority-count-bold">{pg.count} Görev</span>
+              <span className="priority-count-bold">{pg.count} Tasks</span>
             </div>
           ))}
         </div>

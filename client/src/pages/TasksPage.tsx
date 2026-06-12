@@ -11,19 +11,19 @@ import {
 /* ---- Helpers ---- */
 function priorityLabel(p: string) {
   switch (p) {
-    case 'urgent': return 'Acil';
-    case 'high': return 'Yüksek';
-    case 'medium': return 'Orta';
-    case 'low': return 'Düşük';
+    case 'urgent': return 'Urgent';
+    case 'high': return 'High';
+    case 'medium': return 'Medium';
+    case 'low': return 'Low';
     default: return p;
   }
 }
 
 function statusLabel(s: string) {
   switch (s) {
-    case 'todo': return 'Yapılacak';
-    case 'in-progress': return 'Devam ediyor';
-    case 'done': return 'Tamamlandı';
+    case 'todo': return 'To Do';
+    case 'in-progress': return 'In Progress';
+    case 'done': return 'Completed';
     default: return s;
   }
 }
@@ -46,16 +46,16 @@ function timeAgo(dateStr: string): string {
   const diffMins = Math.floor(diffMs / 60000);
   const diffHours = Math.floor(diffMins / 60);
   const diffDays = Math.floor(diffHours / 24);
-  if (diffMins < 1) return 'Az önce';
-  if (diffMins < 60) return `${diffMins} dk önce`;
-  if (diffHours < 24) return `${diffHours} saat önce`;
-  if (diffDays === 1) return 'Dün';
-  if (diffDays < 7) return `${diffDays} gün önce`;
-  return new Date(dateStr).toLocaleDateString('tr-TR');
+  if (diffMins < 1) return 'Just now';
+  if (diffMins < 60) return `${diffMins}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return new Date(dateStr).toLocaleDateString('en-US');
 }
 
 function formatDate(d: string) {
-  return new Date(d).toLocaleDateString('tr-TR');
+  return new Date(d).toLocaleDateString('en-US');
 }
 
 interface TaskFormData {
@@ -116,7 +116,7 @@ function TaskForm({ initial, allLabels, taskLabels, users, onSave, onCancel }: T
     } catch (err: unknown) {
       const e = err as { body?: { errors?: { message: string }[] } };
       const errs = e.body?.errors;
-      setError(errs ? errs.map((x) => x.message).join(', ') : 'Bir hata olustu');
+      setError(errs ? errs.map((x) => x.message).join(', ') : 'An error occurred');
     } finally {
       setLoading(false);
     }
@@ -129,39 +129,39 @@ function TaskForm({ initial, allLabels, taskLabels, users, onSave, onCancel }: T
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlFor="task-title">Başlık *</label>
-        <input id="task-title" value={title} onChange={e => setTitle(e.target.value)} placeholder="Görev başlığı" required />
+        <label htmlFor="task-title">Title *</label>
+        <input id="task-title" value={title} onChange={e => setTitle(e.target.value)} placeholder="Task title" required />
       </div>
       <div className="form-group">
-        <label htmlFor="task-description">Açıklama</label>
-        <textarea id="task-description" value={description} onChange={e => setDescription(e.target.value)} placeholder="İsteğe bağlı açıklama" />
+        <label htmlFor="task-description">Description</label>
+        <textarea id="task-description" value={description} onChange={e => setDescription(e.target.value)} placeholder="Optional description" />
       </div>
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="task-status">Durum</label>
+          <label htmlFor="task-status">Status</label>
           <select id="task-status" value={status} onChange={e => setStatus(e.target.value as TaskStatus)}>
-            <option value="todo">Yapılacak</option>
-            <option value="in-progress">Devam ediyor</option>
-            <option value="done">Tamamlandı</option>
+            <option value="todo">To Do</option>
+            <option value="in-progress">In Progress</option>
+            <option value="done">Completed</option>
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="task-priority">Öncelik</label>
+          <label htmlFor="task-priority">Priority</label>
           <select id="task-priority" value={priority} onChange={e => setPriority(e.target.value as TaskPriority)}>
-            <option value="low">Düşük</option>
-            <option value="medium">Orta</option>
-            <option value="high">Yüksek</option>
-            <option value="urgent">Acil</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="urgent">Urgent</option>
           </select>
         </div>
       </div>
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="task-due-date">Bitiş Tarihi</label>
+          <label htmlFor="task-due-date">Due Date</label>
           <input id="task-due-date" type="date" value={dueDate} onChange={e => setDueDate(e.target.value)} />
         </div>
         <div className="form-group">
-          <label htmlFor="task-assignees">Atanan Kişiler (İsteğe Bağlı)</label>
+          <label htmlFor="task-assignees">Assignees (Optional)</label>
           <div id="task-assignees" style={{ maxHeight: '120px', overflowY: 'auto', border: '1px solid var(--border)', borderRadius: 'var(--radius-sm)', padding: '0.4rem', display: 'flex', flexDirection: 'column', gap: '0.3rem', background: 'var(--bg-card)' }}>
             {users.map(u => (
               <label key={u.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', margin: 0, fontWeight: 'normal', fontSize: '0.9rem' }}>
@@ -181,7 +181,7 @@ function TaskForm({ initial, allLabels, taskLabels, users, onSave, onCancel }: T
       </div>
       {allLabels.length > 0 && (
         <div className="form-group">
-          <label htmlFor="task-labels">Etiketler</label>
+          <label htmlFor="task-labels">Labels</label>
           <div id="task-labels" className="label-picker">
             {allLabels.map(l => (
               <button
@@ -199,9 +199,9 @@ function TaskForm({ initial, allLabels, taskLabels, users, onSave, onCancel }: T
       )}
       {error && <div className="error">{error}</div>}
       <div className="modal-actions">
-        <button type="button" className="btn btn-secondary" onClick={onCancel}>İptal</button>
+        <button type="button" className="btn btn-secondary" onClick={onCancel}>Cancel</button>
         <button type="submit" className="btn btn-primary" style={{ width: 'auto' }} disabled={loading}>
-          {loading ? 'Kaydediliyor...' : 'Kaydet'}
+          {loading ? 'Saving...' : 'Save'}
         </button>
       </div>
     </form>
@@ -250,7 +250,7 @@ function TaskDetail({ task, onClose }: TaskDetailProps) {
 
   return (
     <div className="modal-overlay">
-      <button type="button" className="modal-overlay-backdrop" aria-label="Kapat" onClick={onClose} />
+      <button type="button" className="modal-overlay-backdrop" aria-label="Close" onClick={onClose} />
       <div
         className="modal modal-detail"
         aria-modal="true"
@@ -258,7 +258,7 @@ function TaskDetail({ task, onClose }: TaskDetailProps) {
       >
         <div className="detail-header">
           <h3 id="task-detail-title">{task.title}</h3>
-          <button className="modal-close-btn" onClick={onClose} aria-label="Kapat">
+          <button className="modal-close-btn" onClick={onClose} aria-label="Close">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
         </div>
@@ -268,7 +268,7 @@ function TaskDetail({ task, onClose }: TaskDetailProps) {
           <PriorityBadge priority={task.priority} />
           {task.due_date && (
             <span className={`badge badge-due ${isOverdue(task.due_date, task.status) ? 'badge-overdue' : ''}`}>
-              {isOverdue(task.due_date, task.status) ? 'Gecikti: ' : 'Tarih: '}{formatDate(task.due_date)}
+              {isOverdue(task.due_date, task.status) ? 'Overdue: ' : 'Due: '}{formatDate(task.due_date)}
             </span>
           )}
         </div>
@@ -291,41 +291,41 @@ function TaskDetail({ task, onClose }: TaskDetailProps) {
 
         <div className="detail-tabs">
           <button className={`tab-btn ${tab === 'comments' ? 'tab-active' : ''}`} onClick={() => setTab('comments')}>
-            Yorumlar ({comments.length})
+            Comments ({comments.length})
           </button>
           <button className={`tab-btn ${tab === 'subtasks' ? 'tab-active' : ''}`} onClick={() => setTab('subtasks')}>
-            Alt Görevler ({subtasks.length})
+            Subtasks ({subtasks.length})
           </button>
           <button className={`tab-btn ${tab === 'activity' ? 'tab-active' : ''}`} onClick={() => setTab('activity')}>
-            Geçmiş ({activities.length})
+            History ({activities.length})
           </button>
         </div>
 
         <div className="detail-tab-content">
           {tab === 'comments' && (
             <div className="comments-section">
-              {comments.length === 0 && <div className="empty-tab">Henüz yorum yok</div>}
+              {comments.length === 0 && <div className="empty-tab">No comments yet</div>}
               {comments.map(c => (
                 <div key={c.id} className="comment-item">
                   <div className="comment-header">
                     <strong>{c.username}</strong>
                     <span className="comment-time">{timeAgo(c.created_at)}</span>
-                    <button className="comment-delete" onClick={() => handleDeleteComment(c.id)}>Sil</button>
+                    <button className="comment-delete" onClick={() => handleDeleteComment(c.id)}>Delete</button>
                   </div>
                   <p>{c.content}</p>
                 </div>
               ))}
               <form className="comment-form" onSubmit={handleAddComment}>
-                <label htmlFor="new-comment-input" className="visually-hidden">Yorum</label>
+                <label htmlFor="new-comment-input" className="visually-hidden">Comment</label>
                 <input
                   id="new-comment-input"
                   value={newComment}
                   onChange={e => setNewComment(e.target.value)}
-                  placeholder="Yorum yaz..."
+                  placeholder="Write a comment..."
                   required
                 />
                 <button type="submit" className="btn btn-sm btn-primary" style={{ width: 'auto', marginTop: 0, padding: '0.5rem 1rem' }} disabled={loading}>
-                  Gonder
+                  Send
                 </button>
               </form>
             </div>
@@ -333,7 +333,7 @@ function TaskDetail({ task, onClose }: TaskDetailProps) {
 
           {tab === 'subtasks' && (
             <div className="subtasks-section">
-              {subtasks.length === 0 && <div className="empty-tab">Alt görev yok</div>}
+              {subtasks.length === 0 && <div className="empty-tab">No subtasks</div>}
               {subtasks.map(st => (
                 <div key={st.id} className="subtask-item">
                   <span className={`subtask-check ${st.status === 'done' ? 'subtask-done' : ''}`} style={{ display: 'flex', alignItems: 'center' }}>
@@ -348,7 +348,7 @@ function TaskDetail({ task, onClose }: TaskDetailProps) {
               ))}
               {subtasks.length > 0 && (
                 <div className="subtask-progress">
-                  {subtasks.filter(s => s.status === 'done').length}/{subtasks.length} tamamlandı
+                  {subtasks.filter(s => s.status === 'done').length}/{subtasks.length} completed
                 </div>
               )}
             </div>
@@ -356,7 +356,7 @@ function TaskDetail({ task, onClose }: TaskDetailProps) {
 
           {tab === 'activity' && (
             <div className="activity-section">
-              {activities.length === 0 && <div className="empty-tab">Geçmiş kaydı yok</div>}
+              {activities.length === 0 && <div className="empty-tab">No activity history</div>}
               {activities.map(a => (
                 <div key={a.id} className="activity-item">
                   <div className="activity-dot"></div>
@@ -463,7 +463,7 @@ export default function TasksPage() {
 
   /* CSV Export */
   const exportTasksCSV = () => {
-    const header = 'ID,Başlık,Durum,Öncelik,Bitiş Tarihi,Oluşturma Tarihi\n';
+    const header = 'ID,Title,Status,Priority,Due Date,Created At\n';
     const rows = filteredTasks.map(t => {
       const due = t.due_date ? formatDate(t.due_date) : '-';
       const created = formatDate(t.created_at);
@@ -473,7 +473,7 @@ export default function TasksPage() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `görevler_${new Date().toISOString().slice(0, 10)}.csv`;
+    a.download = `tasks_${new Date().toISOString().slice(0, 10)}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -519,7 +519,7 @@ export default function TasksPage() {
         }
       }
       if (additionFailed) {
-        alert("Bazı üyeler eklenemedi. Lütfen projenizi kontrol edin.");
+        alert("Some members could not be added. Please check your project.");
       }
       loadProjects();
       setNewProjectName('');
@@ -533,7 +533,7 @@ export default function TasksPage() {
   };
 
   const handleDeleteProject = async (id: number) => {
-    if (!confirm('Bu projeyi ve içindeki tüm görevleri silmek istediğinize emin misiniz?')) return;
+    if (!confirm('Are you sure you want to delete this project and all its tasks?')) return;
     await api.projects.delete(id);
     if (selectedProjectId === id) setSelectedProjectId(null);
     loadProjects();
@@ -571,7 +571,7 @@ export default function TasksPage() {
   };
 
   const handleDelete = async (id: number) => {
-    if (!confirm('Bu görevi silmek istediğinizden emin misiniz?')) return;
+    if (!confirm('Are you sure you want to delete this task?')) return;
     const el = document.getElementById(`task-${id}`);
     if (el) el.classList.add('task-deleting');
     await new Promise(r => setTimeout(r, 200));
@@ -624,7 +624,7 @@ export default function TasksPage() {
   const completionRate = filteredTasks.length > 0 ? Math.round((doneCount / filteredTasks.length) * 100) : 0;
   const overdueCount = tasks.filter(t => isOverdue(t.due_date, t.status)).length;
   const currentProject = selectedProjectId ? projects.find(p => p.id === selectedProjectId) : null;
-  const currentProjectName = currentProject?.name ?? 'Tüm Görevler';
+  const currentProjectName = currentProject?.name ?? 'All Tasks';
 
   return (
     <div className="tasks-page-layout">
@@ -640,7 +640,7 @@ export default function TasksPage() {
         <button
           type="button"
           className="sidebar-overlay"
-          aria-label="Menüyü kapat"
+          aria-label="Close menu"
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -648,8 +648,8 @@ export default function TasksPage() {
       {/* Sidebar */}
       <div className={`projects-sidebar ${sidebarOpen ? 'sidebar-open' : ''}`}>
         <div className="sidebar-header">
-          <h3>Projeler</h3>
-          <button className="btn-icon" onClick={() => setShowProjectModal(true)} title="Yeni Proje Oluştur">
+          <h3>Projects</h3>
+          <button className="btn-icon" onClick={() => setShowProjectModal(true)} title="Create New Project">
             <Plus size={18} />
           </button>
         </div>
@@ -660,7 +660,7 @@ export default function TasksPage() {
             onClick={() => { setSelectedProjectId(null); setSidebarOpen(false); }}
           >
             <Globe size={18} className="project-icon" />
-            <span className="project-name">Tüm Görevler</span>
+            <span className="project-name">All Tasks</span>
           </button>
           {projects.map(p => (
             <div key={p.id} className={`project-item ${selectedProjectId === p.id ? 'active' : ''}`}>
@@ -676,7 +676,7 @@ export default function TasksPage() {
                 type="button"
                 className="project-delete-btn"
                 onClick={(e) => { e.stopPropagation(); handleDeleteProject(p.id); }}
-                title="Projeyi Sil"
+                title="Delete Project"
               >
                 <X size={14} />
               </button>
@@ -696,9 +696,9 @@ export default function TasksPage() {
             </h2>
             {selectedProjectId && (
               <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Proje Üyeleri:</span>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Project Members:</span>
                 {activeProjectMembers.length === 0 ? (
-                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Sadece siz</span>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Only you</span>
                 ) : (
                   <div className="avatar-group">
                     {activeProjectMembers.map(m => (
@@ -713,7 +713,7 @@ export default function TasksPage() {
                   </div>
                 )}
                 {(currentUser?.role === 'admin' || currentProject?.user_id === currentUser?.userId) && (
-                  <button className="btn-text-sm" onClick={() => setShowManageMembersModal(true)}>Üyeleri Yönet</button>
+                  <button className="btn-text-sm" onClick={() => setShowManageMembersModal(true)}>Manage Members</button>
                 )}
               </div>
             )}
@@ -721,11 +721,11 @@ export default function TasksPage() {
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
             <button className="btn-outline-pill" onClick={exportTasksCSV} title="CSV İndir">
               <Download size={16} />
-              <span>CSV Dışa Aktar</span>
+              <span>Export CSV</span>
             </button>
             <button className="btn-primary-gradient" onClick={() => setShowCreate(true)}>
               <Plus size={18} />
-              <span>Yeni Görev</span>
+              <span>New Task</span>
             </button>
           </div>
         </div>
@@ -750,7 +750,7 @@ export default function TasksPage() {
                 </div>
                 <div className="task-stat-info">
                   <span className="task-stat-number">{todoCount}</span>
-                  <span className="task-stat-label">Yapılacak</span>
+                  <span className="task-stat-label">To Do</span>
                 </div>
               </div>
               <div className="task-stat-card">
@@ -759,7 +759,7 @@ export default function TasksPage() {
                 </div>
                 <div className="task-stat-info">
                   <span className="task-stat-number">{inProgressCount}</span>
-                  <span className="task-stat-label">Devam Ediyor</span>
+                  <span className="task-stat-label">In Progress</span>
                 </div>
               </div>
               <div className="task-stat-card">
@@ -768,7 +768,7 @@ export default function TasksPage() {
                 </div>
                 <div className="task-stat-info">
                   <span className="task-stat-number">{doneCount}</span>
-                  <span className="task-stat-label">Tamamlandı</span>
+                  <span className="task-stat-label">Completed</span>
                 </div>
               </div>
               <div className="task-stat-card">
@@ -776,8 +776,8 @@ export default function TasksPage() {
                   <BarChart3 size={24} />
                 </div>
                 <div className="task-stat-info">
-                  <span className="task-stat-number">%{completionRate}</span>
-                  <span className="task-stat-label">Tamamlanma</span>
+                  <span className="task-stat-number">{completionRate}%</span>
+                  <span className="task-stat-label">Completion</span>
                 </div>
                 <div className="progress-bar-container">
                   <div className="progress-bar-fill" style={{ width: `${completionRate}%` }} />
@@ -788,7 +788,7 @@ export default function TasksPage() {
             {overdueCount > 0 && (
               <div className="overdue-alert">
                 <AlertTriangle size={18} />
-                <span>{overdueCount} görev gecikti!</span>
+                <span>{overdueCount} tasks overdue!</span>
               </div>
             )}
 
@@ -796,12 +796,12 @@ export default function TasksPage() {
             <form className="quick-add-form" onSubmit={handleQuickAdd}>
               <div className="quick-add-container">
                 <Plus size={18} className="quick-add-icon" />
-                <label htmlFor="quick-add-input" className="visually-hidden">Hızlı görev ekle</label>
+                <label htmlFor="quick-add-input" className="visually-hidden">Quick add task</label>
                 <input
                   id="quick-add-input"
                   className="quick-add-input"
                   type="text"
-                  placeholder="Hızlı görev ekle... (Enter ile oluştur)"
+                  placeholder="Quick add task... (press Enter to create)"
                   value={quickAddTitle}
                   onChange={e => setQuickAddTitle(e.target.value)}
                   disabled={quickAddLoading}
@@ -818,13 +818,13 @@ export default function TasksPage() {
             <div className="filter-bar">
               <div className="search-container-modern">
                 <Search size={18} className="search-icon-lucide" />
-                <label htmlFor="task-search-input" className="visually-hidden">Görevlerde ara</label>
+                <label htmlFor="task-search-input" className="visually-hidden">Search tasks</label>
                 <input
                   id="task-search-input"
                   ref={searchInputRef}
                   type="text"
                   className="search-input-modern"
-                  placeholder="Görevlerde ara..."
+                  placeholder="Search tasks..."
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                 />
@@ -835,19 +835,19 @@ export default function TasksPage() {
                 )}
               </div>
               <div className="filter-actions">
-                <label htmlFor="filter-priority" className="visually-hidden">Önceliğe göre filtrele</label>
+                <label htmlFor="filter-priority" className="visually-hidden">Filter by priority</label>
                 <select id="filter-priority" className="filter-select-modern" value={filterPriority} onChange={e => setFilterPriority(e.target.value)}>
-                  <option value="">Tum Oncelikler</option>
-                  <option value="urgent">Acil</option>
-                  <option value="high">Yuksek</option>
-                  <option value="medium">Orta</option>
-                  <option value="low">Dusuk</option>
+                  <option value="">All Priorities</option>
+                  <option value="urgent">Urgent</option>
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
                 </select>
                 {allLabels.length > 0 && (
                   <>
-                    <label htmlFor="filter-label" className="visually-hidden">Etikete göre filtrele</label>
+                    <label htmlFor="filter-label" className="visually-hidden">Filter by label</label>
                     <select id="filter-label" className="filter-select-modern" value={filterLabel} onChange={e => setFilterLabel(e.target.value)}>
-                      <option value="">Tum Etiketler</option>
+                      <option value="">All Labels</option>
                       {allLabels.map(l => <option key={l.id} value={l.name}>{l.name}</option>)}
                     </select>
                   </>
@@ -858,7 +858,7 @@ export default function TasksPage() {
             {searchQuery && (
               <div className="search-results-info">
                 <Search size={14} />
-                <span>&quot;{searchQuery}&quot; için <strong>{filteredTasks.length}</strong> sonuç bulundu</span>
+                <span>&quot;{searchQuery}&quot; returned <strong>{filteredTasks.length}</strong> results</span>
               </div>
             )}
 
@@ -867,10 +867,11 @@ export default function TasksPage() {
                 <div className="empty-state-icon">
                   <List size={48} />
                 </div>
-                <h3>Henüz görev yok!</h3>
-                <p>Harika işler başarmak için ilk görevini oluştur.</p>
+                <h3>No tasks yet!</h3>
+                <p>Create your first task to start accomplishing great things.</p>
                 <button className="btn btn-primary" onClick={() => setShowCreate(true)} style={{ marginTop: '1rem' }}>
-                  Görev Oluştur
+                  Create Task
+                </button>
                 </button>
               </div>
             )}
@@ -878,9 +879,9 @@ export default function TasksPage() {
             {/* Kanban Board with Drag & Drop */}
             <div className="kanban-board">
               {[
-                { id: 'todo', label: 'Yapılacaklar', filter: 'todo', icon: <Circle size={18} className="text-orange" /> },
-                { id: 'in-progress', label: 'Devam Ediyor', filter: 'in-progress', icon: <Activity size={18} className="text-blue" /> },
-                { id: 'done', label: 'Tamamlandı', filter: 'done', icon: <CheckCircle2 size={18} className="text-green" /> }
+                { id: 'todo', label: 'To Do', filter: 'todo', icon: <Circle size={18} className="text-orange" /> },
+                { id: 'in-progress', label: 'In Progress', filter: 'in-progress', icon: <Activity size={18} className="text-blue" /> },
+                { id: 'done', label: 'Completed', filter: 'done', icon: <CheckCircle2 size={18} className="text-green" /> }
               ].map(col => (
                 <section
                   className="kanban-column"
@@ -909,7 +910,7 @@ export default function TasksPage() {
                         <button
                           type="button"
                           className="task-card-stretch"
-                          aria-label={`${task.title} detayını aç`}
+                          aria-label={`Open ${task.title} details`}
                           onClick={() => setDetailTask(task)}
                         />
                         <div className="task-card-header">
@@ -945,10 +946,10 @@ export default function TasksPage() {
                             )}
                           </div>
                           <div className="task-actions-overlay">
-                            <button className="icon-btn-sm" onClick={(e) => { e.stopPropagation(); handleEdit(task); }} title="Duzenle">
+                            <button className="icon-btn-sm" onClick={(e) => { e.stopPropagation(); handleEdit(task); }} title="Edit">
                               <MoreVertical size={16} />
                             </button>
-                            <button className="icon-btn-sm text-danger" onClick={(e) => { e.stopPropagation(); handleDelete(task.id); }} title="Sil">
+                            <button className="icon-btn-sm text-danger" onClick={(e) => { e.stopPropagation(); handleDelete(task.id); }} title="Delete">
                               <Trash2 size={16} />
                             </button>
                           </div>
@@ -958,7 +959,7 @@ export default function TasksPage() {
                     {filteredTasks.filter(task => task.status === col.filter).length === 0 && (
                       <div className="column-empty">
                         <Plus size={16} className="text-muted mb-1" />
-                        Görev yok
+                        No tasks
                       </div>
                     )}
                   </div>
@@ -983,7 +984,7 @@ export default function TasksPage() {
             aria-modal="true"
             aria-labelledby="task-modal-title"
           >
-            <h3 id="task-modal-title">{editTask ? 'Görevi Düzenle' : 'Yeni Görev'}</h3>
+            <h3 id="task-modal-title">{editTask ? 'Edit Task' : 'New Task'}</h3>
             <TaskForm
               initial={editTask ?? undefined}
               allLabels={allLabels}
@@ -1019,9 +1020,9 @@ export default function TasksPage() {
             aria-labelledby="manage-members-title"
             style={{ maxWidth: '400px' }}
           >
-            <h3 id="manage-members-title">Projeyi Yönet</h3>
+            <h3 id="manage-members-title">Manage Project</h3>
             <div className="form-group" style={{ marginTop: '1rem' }}>
-              <label htmlFor="members-list">Üyeleri Düzenle</label>
+              <label htmlFor="members-list">Edit Members</label>
               <div id="members-list" style={{ maxHeight: '200px', overflowY: 'auto', border: '1px solid var(--border)', borderRadius: 'var(--radius-sm)', padding: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', background: 'var(--bg-card)' }}>
                 {users.map(u => {
                   const isMember = activeProjectMembers.some(m => m.id === u.id);
@@ -1043,18 +1044,18 @@ export default function TasksPage() {
                             setActiveProjectMembers(updatedMems);
                           } catch (err) {
                             console.error(err);
-                            alert("Islem basarisiz. Yetkiniz olmayabilir.");
+                            alert("Operation failed. You may not have permission.");
                           }
                         }}
                       />
-                      {u.username} {isProjectOwner ? '(Sahibi)' : ''}
+                      {u.username} {isProjectOwner ? '(Owner)' : ''}
                     </label>
                   );
                 })}
               </div>
             </div>
             <div className="modal-actions" style={{ marginTop: '1rem' }}>
-              <button type="button" className="btn btn-primary" onClick={() => setShowManageMembersModal(false)} style={{ width: '100%' }}>Kapat</button>
+              <button type="button" className="btn btn-primary" onClick={() => setShowManageMembersModal(false)} style={{ width: '100%' }}>Close</button>
             </div>
           </div>
         </div>
@@ -1075,22 +1076,22 @@ export default function TasksPage() {
             aria-labelledby="project-modal-title"
             style={{ maxWidth: '400px' }}
           >
-            <h3 id="project-modal-title">Yeni Proje Oluştur</h3>
+            <h3 id="project-modal-title">Create New Project</h3>
             <form onSubmit={handleCreateProject}>
               <div className="form-group">
-                <label htmlFor="new-project-name">Proje Adı *</label>
+                <label htmlFor="new-project-name">Project Name *</label>
                 <input
                   id="new-project-name"
                   value={newProjectName}
                   onChange={e => setNewProjectName(e.target.value)}
-                  placeholder="Proje adı"
+                  placeholder="Project name"
                   autoFocus
                   required
                 />
               </div>
               {users.length > 0 && (
                 <div className="form-group">
-                  <label htmlFor="new-project-members">Üyeler Ekle (İsteğe Bağlı)</label>
+                  <label htmlFor="new-project-members">Add Members (Optional)</label>
                   <div id="new-project-members" style={{ maxHeight: '150px', overflowY: 'auto', border: '1px solid var(--border)', borderRadius: 'var(--radius-sm)', padding: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', background: 'var(--bg-card)' }}>
                     {users.map(u => (
                       <label key={u.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', margin: 0, fontWeight: 'normal', fontSize: '0.9rem' }}>
@@ -1102,15 +1103,15 @@ export default function TasksPage() {
                             else setNewProjectMembers(newProjectMembers.filter(id => id !== u.id));
                           }}
                         />
-                        {u.username} {currentUser?.userId === u.id ? '(Siz - Otomatik Eklenecek)' : ''}
+                        {u.username} {currentUser?.userId === u.id ? '(You - Auto Added)' : ''}
                       </label>
                     ))}
                   </div>
                 </div>
               )}
               <div className="modal-actions">
-                <button type="button" className="btn btn-secondary" onClick={() => setShowProjectModal(false)}>İptal</button>
-                <button type="submit" className="btn btn-primary" style={{ width: 'auto' }}>Oluştur</button>
+                <button type="button" className="btn btn-secondary" onClick={() => setShowProjectModal(false)}>Cancel</button>
+                <button type="submit" className="btn btn-primary" style={{ width: 'auto' }}>Create</button>
               </div>
             </form>
           </div>

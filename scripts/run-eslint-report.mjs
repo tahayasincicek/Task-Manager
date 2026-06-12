@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 /**
- * ESLint'i projenin kendi kodu üzerinde çalıştırır ve JSON raporunu
- * reports/<stage>/eslint.json yoluna yazar.
+ * Runs ESLint on the project's own code and writes the JSON report
+ * to reports/<stage>/eslint.json.
  *
- * ESLint bulgu bulduğunda exit code != 0 döner; yönerge sadece raporun
- * üretilmesini istediği için exit code'u 0'a normalleştiriyoruz
- * (gerçek başarısızlık — parse hatası vb. — yine propagate edilir).
+ * ESLint returns exit code != 0 when it finds issues; since the
+ * guidelines only require the report to be generated, we normalize
+ * the exit code to 0 (actual failures — parse errors etc. — are
+ * still propagated).
  *
- * Kullanım:
+ * Usage:
  *   node scripts/run-eslint-report.mjs --stage stage1
  */
 
@@ -58,8 +59,8 @@ async function main() {
     child.on('close', (code) => {
       // ESLint exit codes:
       //   0 = no problems
-      //   1 = lint errors (rapor üretilir, istenilen durum)
-      //   2 = ESLint kendisi hata verdi (config/parse)
+      //   1 = lint errors (report generated, desired state)
+      //   2 = ESLint itself errored (config/parse)
       if (code === 2) {
         console.error(`[eslint] aborted with code ${code}`);
         process.exit(code);
@@ -69,7 +70,7 @@ async function main() {
     });
   });
 
-  // Özet çıktısı
+  // Summary output
   try {
     const raw = await fs.readFile(outFile, 'utf8');
     const results = JSON.parse(raw);

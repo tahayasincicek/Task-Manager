@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
- * SonarQube Web API'sinden BUG + CODE_SMELL issue'larını ve yönergede
- * listelenen metrikleri çekip reports/<stage>/ altına JSON olarak yazar.
+ * Fetches BUG + CODE_SMELL issues and metrics listed in the guidelines
+ * from the SonarQube Web API and writes them as JSON under reports/<stage>/.
  *
- * Kullanım:
+ * Usage:
  *   node scripts/fetch-sonar-reports.mjs --stage stage1
  *
- * Ortam değişkenleri:
- *   SONAR_HOST_URL  (varsayılan: http://localhost:9000)
- *   SONAR_TOKEN     (zorunlu — SonarQube -> My Account -> Security -> Generate Token)
- *   SONAR_PROJECT   (varsayılan: sonar-project.properties içindeki projectKey)
+ * Environment variables:
+ *   SONAR_HOST_URL  (default: http://localhost:9000)
+ *   SONAR_TOKEN     (required — SonarQube -> My Account -> Security -> Generate Token)
+ *   SONAR_PROJECT   (default: projectKey from sonar-project.properties)
  */
 
 import fs from 'node:fs/promises';
@@ -110,7 +110,7 @@ async function main() {
   const projectKey = process.env.SONAR_PROJECT || await readProjectKey();
 
   if (!token) {
-    console.error('HATA: SONAR_TOKEN ortam değişkeni set edilmeli.');
+    console.error('ERROR: SONAR_TOKEN environment variable must be set.');
     console.error('  SonarQube UI -> My Account -> Security -> Generate Token');
     process.exit(2);
   }
@@ -123,7 +123,7 @@ async function main() {
   const issues = await fetchAllIssues(host, token, projectKey);
   const measures = await fetchMeasures(host, token, projectKey);
 
-  // Severity dağılımı — yönerge severity seviyesinin raporlanmasını istiyor
+  // Severity breakdown — guidelines require reporting by severity level
   const severityBreakdown = {};
   for (const i of issues) {
     const s = i.severity || 'UNKNOWN';

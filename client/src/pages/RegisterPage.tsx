@@ -29,7 +29,7 @@ export default function RegisterPage({ onLogin }: Props) {
     } catch (err: unknown) {
       const e = err as { body?: { errors?: { message: string }[]; error?: string } };
       const errs = e.body?.errors;
-      setError(errs ? errs.map((x) => x.message).join(', ') : (e.body?.error ?? 'Kayıt başarısız'));
+      setError(errs ? errs.map((x) => x.message).join(', ') : (e.body?.error ?? 'Registration failed'));
     } finally {
       setLoading(false);
     }
@@ -42,20 +42,20 @@ export default function RegisterPage({ onLogin }: Props) {
           <div className="auth-logo">
             <UserPlus size={32} className="text-primary" />
           </div>
-          <h2>Yeni Hesap Oluştur</h2>
-          <p className="text-muted">Hemen kayıt ol ve projelerini yönetmeye baş.</p>
+          <h2>Create New Account</h2>
+          <p className="text-muted">Register now and start managing your projects.</p>
         </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
-            <label htmlFor="register-username">Kullanıcı Adı</label>
+            <label htmlFor="register-username">Username</label>
             <div className="input-with-icon">
               <User size={18} className="input-icon" />
               <input
                 id="register-username"
                 value={username}
                 onChange={e => setUsername(e.target.value)}
-                placeholder="Örn: ahmet_yilmaz"
+                placeholder="e.g. john_doe"
                 required
                 autoFocus
               />
@@ -63,7 +63,7 @@ export default function RegisterPage({ onLogin }: Props) {
           </div>
 
           <div className="form-group">
-            <label htmlFor="register-email">E-posta</label>
+            <label htmlFor="register-email">Email</label>
             <div className="input-with-icon">
               <Mail size={18} className="input-icon" />
               <input
@@ -78,7 +78,7 @@ export default function RegisterPage({ onLogin }: Props) {
           </div>
 
           <div className="form-group">
-            <label htmlFor="register-password">Şifre</label>
+            <label htmlFor="register-password">Password</label>
             <div className="input-with-icon">
               <Lock size={18} className="input-icon" />
               <input
@@ -86,7 +86,7 @@ export default function RegisterPage({ onLogin }: Props) {
                 type="password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
-                placeholder="En az 6 karakter"
+                placeholder="At least 6 characters"
                 required
               />
             </div>
@@ -104,7 +104,7 @@ export default function RegisterPage({ onLogin }: Props) {
               <div className="spinner-xs" />
             ) : (
               <>
-                <span>Kayıt Ol</span>
+                <span>Register</span>
                 <ArrowRight size={18} />
               </>
             )}
@@ -112,7 +112,7 @@ export default function RegisterPage({ onLogin }: Props) {
         </form>
 
         <div className="auth-footer">
-          <p>Zaten hesabın var mı? <Link to="/login" className="text-primary font-bold">Giriş Yap</Link></p>
+          <p>Already have an account? <Link to="/login" className="text-primary font-bold">Sign In</Link></p>
         </div>
       </div>
     </div>

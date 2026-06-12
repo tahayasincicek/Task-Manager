@@ -42,25 +42,25 @@ function App() {
             <LayoutDashboard size={16} /> Dashboard
           </Link>
           <Link to="/tasks" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-            <CheckSquare size={16} /> Görevler
+            <CheckSquare size={16} /> Tasks
           </Link>
           <Link to="/reports" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-            <BarChart3 size={16} /> Raporlar
+            <BarChart3 size={16} /> Reports
           </Link>
           {auth.role === 'admin' && (
             <Link to="/admin" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <ShieldCheck size={16} /> Admin Paneli
+              <ShieldCheck size={16} /> Admin Panel
             </Link>
           )}
           <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginLeft: '0.5rem' }}>
             <User size={14} /> {auth.username}
           </span>
-          <button className="theme-toggle" onClick={() => setDark(!dark)} title={dark ? 'Açık Tema' : 'Koyu Tema'} style={{ marginLeft: '0.5rem' }}>
+          <button className="theme-toggle" onClick={() => setDark(!dark)} title={dark ? 'Light Theme' : 'Dark Theme'} style={{ marginLeft: '0.5rem' }}>
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <button onClick={handleLogout} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginLeft: '0.5rem' }} className="btn-logout-nav">
             <LogOut size={16} />
-            Çıkış
+            Logout
           </button>
         </nav>
       )}

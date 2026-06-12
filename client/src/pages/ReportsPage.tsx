@@ -41,16 +41,16 @@ interface TeamSummary {
 
 function priorityLabel(p: string) {
   switch (p) {
-    case 'urgent': return 'Acil';
-    case 'high': return 'Yüksek';
-    case 'medium': return 'Orta';
-    case 'low': return 'Düşük';
+    case 'urgent': return 'Urgent';
+    case 'high': return 'High';
+    case 'medium': return 'Medium';
+    case 'low': return 'Low';
     default: return p;
   }
 }
 
 function formatDate(d: string) {
-  return new Date(d).toLocaleDateString('tr-TR');
+  return new Date(d).toLocaleDateString('en-US');
 }
 
 import { 
@@ -94,7 +94,7 @@ export default function ReportsPage() {
       <div className="page-header">
         <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <BarChart3 size={28} className="text-primary" />
-          Raporlar ve Analizler
+          Reports & Analytics
         </h2>
       </div>
 
@@ -107,7 +107,7 @@ export default function ReportsPage() {
             </div>
             <div className="report-summary-info">
               <div className="report-summary-number">{teamSummary.totalTasks}</div>
-              <div className="report-summary-label">Toplam Görev</div>
+              <div className="report-summary-label">Total Tasks</div>
             </div>
           </div>
           <div className="report-summary-card">
@@ -116,7 +116,7 @@ export default function ReportsPage() {
             </div>
             <div className="report-summary-info">
               <div className="report-summary-number">{teamSummary.totalDone}</div>
-              <div className="report-summary-label">Tamamlanan</div>
+              <div className="report-summary-label">Completed</div>
             </div>
           </div>
           <div className="report-summary-card report-summary-danger">
@@ -125,7 +125,7 @@ export default function ReportsPage() {
             </div>
             <div className="report-summary-info">
               <div className="report-summary-number text-red">{teamSummary.totalOverdue}</div>
-              <div className="report-summary-label">Geciken</div>
+              <div className="report-summary-label">Overdue</div>
             </div>
           </div>
           <div className="report-summary-card">
@@ -133,8 +133,8 @@ export default function ReportsPage() {
               <TrendingUp size={24} className="text-purple" />
             </div>
             <div className="report-summary-info">
-              <div className="report-summary-number">%{teamSummary.completionRate}</div>
-              <div className="report-summary-label">Verimlilik</div>
+              <div className="report-summary-number">{teamSummary.completionRate}%</div>
+              <div className="report-summary-label">Efficiency</div>
             </div>
           </div>
           <div className="report-summary-card">
@@ -143,7 +143,7 @@ export default function ReportsPage() {
             </div>
             <div className="report-summary-info">
               <div className="report-summary-number">{teamSummary.totalUsers}</div>
-              <div className="report-summary-label">Kullanıcı</div>
+              <div className="report-summary-label">Users</div>
             </div>
           </div>
           <div className="report-summary-card">
@@ -152,7 +152,7 @@ export default function ReportsPage() {
             </div>
             <div className="report-summary-info">
               <div className="report-summary-number">{teamSummary.totalProjects}</div>
-              <div className="report-summary-label">Proje</div>
+              <div className="report-summary-label">Projects</div>
             </div>
           </div>
         </div>
@@ -163,10 +163,10 @@ export default function ReportsPage() {
         <div className="report-section-modern">
           <h3 className="report-section-title">
             <Users size={18} className="text-secondary" />
-            Kişi Bazlı İlerleme
+            Per-User Progress
           </h3>
           {userStats.length === 0 ? (
-            <div className="empty-tab">Kullanıcı bulunamadı</div>
+            <div className="empty-tab">No users found</div>
           ) : (
             <div className="report-user-list">
               {userStats.map(u => (
@@ -177,7 +177,7 @@ export default function ReportsPage() {
                   <div className="report-user-info">
                     <div className="report-user-header">
                       <span className="report-user-name">{u.username}</span>
-                      <span className="report-user-total-badge">{u.total} görev</span>
+                      <span className="report-user-total-badge">{u.total} tasks</span>
                     </div>
                     <div className="report-user-bar-track-modern">
                       <div className="bar bar-done" style={{ width: `${(u.done / maxUserTasks) * 100}%` }} title="Done" />
@@ -202,10 +202,10 @@ export default function ReportsPage() {
         <div className="report-section-modern">
           <h3 className="report-section-title">
             <Layout size={18} className="text-secondary" />
-            Proje Bazlı İlerleme
+            Per-Project Progress
           </h3>
           {projectProgress.length === 0 ? (
-            <div className="empty-tab">Proje bulunamadı</div>
+            <div className="empty-tab">No projects found</div>
           ) : (
             <div className="report-project-list">
               {projectProgress.map(p => (
@@ -215,7 +215,7 @@ export default function ReportsPage() {
                       <span className="project-name-bold">{p.project_name}</span>
                       <span className="project-owner-text">Owner: {p.owner}</span>
                     </div>
-                    <span className="project-rate-badge">%{p.completion_rate}</span>
+                    <span className="project-rate-badge">{p.completion_rate}%</span>
                   </div>
                   <div className="report-project-bar-container">
                     <div className="report-project-bar-track">
@@ -227,7 +227,7 @@ export default function ReportsPage() {
                   </div>
                   <div className="report-project-footer">
                     <CheckCircle2 size={12} className="text-success" />
-                    <span>{p.done}/{p.total} görev tamamlandı</span>
+                    <span>{p.done}/{p.total} tasks completed</span>
                   </div>
                 </div>
               ))}
@@ -240,25 +240,25 @@ export default function ReportsPage() {
       <div className="report-section-modern full-width">
         <h3 className="report-section-title">
           <AlertTriangle size={18} className="text-red" />
-          Geciken Görevler ({overdueTasks.length})
+          Overdue Tasks ({overdueTasks.length})
         </h3>
         {overdueTasks.length === 0 ? (
           <div className="empty-state-modern-small">
             <CheckCircle2 size={40} className="text-success opacity-40" />
-            <h4>Geciken görev yok!</h4>
-            <p>Harika gidiyorsun, tüm görevler zamanında ilerliyor.</p>
+            <h4>No overdue tasks!</h4>
+            <p>Great job, all tasks are progressing on time.</p>
           </div>
         ) : (
           <div className="table-responsive">
             <table className="modern-table">
               <thead>
                 <tr>
-                  <th>Görev</th>
-                  <th>Proje</th>
-                  <th>Atanan</th>
-                  <th>Öncelik</th>
-                  <th>Geciken Gün</th>
-                  <th>Bitiş Tarihi</th>
+                  <th>Task</th>
+                  <th>Project</th>
+                  <th>Assigned</th>
+                  <th>Priority</th>
+                  <th>Days Overdue</th>
+                  <th>Due Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -283,7 +283,7 @@ export default function ReportsPage() {
                       </span>
                     </td>
                     <td className="text-red font-bold">
-                      {Math.floor((new Date().getTime() - new Date(t.due_date).getTime()) / (1000 * 3600 * 24))} Gün
+                      {Math.floor((new Date().getTime() - new Date(t.due_date).getTime()) / (1000 * 3600 * 24))} Days
                     </td>
                     <td className="text-red-dark">
                       <Calendar size={14} className="inline mr-1" />

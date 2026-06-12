@@ -24,7 +24,7 @@ export default function LoginPage({ onLogin }: Props) {
       onLogin(me);
     } catch (err: unknown) {
       const e = err as { body?: { error?: string } };
-      setError(e.body?.error ?? 'Giriş başarısız');
+      setError(e.body?.error ?? 'Login failed');
     } finally {
       setLoading(false);
     }
@@ -37,20 +37,20 @@ export default function LoginPage({ onLogin }: Props) {
           <div className="auth-logo">
             <ShieldCheck size={32} className="text-primary" />
           </div>
-          <h2>Tekrar Hoş Geldin</h2>
-          <p className="text-muted">Devam etmek için hesabına giriş yap.</p>
+          <h2>Welcome Back</h2>
+          <p className="text-muted">Sign in to your account to continue.</p>
         </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
-            <label htmlFor="login-username">Kullanıcı Adı</label>
+            <label htmlFor="login-username">Username</label>
             <div className="input-with-icon">
               <User size={18} className="input-icon" />
               <input
                 id="login-username"
                 value={username}
                 onChange={e => setUsername(e.target.value)}
-                placeholder="Kullanıcı adınızı girin"
+                placeholder="Enter your username"
                 required
                 autoFocus
               />
@@ -58,7 +58,7 @@ export default function LoginPage({ onLogin }: Props) {
           </div>
 
           <div className="form-group">
-            <label htmlFor="login-password">Şifre</label>
+            <label htmlFor="login-password">Password</label>
             <div className="input-with-icon">
               <Lock size={18} className="input-icon" />
               <input
@@ -84,7 +84,7 @@ export default function LoginPage({ onLogin }: Props) {
               <div className="spinner-xs" />
             ) : (
               <>
-                <span>Giriş Yap</span>
+                <span>Sign In</span>
                 <ArrowRight size={18} />
               </>
             )}
@@ -92,20 +92,20 @@ export default function LoginPage({ onLogin }: Props) {
         </form>
 
         <div className="auth-footer">
-          <p>Hesabın yok mu? <Link to="/register" className="text-primary font-bold">Hemen Kayıt Ol</Link></p>
+          <p>Don't have an account? <Link to="/register" className="text-primary font-bold">Register Now</Link></p>
         </div>
 
         <div className="demo-info-card">
           <div className="demo-info-header">
             <ShieldCheck size={14} />
-            <strong>Demo Hesap Bilgileri:</strong>
+            <strong>Demo Account Info:</strong>
           </div>
           <div className="demo-credentials">
             <div className="credential-row">
               <span>Admin:</span> <code>admin / Admin123!</code>
             </div>
             <div className="credential-row">
-              <span>Kullanıcı:</span> <code>user1 / User123!</code>
+              <span>User:</span> <code>user1 / User123!</code>
             </div>
           </div>
         </div>

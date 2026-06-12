@@ -1,121 +1,120 @@
-# Statik Analiz Raporları — Task Manager
+# Static Analysis Reports — Task Manager
 
-Bu klasör, proje üzerinde çalıştırılan **SonarQube** ve **ESLint** statik
-analizlerinin JSON çıktılarını ve insan tarafından okunabilir analiz raporlarını
-barındırır.
+This folder contains JSON outputs from **SonarQube** and **ESLint** static
+analyses run on the project, as well as human-readable analysis reports.
 
 ```
 reports/
-├── README.md              # (bu dosya)
-├── stage1/                # Aşama 2 — İlk Statik Analiz
+├── README.md              # (this file)
+├── stage1/                # Stage 2 — Initial Static Analysis
 │   ├── eslint.json
 │   ├── sonarqube-issues.json
 │   ├── sonarqube-measures.json
 │   └── ILK_ANALIZ_RAPORU.md
-└── stage2/                # Aşama 4 — Son Statik Analiz (sonra oluşturulacak)
+└── stage2/                # Stage 4 — Final Static Analysis
     ├── eslint.json
     ├── sonarqube-issues.json
     ├── sonarqube-measures.json
     └── SON_ANALIZ_RAPORU.md
 ```
 
-Yönerge gereği **Aşama 2 ve Aşama 4 aynı komutlar ve aynı ayarlar ile**
-üretilir. Yalnızca `<stage>` değişir (`stage1` → `stage2`).
+As per the guidelines, **Stage 2 and Stage 4 are produced with the same
+commands and the same settings**. Only `<stage>` changes (`stage1` → `stage2`).
 
 ---
 
-## 1) Analizi Yeniden Üretmek
+## 1) Reproducing the Analysis
 
-### Ön koşullar
-- Node.js ≥ 20 (proje `v22.x` ile test edildi)
-- Docker Desktop (yerel SonarQube için)
-- Java 17+ (sonar-scanner için — Eclipse Adoptium JDK 21 test edildi)
+### Prerequisites
+- Node.js ≥ 20 (tested with `v22.x`)
+- Docker Desktop (for local SonarQube)
+- Java 17+ (for sonar-scanner — tested with Eclipse Adoptium JDK 21)
 
 ### 1.1 ESLint
 
 ```bash
-# Aşama 2
+# Stage 2
 npm run lint:stage1
 
-# Aşama 4 (son analiz)
+# Stage 4 (final analysis)
 npm run lint:stage2
 ```
 
-Çıktı: `reports/<stage>/eslint.json`
+Output: `reports/<stage>/eslint.json`
 
-Kural seti: kök dizindeki `.eslintrc.cjs` — `eslint:recommended`,
+Rule set: `.eslintrc.cjs` in root — `eslint:recommended`,
 `plugin:@typescript-eslint/recommended`, `plugin:react/recommended`,
-`plugin:react-hooks/recommended`. Kapsam: `src/`, `client/src/`, `tests/`.
+`plugin:react-hooks/recommended`. Scope: `src/`, `client/src/`, `tests/`.
 
 ### 1.2 SonarQube
 
-#### a) Yerel SonarQube sunucusunu başlat
+#### a) Start the local SonarQube server
 
 ```bash
 npm run sonar:up
-# http://localhost:9000 — ilk giriş admin/admin, parolayı değiştir
+# http://localhost:9000 — initial login admin/admin, change password
 ```
 
-SonarQube UI'da:
+In the SonarQube UI:
 1. **Projects → Create Project** → key: `task-manager`
-2. **My Account → Security → Generate Token** → token'ı kopyala
+2. **My Account → Security → Generate Token** → copy the token
 
-#### b) Token'ı ortama ver
+#### b) Set the token in environment
 
 ```bash
 export SONAR_HOST_URL=http://localhost:9000
 export SONAR_TOKEN=<generated_token>
 ```
 
-Windows PowerShell için:
+For Windows PowerShell:
 ```powershell
 $env:SONAR_HOST_URL = "http://localhost:9000"
 $env:SONAR_TOKEN = "<generated_token>"
 ```
 
-#### c) Scan + Web API'den JSON raporları çek
+#### c) Scan + fetch JSON reports from Web API
 
 ```bash
-# Aşama 2
+# Stage 2
 npm run sonar:scan
 npm run sonar:fetch:stage1
 
-# Aşama 4
+# Stage 4
 npm run sonar:scan
 npm run sonar:fetch:stage2
 ```
 
-`sonar:scan` konfigürasyonu `sonar-project.properties` dosyasından alır. Scan
-biter bitmez sunucuda analiz sonuçları hazırdır; `sonar:fetch:*` komutu
-aşağıdaki Web API uç noktalarını çağırıp JSON'a yazar:
+`sonar:scan` reads configuration from `sonar-project.properties`. As soon as
+the scan finishes, analysis results are available on the server; the
+`sonar:fetch:*` command calls the following Web API endpoints and writes to JSON:
 
 - `GET /api/issues/search?componentKeys=<key>&types=BUG|CODE_SMELL` →
   `reports/<stage>/sonarqube-issues.json`
 - `GET /api/measures/component?component=<key>&metricKeys=bugs,code_smells,duplicated_lines_density,ncloc,complexity,cognitive_complexity,reliability_rating,sqale_rating,vulnerabilities,security_hotspots,security_rating,sqale_index,sqale_debt_ratio`
   → `reports/<stage>/sonarqube-measures.json`
 
-Issues JSON'u `severity` (BLOCKER/CRITICAL/MAJOR/MINOR/INFO) alanını orijinal
-payload'da taşır; ayrıca kolay inceleme için `severityBreakdown` özeti eklenir.
+The Issues JSON carries the `severity` field (BLOCKER/CRITICAL/MAJOR/MINOR/INFO)
+in the original payload; a `severityBreakdown` summary is also added for easy review.
 
-### 1.3 Tek komutla Aşama-2 analizi
+### 1.3 Single-command Stage 2 analysis
 
 ```bash
-# SonarQube sunucusu ayaktayken, token tanımlıyken
+# With SonarQube server running and token defined
 npm run analyze:stage1
 ```
 
-Bu zinciri çalıştırır: `lint:stage1` → `sonar:scan` → `sonar:fetch:stage1`.
+This runs the chain: `lint:stage1` → `sonar:scan` → `sonar:fetch:stage1`.
 
 ---
 
-## 2) Analiz Kapsamı
+## 2) Analysis Scope
 
-`sonar-project.properties` ve `.eslintrc.cjs` konfigürasyonu yalnızca
-**projenin kendi kodunu** analiz eder:
+The `sonar-project.properties` and `.eslintrc.cjs` configuration only
+analyzes **the project's own code**:
 
-- **Dahil:** `src/**`, `client/src/**`, `tests/**`
-- **Hariç:** `node_modules/`, `node_modules_old/`, `dist/`, `build/`,
-  `coverage/`, `client/dist/`, `data/`, `reports/`, config dosyaları.
+- **Included:** `src/**`, `client/src/**`, `tests/**`
+- **Excluded:** `node_modules/`, `node_modules_old/`, `dist/`, `build/`,
+  `coverage/`, `client/dist/`, `data/`, `reports/`, config files.
 
-Aşama 2 ile Aşama 4 arasındaki karşılaştırılabilirliği bozmamak için bu
-kapsamı değiştirmeyin.
+Do not change this scope to avoid breaking comparability between Stage 2
+and Stage 4.

@@ -1,80 +1,80 @@
-# Dönem Projesi - Task Manager API
+# Term Project - Task Manager API
 
-## Proje Açıklaması
+## Project Description
 
-Bu proje, Yazılım Kalite Güvencesi dersi kapsamında geliştirilmiş bir görev yönetimi (Task Manager) REST API uygulamasıdır. TypeScript, Node.js ve Express framework kullanılarak inşa edilmiş olan bu API, kullanıcıların görev oluşturmasına, güncellemesine, listemesine ve silmesine olanak tanır. Kimlik doğrulama ve yetkilendirme mekanizmaları da dahil olmak üzere tam işlevsel bir backend servisi sunmaktadır.
+This project is a task management (Task Manager) REST API application developed as part of the Software Quality Assurance course. Built using TypeScript, Node.js, and the Express framework, this API allows users to create, update, list, and delete tasks. It provides a fully functional backend service including authentication and authorization mechanisms.
 
-## Mimari Özeti
+## Architecture Overview
 
-Uygulama, katmanlı mimari prensibine göre tasarlanmıştır. Sunum katmanında Express Router'ları ile tanımlanmış HTTP endpoint'leri bulunmakta, iş mantığı ise `services/` dizini altında ayrı servis modüllerinde konumlandırılmaktadır. Bu yaklaşım, kodun test edilebilirliğini ve bakımını önemli ölçüde kolaylaştırmaktadır.
+The application is designed according to layered architecture principles. The presentation layer contains HTTP endpoints defined with Express Routers, while business logic is located in separate service modules under the `services/` directory. This approach significantly facilitates code testability and maintainability.
 
-Veritabanı katmanında `better-sqlite3` kütüphanesi kullanılarak senkron SQLite operasyonları gerçekleştirilmektedir. `db.ts` modülü uygulama başladığında tabloları otomatik olarak oluşturmakta ve WAL (Write-Ahead Logging) modu etkinleştirilerek performans optimize edilmektedir. Yabancı anahtar kısıtları da açıkça aktif hale getirilmiştir.
+At the database layer, synchronous SQLite operations are performed using the `better-sqlite3` library. The `db.ts` module automatically creates tables when the application starts, and performance is optimized by enabling WAL (Write-Ahead Logging) mode. Foreign key constraints are also explicitly activated.
 
-Kimlik doğrulama, `express-session` middleware'i aracılığıyla sunucu taraflı oturum yönetimiyle sağlanmaktadır. Oturum kimliği `httpOnly` özelliğine sahip bir çerezde saklanarak XSS saldırılarına karşı koruma sağlanmaktadır. Kullanıcı şifreleri veritabanına kaydedilmeden önce `bcrypt` ile hash'lenerek güvenlik güçlendirilmektedir.
+Authentication is provided through server-side session management via the `express-session` middleware. The session ID is stored in an `httpOnly` cookie, protecting against XSS attacks. User passwords are hashed with `bcrypt` before being stored in the database, strengthening security.
 
-Test altyapısı Vitest ve Supertest üzerine inşa edilmiştir. Birim testleri servis fonksiyonlarını izole in-memory veritabanları ile test ederken, duman testleri (smoke tests) gerçek HTTP istekleri göndererek uçtan uca akışı doğrulamaktadır. Bu iki katmanlı test stratejisi hem bireysel bileşenlerin hem de sistemin bütününün doğru çalıştığını garanti etmektedir.
+The test infrastructure is built on Vitest and Supertest. Unit tests test service functions with isolated in-memory databases, while smoke tests send real HTTP requests to verify the end-to-end flow. This two-layer test strategy guarantees that both individual components and the system as a whole work correctly.
 
-## Kurulum ve Çalıştırma
+## Installation and Running
 
-### Gereksinimler
+### Prerequisites
 
 - Node.js >= 18.x
 - npm >= 9.x
 
-### Adımlar
+### Steps
 
 ```bash
-# Bağımlılıkları yükle
+# Install dependencies
 npm install
 
-# Veritabanını başlangıç verileriyle doldur
+# Seed the database with initial data
 npm run seed
 
-# Geliştirme modunda başlat
+# Start in development mode
 npm run dev
 
-# Üretim için derle
+# Build for production
 npm run build
 
-# Derlenmiş uygulamayı çalıştır
+# Run the compiled application
 npm start
 ```
 
-## Varsayılan Kullanıcılar (Seed)
+## Default Users (Seed)
 
-`npm run seed` komutu çalıştırıldıktan sonra aşağıdaki kullanıcılar oluşturulur:
+After running the `npm run seed` command, the following users are created:
 
-| Kullanıcı Adı | Şifre     | Rol   |
-|---------------|-----------|-------|
-| admin         | Admin123! | admin |
-| user1         | User123!  | user  |
+| Username | Password  | Role  |
+|----------|-----------|-------|
+| admin    | Admin123! | admin |
+| user1    | User123!  | user  |
 
-Seed ayrıca 3 örnek görev de oluşturur: biri "todo", biri "in-progress", biri "done" statüsünde.
+Seed also creates 3 sample tasks: one with "todo", one with "in-progress", and one with "done" status.
 
-## Oturum Yönetimi Tercihi
+## Session Management Choice
 
-Oturum yönetimi için JWT yerine sunucu taraflı `express-session` tercih edilmiştir. Bu kararın temel sebebi güvenlik odaklıdır: oturum verileri sunucuda tutulduğundan, bir oturumu geçersiz kılmak (örneğin kullanıcıyı çıkış yapmaya zorlamak) anlık olarak mümkündür. JWT tabanlı yaklaşımda token süresi dolana kadar geçersiz kılma mümkün değildir. Oturum ID'si `httpOnly` çerezde taşınarak JavaScript tarafından erişilmesi engellenmekte, böylece XSS saldırılarına karşı ek koruma sağlanmaktadır.
+Server-side `express-session` was chosen over JWT for session management. The primary reason for this decision is security-focused: since session data is stored on the server, invalidating a session (e.g., forcing a user to log out) is possible instantly. With a JWT-based approach, invalidation is not possible until the token expires. The session ID is carried in an `httpOnly` cookie, preventing JavaScript access, thereby providing additional protection against XSS attacks.
 
-## Veritabanı Tercihi
+## Database Choice
 
-Veritabanı olarak SQLite (`better-sqlite3`) seçilmiştir. Bu tercih, uygulamanın bağımsız çalışabilmesini (ek veritabanı sunucusu gerektirmemesini) sağlar ve özellikle geliştirme ortamında kurulum karmaşıklığını ortadan kaldırır. `better-sqlite3` kütüphanesi senkron API sunduğu için kod okunabilirliği artmakta ve async/await karmaşası yaşanmamaktadır. WAL modu etkinleştirilerek eş zamanlı okuma performansı da iyileştirilmiştir.
+SQLite (`better-sqlite3`) was chosen as the database. This choice allows the application to run independently (without requiring an additional database server) and eliminates setup complexity, especially in development environments. Since the `better-sqlite3` library provides a synchronous API, code readability is improved and async/await complexity is avoided. WAL mode is enabled to improve concurrent read performance.
 
-## Test Komutları
+## Test Commands
 
 ```bash
-# Tüm testleri çalıştır
+# Run all tests
 npm test
 
-# Yalnızca duman testlerini çalıştır
+# Run only smoke tests
 npm run test:smoke
 
-# Yalnızca birim testlerini çalıştır
+# Run only unit tests
 npm run test:unit
 ```
 
-## Test Logları
+## Test Logs
 
-`npm test` çıktısı (98/98 test geçti):
+`npm test` output (98/98 tests passed):
 
 ```
   ✓ tests/smoke/api.smoke.test.ts (31)
@@ -91,106 +91,106 @@ npm run test:unit
    Duration  1.30s (transform 189ms, setup 1ms, collect 594ms, tests 420ms, environment 0ms, prepare 131ms)
 ```
 
-## Testler
+## Tests
 
-Bu projede kalite güvencesi kapsamında iki temel test seviyesi uygulanmıştır: Birim Testleri (Unit Tests) ve Duman Testleri (Smoke Tests).
+Two fundamental test levels have been implemented as part of quality assurance in this project: Unit Tests and Smoke Tests.
 
-### Duman Testleri (Smoke Tests)
+### Smoke Tests
 
-Duman testleri, uygulamanın en kritik işlevlerinin uçtan uca (end-to-end) doğru çalışıp çalışmadığını doğrular. `tests/smoke/api.smoke.test.ts` içinde yer alan 31 senaryo şunları kapsar:
+Smoke tests verify whether the application's most critical functions work correctly end-to-end. The 31 scenarios in `tests/smoke/api.smoke.test.ts` cover:
 
-1.  **Kimlik Doğrulama:** Kayıt olma, giriş yapma ve oturum (session) çerezinin doğrulanması.
-2.  **Yetkilendirme:** Oturum açmadan korumalı endpoint'lere erişimin engellenmesi ve admin-only endpoint testleri.
-3.  **Ana Varlık (Task) CRUD:** Görev oluşturma, listeleme, detay görüntüleme, güncelleme ve silme akışları.
-4.  **Doğrulama (Validation):** Geçersiz verilerle (örn. boş başlık) yapılan isteklerin 400 hatası ile reddedilmesi.
-5.  **Ek Özellikler:** Yorum ekleme/silme, etiket yönetimi, alt görev (subtask) oluşturma ve proje bazlı yönetim.
-6.  **Raporlama:** İstatistik ve özet raporlarına yetkili erişim.
+1.  **Authentication:** Registration, login, and session cookie verification.
+2.  **Authorization:** Blocking access to protected endpoints without logging in and admin-only endpoint tests.
+3.  **Core Entity (Task) CRUD:** Task creation, listing, detail viewing, updating, and deletion flows.
+4.  **Validation:** Rejection of requests with invalid data (e.g., empty title) with 400 error.
+5.  **Additional Features:** Comment add/delete, label management, subtask creation, and project-based management.
+6.  **Reporting:** Authorized access to statistics and summary reports.
 
-### Birim Testleri (Unit Tests)
+### Unit Tests
 
-Birim testleri, servis katmanındaki (service layer) iş kurallarını ve veri doğrulama mantığını veritabanı veya ağ bağımlılığı olmadan (in-memory DB ile) izole bir şekilde test eder. Toplam 67 birim testi şu başlıkları içerir:
+Unit tests test business rules and data validation logic in the service layer in isolation without database or network dependencies (with in-memory DB). A total of 67 unit tests include the following topics:
 
--   **Validation / İş Kuralları:** `taskService`, `authService`, `labelService` vb. içindeki girdi doğrulama fonksiyonları (boş değer, uzunluk, format kontrolü).
--   **Yetkilendirme Kararı:** `authService` içindeki rol bazlı (admin/user) erişim izinleri.
--   **Hata Durumları:** Kaynak bulunamadı (404), yetkisiz erişim (403) ve çakışma (conflict) durumlarının servis seviyesinde yönetimi.
--   **Servis Mantığı:** "Ana varlık" ve yardımcı varlıkların (etiket, yorum, proje) veritabanı ile olan CRUD etkileşimleri ve karmaşık istatistik hesaplama algoritmaları (`reportService`).
+-   **Validation / Business Rules:** Input validation functions (empty value, length, format checking) in `taskService`, `authService`, `labelService`, etc.
+-   **Authorization Decision:** Role-based (admin/user) access permissions in `authService`.
+-   **Error Cases:** Resource not found (404), unauthorized access (403), and conflict situations managed at the service level.
+-   **Service Logic:** CRUD interactions of the core entity and auxiliary entities (label, comment, project) with the database, and complex statistics calculation algorithms (`reportService`).
 
-## API Endpoint Dokümantasyonu
+## API Endpoint Documentation
 
-### Kimlik Doğrulama
+### Authentication
 
-| Metod | Endpoint            | Açıklama                        | Yetki      |
-|-------|---------------------|---------------------------------|------------|
-| POST  | /api/auth/register  | Yeni kullanıcı kaydı            | Herkese açık |
-| POST  | /api/auth/login     | Giriş yap, oturum oluştur       | Herkese açık |
-| POST  | /api/auth/logout    | Oturumu sonlandır               | Giriş yapmış |
-| GET   | /api/auth/me        | Mevcut oturum bilgisi           | Giriş yapmış |
+| Method | Endpoint            | Description              | Access       |
+|--------|---------------------|--------------------------|--------------|
+| POST   | /api/auth/register  | Register new user        | Public       |
+| POST   | /api/auth/login     | Login, create session    | Public       |
+| POST   | /api/auth/logout    | End session              | Logged in    |
+| GET    | /api/auth/me        | Current session info     | Logged in    |
 
 #### POST /api/auth/register
 ```json
 {
-  "username": "kullanici",
-  "email": "kullanici@ornek.com",
-  "password": "Sifre123!"
+  "username": "johndoe",
+  "email": "john@example.com",
+  "password": "Pass123!"
 }
 ```
 
 #### POST /api/auth/login
 ```json
 {
-  "username": "kullanici",
-  "password": "Sifre123!"
+  "username": "johndoe",
+  "password": "Pass123!"
 }
 ```
 
-### Görevler (Tasks)
+### Tasks
 
-Tüm görev endpoint'leri kimlik doğrulaması gerektirir.
+All task endpoints require authentication.
 
-| Metod  | Endpoint         | Açıklama                  | Yetki        |
-|--------|------------------|---------------------------|--------------|
-| GET    | /api/tasks       | Tüm görevleri listele      | Giriş yapmış |
-| POST   | /api/tasks       | Yeni görev oluştur         | Giriş yapmış |
-| GET    | /api/tasks/:id   | Tek görev getir            | Giriş yapmış |
-| PATCH  | /api/tasks/:id   | Görevi güncelle            | Giriş yapmış |
-| DELETE | /api/tasks/:id   | Görevi sil                 | Giriş yapmış |
+| Method | Endpoint         | Description          | Access       |
+|--------|------------------|----------------------|--------------|
+| GET    | /api/tasks       | List all tasks       | Logged in    |
+| POST   | /api/tasks       | Create new task      | Logged in    |
+| GET    | /api/tasks/:id   | Get single task      | Logged in    |
+| PATCH  | /api/tasks/:id   | Update task          | Logged in    |
+| DELETE | /api/tasks/:id   | Delete task          | Logged in    |
 
-#### POST /api/tasks — Görev Oluşturma
+#### POST /api/tasks — Create Task
 ```json
 {
-  "title": "Görev başlığı",
-  "description": "İsteğe bağlı açıklama",
+  "title": "Task title",
+  "description": "Optional description",
   "status": "todo"
 }
 ```
-Geçerli `status` değerleri: `todo`, `in-progress`, `done`
+Valid `status` values: `todo`, `in-progress`, `done`
 
-#### PATCH /api/tasks/:id — Görev Güncelleme
+#### PATCH /api/tasks/:id — Update Task
 ```json
 {
-  "title": "Yeni başlık",
+  "title": "New title",
   "status": "in-progress"
 }
 ```
 
 ### Admin
 
-Yalnızca `admin` rolündeki kullanıcılar erişebilir.
+Only users with the `admin` role can access.
 
-| Metod | Endpoint          | Açıklama                         | Yetki |
-|-------|-------------------|----------------------------------|-------|
-| GET   | /api/admin/users  | Tüm kullanıcıları listele        | Admin |
-| GET   | /api/admin/stats  | Kullanıcı ve görev istatistikleri | Admin |
+| Method | Endpoint          | Description                    | Access |
+|--------|-------------------|--------------------------------|--------|
+| GET    | /api/admin/users  | List all users                 | Admin  |
+| GET    | /api/admin/stats  | User and task statistics       | Admin  |
 
-### Sistem
+### System
 
-| Metod | Endpoint  | Açıklama            |
-|-------|-----------|---------------------|
-| GET   | /health   | Servis sağlık kontrolü |
+| Method | Endpoint  | Description          |
+|--------|-----------|----------------------|
+| GET    | /health   | Service health check |
 
-## Hata Yanıtları
+## Error Responses
 
-Doğrulama hataları için:
+For validation errors:
 ```json
 {
   "errors": [
@@ -199,32 +199,32 @@ Doğrulama hataları için:
 }
 ```
 
-Genel hatalar için:
+For general errors:
 ```json
 {
-  "error": "Hata mesajı"
+  "error": "Error message"
 }
 ```
 
-## HTTP Durum Kodları
+## HTTP Status Codes
 
-| Kod | Açıklama                        |
-|-----|---------------------------------|
-| 200 | Başarılı                        |
-| 201 | Kaynak oluşturuldu              |
-| 204 | Başarılı, içerik yok (silme)    |
-| 400 | Geçersiz istek / doğrulama hatası |
-| 401 | Kimlik doğrulaması gerekli      |
-| 403 | Yetkisiz erişim                 |
-| 404 | Kaynak bulunamadı               |
-| 409 | Çakışma (kullanıcı adı/e-posta zaten mevcut) |
-| 500 | Sunucu hatası                   |
+| Code | Description                              |
+|------|------------------------------------------|
+| 200  | Success                                  |
+| 201  | Resource created                         |
+| 204  | Success, no content (deletion)           |
+| 400  | Invalid request / validation error       |
+| 401  | Authentication required                  |
+| 403  | Unauthorized access                      |
+| 404  | Resource not found                       |
+| 409  | Conflict (username/email already exists) |
+| 500  | Server error                             |
 
-## Opsiyonel UI (BONUS)
+## Optional UI (BONUS)
 
-React + Vite ile geliştirilmiş bir kullanıcı arayüzü `client/` dizininde bulunmaktadır.
+A user interface developed with React + Vite is located in the `client/` directory.
 
-### UI Kurulumu ve Çalıştırma
+### UI Setup and Running
 
 ```bash
 cd client
@@ -232,10 +232,10 @@ npm install
 npm run dev
 ```
 
-Tarayıcıda http://localhost:5173 adresini açın. Backend (port 3000) çalışıyor olmalıdır.
+Open http://localhost:5173 in your browser. The backend (port 3000) must be running.
 
-### UI Özellikleri
-- Giriş ve kayıt sayfaları
-- Görev listesi: oluşturma, düzenleme, silme
-- Durum rozetleri (Yapılacak / Devam ediyor / Tamamlandı)
-- Admin paneli: kullanıcı listesi ve istatistikler (yalnızca admin rolü)
+### UI Features
+- Login and registration pages
+- Task list: create, edit, delete
+- Status badges (To Do / In Progress / Completed)
+- Admin panel: user list and statistics (admin role only)

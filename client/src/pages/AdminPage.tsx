@@ -19,25 +19,25 @@ const PAGE_SIZE = 5;
 
 function priorityLabel(p: string) {
   switch (p) {
-    case 'urgent': return 'Acil';
-    case 'high': return 'Yüksek';
-    case 'medium': return 'Orta';
-    case 'low': return 'Düşük';
+    case 'urgent': return 'Urgent';
+    case 'high': return 'High';
+    case 'medium': return 'Medium';
+    case 'low': return 'Low';
     default: return p;
   }
 }
 
 function exportCSV(users: User[]) {
-  const header = 'ID,Kullanıcı Adı,E-posta,Rol,Kayıt Tarihi\n';
+  const header = 'ID,Username,Email,Role,Registration Date\n';
   const rows = users.map(u => {
-    const date = new Date(u.created_at).toLocaleDateString('tr-TR');
+    const date = new Date(u.created_at).toLocaleDateString('en-US');
     return `${u.id},"${u.username}","${u.email}",${u.role},"${date}"`;
   }).join('\n');
   const blob = new Blob(['\uFEFF' + header + rows], { type: 'text/csv;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `kullanıcılar_${new Date().toISOString().slice(0, 10)}.csv`;
+  a.download = `users_${new Date().toISOString().slice(0, 10)}.csv`;
   a.click();
   URL.revokeObjectURL(url);
 }
@@ -146,12 +146,12 @@ export default function AdminPage() {
       <div className="page-header">
         <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <ShieldCheck size={28} className="text-primary" />
-          Sistem Yönetimi
+          System Management
         </h2>
         <div className="header-actions">
           <button className="btn-outline-pill" onClick={() => exportCSV(processedUsers)}>
             <Download size={16} />
-            <span>Verileri Dışa Aktar</span>
+            <span>Export Data</span>
           </button>
         </div>
       </div>
@@ -164,7 +164,7 @@ export default function AdminPage() {
           </div>
           <div className="admin-stat-info">
             <span className="admin-stat-number">{stats?.userCount ?? 0}</span>
-            <span className="admin-stat-label">Toplam Kullanıcı</span>
+            <span className="admin-stat-label">Total Users</span>
           </div>
         </div>
         <div className="admin-stat-card-modern">
@@ -173,7 +173,7 @@ export default function AdminPage() {
           </div>
           <div className="admin-stat-info">
             <span className="admin-stat-number">{stats?.taskCount ?? 0}</span>
-            <span className="admin-stat-label">Toplam Görev</span>
+            <span className="admin-stat-label">Total Tasks</span>
           </div>
         </div>
         <div className="admin-stat-card-modern">
@@ -182,7 +182,7 @@ export default function AdminPage() {
           </div>
           <div className="admin-stat-info">
             <span className="admin-stat-number">{doneCount}</span>
-            <span className="admin-stat-label">Tamamlanan</span>
+            <span className="admin-stat-label">Completed</span>
           </div>
         </div>
         <div className="admin-stat-card-modern">
@@ -191,7 +191,7 @@ export default function AdminPage() {
           </div>
           <div className="admin-stat-info">
             <span className="admin-stat-number text-red">{stats?.overdueCount ?? 0}</span>
-            <span className="admin-stat-label">Geciken</span>
+            <span className="admin-stat-label">Overdue</span>
           </div>
         </div>
       </div>
@@ -200,11 +200,11 @@ export default function AdminPage() {
       <div className="admin-meta-info-bar">
         <div className="meta-item">
           <Tag size={14} />
-          <span>Etiket: <strong>{stats?.labelCount ?? 0}</strong></span>
+          <span>Labels: <strong>{stats?.labelCount ?? 0}</strong></span>
         </div>
         <div className="meta-item">
           <MessageSquare size={14} />
-          <span>Yorum: <strong>{stats?.commentCount ?? 0}</strong></span>
+          <span>Comments: <strong>{stats?.commentCount ?? 0}</strong></span>
         </div>
         <div className="divider-v"></div>
         <div className="meta-priority-group">
@@ -224,7 +224,7 @@ export default function AdminPage() {
           <div className="admin-chart-section">
             <h3 className="section-title-sm">
               <BarChart3 size={16} />
-              Görev Durum Analizi
+              Task Status Analysis
             </h3>
             <div className="modern-status-bar">
               {todoCount > 0 && (
@@ -246,15 +246,15 @@ export default function AdminPage() {
             <div className="status-legend-modern">
               <div className="legend-pill">
                 <span className="pill-dot bg-orange"></span>
-                <span>Yapılacak ({todoCount})</span>
+                <span>To Do ({todoCount})</span>
               </div>
               <div className="legend-pill">
                 <span className="pill-dot bg-blue"></span>
-                <span>Devam Ediyor ({inProgressCount})</span>
+                <span>In Progress ({inProgressCount})</span>
               </div>
               <div className="legend-pill">
                 <span className="pill-dot bg-green"></span>
-                <span>Tamamlandı ({doneCount})</span>
+                <span>Completed ({doneCount})</span>
               </div>
             </div>
           </div>
@@ -264,15 +264,15 @@ export default function AdminPage() {
         <div className="admin-table-section">
           <div className="table-header-modern">
             <div className="header-left">
-              <h3 className="section-title-sm">Kullanıcı Yönetimi</h3>
-              <span className="result-count">{processedUsers.length} kişi bulundu</span>
+              <h3 className="section-title-sm">User Management</h3>
+              <span className="result-count">{processedUsers.length} users found</span>
             </div>
             <div className="header-right">
               <div className="search-box-modern">
                 <Search size={18} className="search-icon" />
                 <input
                   type="text"
-                  placeholder="İsim veya e-posta ara..."
+                  placeholder="Search by name or email..."
                   value={search}
                   onChange={e => setSearch(e.target.value)}
                 />
@@ -284,9 +284,9 @@ export default function AdminPage() {
                   value={roleFilter}
                   onChange={e => setRoleFilter(e.target.value as 'all' | 'admin' | 'user')}
                 >
-                  <option value="all">Tüm Roller</option>
+                  <option value="all">All Roles</option>
                   <option value="admin">Admin</option>
-                  <option value="user">Kullanıcı</option>
+                  <option value="user">User</option>
                 </select>
               </div>
             </div>
@@ -297,10 +297,10 @@ export default function AdminPage() {
               <thead>
                 <tr>
                   <th onClick={() => handleSort('id')}>ID {sortArrow('id')}</th>
-                  <th onClick={() => handleSort('username')}>Kullanıcı {sortArrow('username')}</th>
-                  <th onClick={() => handleSort('email')}>E-posta {sortArrow('email')}</th>
-                  <th onClick={() => handleSort('role')}>Rol {sortArrow('role')}</th>
-                  <th onClick={() => handleSort('created_at')}>Tarih {sortArrow('created_at')}</th>
+                  <th onClick={() => handleSort('username')}>Username {sortArrow('username')}</th>
+                  <th onClick={() => handleSort('email')}>Email {sortArrow('email')}</th>
+                  <th onClick={() => handleSort('role')}>Role {sortArrow('role')}</th>
+                  <th onClick={() => handleSort('created_at')}>Date {sortArrow('created_at')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -309,8 +309,8 @@ export default function AdminPage() {
                     <td colSpan={5}>
                       <div className="empty-state-table">
                         <Search size={48} className="text-muted opacity-20" />
-                        <h4>Arama kriterine uygun sonuç bulunamadı</h4>
-                        <p>Lütfen farklı bir kelime deneyin veya filtreleri sıfırlayın.</p>
+                        <h4>No results matching your search criteria</h4>
+                        <p>Please try a different keyword or reset the filters.</p>
                       </div>
                     </td>
                   </tr>
@@ -334,7 +334,7 @@ export default function AdminPage() {
                         </span>
                       </td>
                       <td className="text-muted text-sm">
-                        {new Date(u.created_at).toLocaleDateString('tr-TR')}
+                        {new Date(u.created_at).toLocaleDateString('en-US')}
                       </td>
                     </tr>
                   ))
@@ -348,7 +348,7 @@ export default function AdminPage() {
             <div className="pagination-modern">
               <button className="page-nav-btn" disabled={page === 1} onClick={() => setPage(p => p - 1)}>
                 <ChevronLeft size={18} />
-                <span>Önceki</span>
+                <span>Previous</span>
               </button>
               <div className="page-numbers">
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
@@ -362,7 +362,7 @@ export default function AdminPage() {
                 ))}
               </div>
               <button className="page-nav-btn" disabled={page === totalPages} onClick={() => setPage(p => p + 1)}>
-                <span>Sonraki</span>
+                <span>Next</span>
                 <ChevronRight size={18} />
               </button>
             </div>
