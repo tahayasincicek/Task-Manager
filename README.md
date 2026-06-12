@@ -4,6 +4,16 @@
 
 This project is a task management (Task Manager) REST API application developed as part of the Software Quality Assurance course. Built using TypeScript, Node.js, and the Express framework, this API allows users to create, update, list, and delete tasks. It provides a fully functional backend service including authentication and authorization mechanisms.
 
+## Screenshots
+
+<div align="center">
+  <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="800"/>
+  <br/><br/>
+  <img src="assets/screenshots/tasks.png" alt="Tasks" width="800"/>
+  <br/><br/>
+  <img src="assets/screenshots/reports.png" alt="Reports" width="800"/>
+</div>
+
 ## Architecture Overview
 
 The application is designed according to layered architecture principles. The presentation layer contains HTTP endpoints defined with Express Routers, while business logic is located in separate service modules under the `services/` directory. This approach significantly facilitates code testability and maintainability.
