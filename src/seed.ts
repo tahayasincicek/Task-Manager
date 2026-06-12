@@ -54,15 +54,15 @@ async function seed() {
   const fmt = (d: Date) => d.toISOString().split('T')[0];
 
   // Tasks
-  const { lastInsertRowid: task1 } = insertTask.run('API endpoint testleri yazilmali', 'Tum API endpointleri icin smoke testler yazilmali', 'todo', 'high', fmt(tomorrow), null, Number(userId), Number(adminId));
-  const { lastInsertRowid: task2 } = insertTask.run('Kullanici arayuzu gelistirme', 'React ile modern bir UI olustur', 'in-progress', 'medium', fmt(nextWeek), null, Number(adminId), Number(userId));
-  const { lastInsertRowid: task3 } = insertTask.run('Veritabani sema tasarimi', 'SQLite tablolari ve iliskiler tamamlandi', 'done', 'high', null, null, null, Number(userId));
-  const { lastInsertRowid: task4 } = insertTask.run('Login sayfasi hata duzeltme', 'Login sayfasinda sifre alani bos birakildiginda hata veriyor', 'todo', 'urgent', fmt(yesterday), null, Number(userId), Number(adminId));
-  const { lastInsertRowid: task5 } = insertTask.run('README dokumantasyonu', 'Proje dokumantasyonunu guncelle', 'in-progress', 'low', fmt(nextWeek), null, null, Number(adminId));
+  const { lastInsertRowid: task1 } = insertTask.run('Write API endpoint tests', 'Smoke tests must be written for all API endpoints', 'todo', 'high', fmt(tomorrow), null, Number(userId), Number(adminId));
+  const { lastInsertRowid: task2 } = insertTask.run('User interface development', 'Create a modern UI using React', 'in-progress', 'medium', fmt(nextWeek), null, Number(adminId), Number(userId));
+  const { lastInsertRowid: task3 } = insertTask.run('Database schema design', 'SQLite tables and relations are completed', 'done', 'high', null, null, null, Number(userId));
+  const { lastInsertRowid: task4 } = insertTask.run('Login page bug fix', 'Throws an error when the password field is left empty on the login page', 'todo', 'urgent', fmt(yesterday), null, Number(userId), Number(adminId));
+  const { lastInsertRowid: task5 } = insertTask.run('README documentation', 'Update project documentation', 'in-progress', 'low', fmt(nextWeek), null, null, Number(adminId));
 
   // Subtask for task2
-  insertTask.run('Header komponenti', 'Navbar tasarimi', 'done', 'medium', null, Number(task2), Number(adminId), Number(userId));
-  insertTask.run('Gorev listesi sayfasi', 'Kanban board gorunumu', 'in-progress', 'medium', null, Number(task2), Number(userId), Number(userId));
+  insertTask.run('Header component', 'Navbar design', 'done', 'medium', null, Number(task2), Number(adminId), Number(userId));
+  insertTask.run('Task list page', 'Kanban board view', 'in-progress', 'medium', null, Number(task2), Number(userId), Number(userId));
 
   // Task-label associations
   insertTaskLabel.run(Number(task1), Number(labelBackend));
@@ -74,13 +74,13 @@ async function seed() {
   insertTaskLabel.run(Number(task5), Number(labelDocs));
 
   // Comments
-  insertComment.run(Number(task1), Number(adminId), 'Bu gorev icin Vitest ve Supertest kullanabiliriz.');
-  insertComment.run(Number(task1), Number(userId), 'Tamam, ben smoke testleri yazayim.');
-  insertComment.run(Number(task4), Number(adminId), 'Bu bug yuksek oncelikli, hemen duzeltilmeli.');
+  insertComment.run(Number(task1), Number(adminId), 'We can use Vitest and Supertest for this task.');
+  insertComment.run(Number(task1), Number(userId), 'Alright, I will write the smoke tests.');
+  insertComment.run(Number(task4), Number(adminId), 'This bug has high priority, it should be fixed immediately.');
 
   // Activity logs
-  insertActivity.run(Number(task1), Number(adminId), 'created', 'Task created: API endpoint testleri yazilmali');
-  insertActivity.run(Number(task2), Number(userId), 'created', 'Task created: Kullanici arayuzu gelistirme');
+  insertActivity.run(Number(task1), Number(adminId), 'created', 'Task created: Write API endpoint tests');
+  insertActivity.run(Number(task2), Number(userId), 'created', 'Task created: User interface development');
   insertActivity.run(Number(task2), Number(userId), 'updated', 'Status: todo -> in-progress');
   insertActivity.run(Number(task3), Number(userId), 'updated', 'Status: in-progress -> done');
 
