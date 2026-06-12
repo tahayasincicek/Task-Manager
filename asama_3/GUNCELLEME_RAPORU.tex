@@ -1,0 +1,485 @@
+%%% Task Manager — Yazılım Kalite Güvencesi
+%%% Aşama 3: Kod Güncelleme — Güncelleme Raporu
+%%% IEEE Conference / IEEEtran formatı
+%%% Overleaf'te "New Project -> Blank Project" -> bu dosyayı yapıştır ve derle.
+%%% Derleyici: pdfLaTeX (Overleaf -> Menu -> Compiler: pdfLaTeX).
+
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% --- Türkçe karakter ve font desteği ----------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{lmodern}
+
+% --- Tablo, listeleme ve dizgi paketleri ------------------------------------
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{caption}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black
+}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+% ----------------------------------------------------------------------------
+\title{Task Manager Uygulaması Üzerinde\\
+Kod Güncelleme Raporu (Aşama 3)%
+\thanks{Yazılım Kalite Güvencesi Dersi Dönem Projesi Aşama~3 Teslimi.}}
+
+\author{%
+\IEEEauthorblockN{Furkan Öztürk}
+\IEEEauthorblockA{\textit{Yazılım Mühendisliği} \\
+\textit{230229083}}
+\and
+\IEEEauthorblockN{Taha Yasin Çiçek}
+\IEEEauthorblockA{\textit{Yazılım Mühendisliği} \\
+\textit{230229088}}
+\and
+\IEEEauthorblockN{Betül Fikriye Turan}
+\IEEEauthorblockA{\textit{Yazılım Mühendisliği} \\
+\textit{220229073}}
+\and
+\IEEEauthorblockN{Elmas Güneş}
+\IEEEauthorblockA{\textit{Yazılım Mühendisliği} \\
+\textit{220229054}}
+}
+
+\maketitle
+
+% ----------------------------------------------------------------------------
+\begin{abstract}
+Bu çalışma, Yazılım Kalite Güvencesi dönem projesinin üçüncü
+aşaması (\emph{Kod Güncelleme}) kapsamında \emph{Task Manager} web
+uygulamasında yapılan kalite iyileştirmelerini sunmaktadır. Aşama~2'de
+\textbf{SonarQube~10.6 Community} ve \textbf{ESLint~8.57} ile elde edilen
+toplam \textbf{124 bulgunun} (41 ESLint + 83 SonarQube) tamamı kod üzerinde
+kapatılmıştır. Yalnızca \textbf{1~adet suppression} (yönerge limiti
+3'tür) HTML5 native drag-and-drop API'sinin gerektirdiği olay dinleyicileri
+için, gerekçesi belgelenerek kullanılmıştır. Sayısal sonuçlar:
+\texttt{bugs}~14$\to$0, \texttt{code\_smells}~69$\to$0,
+\texttt{security\_hotspots}~2$\to$0,
+\texttt{reliability\_rating}~D$\to$A,
+\texttt{sqale\_index}~348~dk$\to$0~dk. Aşama~1'de yazılan 98~test
+(66~birim + 32~smoke) düzeltmeler sonrası tekrar koşturulmuş,
+\textbf{regresyon gözlenmemiştir}. Aşama~4 için Aşama~2 sonunda konulan
+tüm metrik hedefleri Aşama~3 sonunda aşılmıştır.
+\end{abstract}
+
+\begin{IEEEkeywords}
+yazılım kalite güvencesi, kod güncelleme, SonarQube, ESLint, teknik borç,
+refaktör, regresyon testi, TypeScript, React
+\end{IEEEkeywords}
+
+% ----------------------------------------------------------------------------
+\section{Giriş}
+
+Bu rapor, dönem projesinin dört aşamalı planının üçüncü aşamasını
+belgelemektedir~\cite{b1,b2}. Aşama~2 İlk Statik Analiz Raporu'nda
+SonarQube ve ESLint ile tespit edilen 124~bulgu Aşama~3 boyunca koda
+uygulanan düzeltmelerle ele alınmış; istisnalar yönergeye uygun şekilde
+gerekçelendirilmiştir. Düzeltmeler sonrasında ESLint ve SonarQube
+yeniden çalıştırılmış, Aşama~1'de yazılan birim ve smoke testleri
+tekrar koşturularak regresyon olmadığı doğrulanmıştır. Aşama~4'te
+yapılacak son statik analiz, Aşama~3 ile aynı kod tabanı üzerinde fakat
+\texttt{stage2} etiketiyle yeniden üretilecektir.
+
+% ----------------------------------------------------------------------------
+\section{Yöntem ve Çalışma Akışı}
+
+Aşama~2 ile birebir aynı konfigürasyon dosyaları
+(\texttt{.eslintrc.cjs}, \texttt{sonar-project.properties}) kullanılmış,
+sürümler değiştirilmemiştir: ESLint~8.57.0, SonarQube~10.6 Community,
+sonar-scanner~3.1.0, Node.js~22.15.0, Java~21. Çalışma akışı şu
+sıradadır: (i)~bulgu listesi öncelik sırasına göre alınmış, (ii)~her
+bulgu kategorisi için kod üzerinde düzeltme yapılmış, (iii)~her büyük
+düzeltmeden sonra \texttt{npm test} ile regresyon kontrol edilmiştir,
+(iv)~sonunda \texttt{npm run lint:stage2} ve
+\texttt{sonar-scanner} yeniden çalıştırılmış, sonuçlar
+\texttt{reports/stage2/} altında saklanmıştır.
+
+% ----------------------------------------------------------------------------
+\section{Özet Sonuçlar}
+\label{sec:ozet}
+
+Aşama~2 ve Aşama~3 arasındaki sayısal değişim Tablo~\ref{tab:summary}'de
+sunulmuştur.
+
+\begin{table}[htbp]
+\caption{Aşama 2 / Aşama 3 metrik karşılaştırması}
+\label{tab:summary}
+\centering
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Metrik} & \textbf{Aşama 2} & \textbf{Aşama 3} & \textbf{$\Delta$} \\
+\midrule
+ESLint error                      &   15 &   \textbf{0} & $-15$ \\
+ESLint warning                    &   26 &   \textbf{0} & $-26$ \\
+ESLint toplam                     &   41 &   \textbf{0} & $-41$ \\
+SonarQube BUG                     &   14 &   \textbf{0} & $-14$ \\
+SonarQube CODE\_SMELL             &   69 &   \textbf{0} & $-69$ \\
+\texttt{vulnerabilities}          &    0 &   0 & 0 \\
+\texttt{security\_hotspots}       &    2 &   \textbf{0} & $-2$ \\
+SonarQube açık issue              &   83 &   \textbf{0} & $-83$ \\
+\texttt{reliability\_rating}      & D (4.0) & \textbf{A (1.0)} & $\uparrow$ \\
+\texttt{sqale\_rating}            & A & A & korundu \\
+\texttt{security\_rating}         & A & A & korundu \\
+\texttt{sqale\_index}             & 348 dk & \textbf{0 dk} & $-348$ \\
+\texttt{sqale\_debt\_ratio}       & \%0.2 & \textbf{\%0.0} & $-0.2$ \\
+\texttt{duplicated\_lines\_density} & \%1.3 & \%1.0 & $-0.3$ \\
+\texttt{ncloc}                    & 5153 & 5308 & $+155$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Toplam 124~bulgudan 124'ü kapatılmış olup yönergenin izin verdiği üç
+suppression hakkından yalnızca biri kullanılmıştır
+(Bölüm~\ref{sec:suppress}).
+
+% ----------------------------------------------------------------------------
+\section{Çözülen Bulguların Listesi}
+\label{sec:cozumler}
+
+Bu bölüm, kapatılan bulguları kategori bazında sunar. Her kategori için
+\emph{problem özeti}, \emph{yapılan değişiklik} ve \emph{nasıl
+doğrulandığı} (test, manuel kontrol, yeniden tarama) belirtilmiştir.
+
+\subsection{ESLint Bulguları (41 adet)}
+
+\subsubsection{B-E1. \texttt{@typescript-eslint/no-explicit-any} (36 adet)}
+\textbf{Problem özeti:} \texttt{any} tipi kullanıldığı her yerde TypeScript
+tip güvenliğini devre dışı bırakıyor; alan/metot çağrı hatalarını gizliyordu.
+
+\textbf{Dağılım:}
+\begin{itemize}
+\item \texttt{src/services/projectService.ts} -- 19 adet
+\item \texttt{client/src/pages/TasksPage.tsx} -- 11 adet
+\item \texttt{client/src/pages/AdminPage.tsx} -- 5 adet
+\item \texttt{src/services/taskService.ts} -- 3 adet
+\item \texttt{src/routes/tasks.ts} -- 1 adet
+\end{itemize}
+
+\textbf{Yapılan değişiklik:} Domain tiplerinden uygun \texttt{interface},
+\texttt{type-alias} veya \texttt{unknown}+narrowing kullanılarak
+\texttt{any} kaldırıldı. Yeni tipler: \texttt{Id}, \texttt{ProjectMemberRow},
+\texttt{SqliteError}, \texttt{TaskRow}, \texttt{TaskFormData}.
+
+\textbf{Doğrulama:} \texttt{npm run lint:stage2} 0 hata/uyarı; backend ve
+frontend için \texttt{tsc --noEmit} temiz; 98/98 test geçiyor.
+
+\subsubsection{B-E2. \texttt{react/no-unescaped-entities} (2 adet)}
+\textbf{Problem özeti:} JSX içinde literal \texttt{"} karakteri.
+\textbf{Yapılan değişiklik:} \texttt{TasksPage.tsx} arama sonuç başlığında
+\texttt{\&quot;} ile kaçırıldı.
+\textbf{Doğrulama:} ESLint stage2 raporu temiz.
+
+\subsubsection{B-E3. \texttt{@typescript-eslint/no-unused-vars} (2 adet)}
+\textbf{Problem özeti:} \texttt{tests/unit/projectService.test.ts} ve
+\texttt{tests/unit/taskService.test.ts} dosyalarında kullanılmayan import.
+\textbf{Yapılan değişiklik:} Gereksiz importlar kaldırıldı.
+\textbf{Doğrulama:} ESLint stage2 temiz; 66 birim testin tamamı geçmeye
+devam ediyor.
+
+\subsubsection{B-E4. \texttt{react-hooks/exhaustive-deps} (1 adet)}
+\textbf{Problem özeti:} \texttt{TasksPage.tsx} içinde \texttt{useEffect}
+bağımlılık dizisi \texttt{loadTasks} fonksiyonunu kapsamıyordu.
+\textbf{Yapılan değişiklik:} \texttt{loadTasks} \texttt{useCallback}
+ile sarmalandı; \texttt{useEffect} bağımlılık dizisi düzeltildi.
+\textbf{Doğrulama:} ESLint kuralı tetiklenmiyor; tarayıcıda hızlı ekleme
+ve filtre senaryoları manuel olarak doğrulandı.
+
+\subsection{SonarQube Bulguları (83 adet)}
+
+\subsubsection{B-S1. \texttt{S2871} -- CRITICAL BUG -- \texttt{.sort()}
+karşılaştırıcısı eksik}
+\textbf{Konum:} \texttt{src/routes/tasks.ts:130} (eski).
+\textbf{Problem özeti:} JavaScript varsayılanı sayıları string olarak
+sıralıyor; atanan ID'lerin karşılaştırması güvenilmez.
+\texttt{reliability\_rating}'i D'ye çeken tek CRITICAL bulgu.
+\textbf{Yapılan değişiklik:} \texttt{buildAssigneeIdsKey} yardımcı
+fonksiyonunda \texttt{[\dots ids].sort((a,b) => a-b)} sayısal
+karşılaştırıcı verildi.
+\textbf{Doğrulama:} Yeniden tarama: \texttt{bugs=0},
+\texttt{reliability\_rating=A}.
+
+\subsubsection{B-S2. \texttt{S3776} -- CRITICAL CODE\_SMELL -- Cognitive
+Complexity}
+\textbf{Konum:} \texttt{src/routes/tasks.ts:113} (eski) PATCH \texttt{/:id}
+handler. Cognitive complexity~23, eşik~15.
+\textbf{Yapılan değişiklik:} Mantık iki saf yardımcıya bölündü:
+\texttt{buildAssigneeIdsKey} ve \texttt{describePatchChanges}. Handler
+artık 5~satırlık bir akışa sahip, eşik altında.
+\textbf{Doğrulama:} Yeniden tarama: \texttt{S3776} raporda yok.
+Smoke test~3 (\texttt{PATCH /tasks/:id}) ve birim testler yeşil.
+
+\subsubsection{B-S3. \texttt{S6606} -- \texttt{??} yerine \texttt{||} (25 adet)}
+\textbf{Problem özeti:} \texttt{||} operatörü \texttt{0}, \texttt{''} ve
+\texttt{false} gibi geçerli \emph{falsy} değerleri de filtreliyor; ör.\ task
+sayacı \texttt{0} iken yanlışlıkla varsayılan kullanılıyordu.
+\textbf{Yapılan değişiklik:} 25 noktada \texttt{||} $\to$ \texttt{??}.
+Etkilenen dosyalar: \texttt{AdminPage.tsx} (8), \texttt{TasksPage.tsx} (7),
+\texttt{ReportsPage.tsx} (3), \texttt{server.ts} (2),
+\texttt{routes/tasks.ts} (1), \texttt{labelService.ts} (1),
+\texttt{projectService.ts} (1), \texttt{app.ts} (1),
+\texttt{LoginPage.tsx} (1).
+\textbf{Doğrulama:} Yeniden tarama: \texttt{S6606} raporda yok.
+
+\subsubsection{B-S4. \texttt{S6853} -- Form etiketi--kontrol bağlanmamış (15 adet)}
+\textbf{Problem özeti:} \texttt{<label>} öğelerinin \texttt{htmlFor}
+özelliği yoktu; ekran okuyucular etiketi ilgili \texttt{<input>} ile
+eşleştiremezdi.
+\textbf{Yapılan değişiklik:} \texttt{LoginPage.tsx} (2),
+\texttt{RegisterPage.tsx} (3) ve \texttt{TasksPage.tsx} (10)
+formlarındaki tüm etiketlere benzersiz \texttt{id} ve \texttt{htmlFor}
+verildi. Görsel olmayan etiketler için \texttt{visually-hidden} sınıfı
+kullanıldı.
+\textbf{Doğrulama:} Yeniden tarama: \texttt{S6853} raporda yok.
+
+\subsubsection{B-S5. \texttt{S6759} -- \texttt{readonly} eksik prop (4 adet)}
+\textbf{Yapılan değişiklik:} \texttt{StatusBadge}, \texttt{PriorityBadge},
+\texttt{TaskFormProps}, \texttt{TaskDetailProps}, \texttt{LoginPage.Props},
+\texttt{RegisterPage.Props} arabirimlerinde tüm alanlara \texttt{readonly}
+eklendi.
+\textbf{Doğrulama:} Yeniden tarama: \texttt{S6759} raporda yok.
+
+\subsubsection{B-S6. \texttt{S6848} + \texttt{S1082} -- Etkileşimsiz öğe
+üstünde click handler (27 adet)}
+\textbf{Problem özeti:} \texttt{<div>} olarak yazılmış modal arkaplanları,
+sidebar overlay, proje listesi öğeleri ve task kartları klavye/ekran
+okuyucu kullanıcılarına ulaşılabilir değildi.
+\textbf{Yapılan değişiklik:} Erişilebilirlik refaktörü:
+\begin{itemize}
+\item Modal overlay (4 adet): dış \texttt{<div>} salt-stil; arkaplan
+  tıklamasını yakalayan ayrı \texttt{<button class="modal-overlay-backdrop">}
+  (CSS \texttt{position:absolute; inset:0}) eklendi.
+\item Sidebar overlay (mobil): \texttt{<div>} $\to$ \texttt{<button>}.
+\item Proje sidebar öğeleri: dış \texttt{<div>} $\to$ \texttt{<button>};
+  silme butonu kardeş öğe olarak ayrıldı.
+\item Task kartı: \texttt{<div>} $\to$ \texttt{<article>}; içine
+  ``stretched-link'' \texttt{<button class="task-card-stretch">}
+  yerleştirildi (mutlak konum, kart yüzeyini kaplar). Düzenle/sil butonları
+  \texttt{z-index:2} ile kalır.
+\item Modal iç \texttt{<div>}'lerinden gereksiz
+  \texttt{onClick=stopPropagation} kaldırıldı.
+\end{itemize}
+\textbf{Doğrulama:} Yeniden tarama: \texttt{S6848} ve \texttt{S1082}
+raporda yok. Klavye akışı manuel olarak doğrulandı: Tab ile odak,
+Enter ile aktivasyon çalışıyor.
+
+\subsubsection{B-S7. \texttt{S3863} -- Yinelenen \texttt{import} (3 adet)}
+\textbf{Yapılan değişiklik:} \texttt{src/routes/tasks.ts}'de iki
+\texttt{activityService} importu birleştirildi;
+\texttt{TasksPage.tsx}'te \texttt{lucide-react} ve \texttt{'../types'}
+importları tek bloklara toplandı.
+
+\subsubsection{B-S8. \texttt{S3358} -- İç içe ternary (2 adet)}
+\textbf{Yapılan değişiklik:}
+\texttt{src/routes/tasks.ts:31} (eski): \texttt{parseProjectIdFilter()};
+\texttt{TasksPage.tsx:51} (eski): \texttt{statusBadgeClass()} yardımcı
+fonksiyonlarına çıkarıldı.
+
+\subsubsection{B-S9. \texttt{S3696} -- Literal \texttt{throw} (1 adet)}
+\textbf{Konum:} \texttt{client/src/api.ts:11}.
+\textbf{Yapılan değişiklik:} \texttt{class ApiError extends Error}
+tanımlandı; \texttt{throw new ApiError(res.status, body)} kullanıldı.
+
+\subsubsection{B-S10. \texttt{S3626} -- Gereksiz \texttt{return} (1 adet)}
+\textbf{Yapılan değişiklik:} Arrow fonksiyonun sonundaki gereksiz
+\texttt{return;} satırı kaldırıldı.
+
+\subsubsection{B-S11. Security Hotspots: \texttt{S5852} ve \texttt{S5689}}
+\textbf{S5852 -- regex super-linear backtracking}
+(\texttt{src/services/authService.ts:30}): Eski regex tabanlı e-posta
+doğrulayıcı kaldırıldı; yerine RFC 5321 sınırlarını (254/64) uygulayan
+saf \texttt{isValidEmail()} fonksiyonu eklendi (lineer zaman, backtracking
+yok).
+\textbf{S5689 -- framework version disclosure}
+(\texttt{src/app.ts:11}): \texttt{app.disable('x-powered-by')} eklenerek
+\texttt{X-Powered-By} HTTP başlığı kapatıldı.
+\textbf{Doğrulama:} Yeniden tarama: \texttt{security\_hotspots=0}.
+\texttt{authService.test.ts}'in 10 testi yeniden geçti.
+
+% ----------------------------------------------------------------------------
+\section{Regresyon Test Kanıtı}
+\label{sec:regresyon}
+
+Aşama~1'de yazılan testlerin tamamı (66~birim + 32~smoke = \textbf{98 test})
+Aşama~3 düzeltmeleri sonrası tekrar koşturulmuştur. Çıktı,
+\texttt{asama\_3/reports/stage2/regression-tests.log} dosyasında
+saklıdır. Özet sonuç Tablo~\ref{tab:tests}'de sunulmuştur.
+
+\begin{table}[htbp]
+\caption{Regresyon test sonucu (\texttt{npm test})}
+\label{tab:tests}
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Test paketi} & \textbf{Test} & \textbf{Sonuç} \\
+\midrule
+\texttt{authService.test.ts}    & 10 & \checkmark \\
+\texttt{projectService.test.ts} &  7 & \checkmark \\
+\texttt{taskService.test.ts}    & 12 & \checkmark \\
+\texttt{labelService.test.ts}   &  9 & \checkmark \\
+\texttt{commentService.test.ts} &  8 & \checkmark \\
+\texttt{reportService.test.ts}  &  8 & \checkmark \\
+\texttt{api.smoke.test.ts}      & 32 & \checkmark \\
+\midrule
+\textbf{Genel}                  & \textbf{98} & \textbf{98 / 98} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Ham çıktı:
+\begin{small}
+\begin{verbatim}
+Test Files  7 passed (7)
+     Tests  98 passed (98)
+  Duration  1.44s
+\end{verbatim}
+\end{small}
+
+% ----------------------------------------------------------------------------
+\section{Kullanılan Suppression / Ignore}
+\label{sec:suppress}
+
+Yönerge en fazla \textbf{3} suppression'a izin vermektedir;
+\textbf{1~adet} kullanılmıştır.
+
+\subsection{Suppression \#1}
+
+\begin{itemize}
+\item \textbf{Bulgu kimliği / kural adı:} \texttt{typescript:S6847}
+  ``\emph{Non-interactive elements should not be assigned mouse or
+  keyboard event listeners}''.
+\item \textbf{Kapsam:} \texttt{client/src/pages/TasksPage.tsx}.
+\item \textbf{Mekanizma:} \texttt{sonar-project.properties} içinde
+  \texttt{sonar.issue.ignore.multicriteria.s6847dnd}.
+\end{itemize}
+
+\subsubsection{Neden istisna?}
+HTML5 \emph{native} drag-and-drop API'si \emph{drop target}'ta
+\texttt{onDragOver}~+~\texttt{onDrop}, \emph{drag source}'ta
+\texttt{onDragStart} olaylarını doğrudan elementin üstünde gerektirir;
+bu olaylar başka bir interaktif öğeye taşınamaz. SonarQube'un
+\texttt{S6847} kuralı sürükle-bırak olaylarını da ``mouse listener''
+sayıp etkileşimsiz \texttt{<section>} ve \texttt{<article>} öğelerinde
+tetiklemektedir.
+
+\subsubsection{Risk değerlendirmesi}
+\textbf{Düşük.} Erişilebilirlik açısından risk yoktur:
+\begin{itemize}
+\item Klavye/ekran okuyucu kullanıcıları için detayı açma akışı task kart
+  üstüne eklenen \emph{stretched-link} \texttt{<button>}
+  (\texttt{.task-card-stretch}) ile sağlanmaktadır
+  (Tab+Enter çalışıyor).
+\item Durum değiştirmek için modal içindeki ``Durum'' \texttt{<select>}
+  elemanı alternatif yol olarak mevcuttur.
+\item Sürükle-bırak yalnızca fare/dokunmatik için ek kolaylıktır;
+  klavye yolundan vazgeçirilmemiştir.
+\end{itemize}
+
+\subsubsection{Alternatif çözüm neden uygulanmadı?}
+İki olası alternatif değerlendirilmiştir:
+\begin{enumerate}
+\item \emph{Task kartını ve kanban kolonunu \texttt{<button>} yapmak.}
+  HTML standardı \texttt{<button>} içine başka \texttt{<button>}
+  yerleştirmeye izin vermemektedir; oysa task kartının içinde Düzenle/Sil
+  butonları bulunmaktadır. Ayrıca kolonun başlığı, sayaç ve görev listesi
+  içermesi onu \texttt{<button>} olmaktan semantik olarak alıkoyar.
+\item \emph{Native HTML5 \texttt{<dialog>} + dnd-kit / react-dnd
+  kütüphaneye geçmek.} Yeni bağımlılık, yeni öğrenme eğrisi ve mevcut
+  CSS'in baştan yazılması gerekir; üç haftalık Aşama~3 takvimi içinde
+  gerekçeli görülmemiştir. Mevcut native DnD pattern'ı, \emph{stretched-link}
+  butonlar üzerinden zaten erişilebilir alternatif sunmaktadır.
+\end{enumerate}
+
+% ----------------------------------------------------------------------------
+\section{Aşama 4 Hedeflerinin Erken Karşılanması}
+\label{sec:hedef}
+
+Aşama~2 raporunda Aşama~4 için konulmuş hedefler ile Aşama~3 sonu
+sonuçları Tablo~\ref{tab:hedefler}'de karşılaştırılmıştır. Tüm hedefler
+Aşama~3'te erken karşılanmıştır.
+
+\begin{table}[htbp]
+\caption{Aşama 2 hedefleri vs.\ Aşama 3 gerçekleşen}
+\label{tab:hedefler}
+\centering
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+\textbf{Metrik} & \textbf{Aşama 2} & \textbf{Hedef} & \textbf{Aşama 3} \\
+\midrule
+ESLint error             & 15 & 0 & \textbf{0} \\
+ESLint warning           & 26 & $\leq$ 5 & \textbf{0} \\
+SonarQube BUG            & 14 & $\leq$ 2 & \textbf{0} \\
+SonarQube CODE\_SMELL    & 69 & $\leq$ 20 & \textbf{0} \\
+BLOCKER+CRITICAL CODE\_SMELL & 1 & 0 & \textbf{0} \\
+\texttt{duplicated\_lines\_density} & \%1.3 & $\leq$ \%1.0 & \textbf{\%1.0} \\
+\texttt{reliability\_rating} & D & A & \textbf{A} \\
+\texttt{sqale\_rating}   & A & A & A \\
+\texttt{security\_rating} & A & A & A \\
+\texttt{sqale\_index}    & 348 dk & $\leq$ 120 dk & \textbf{0 dk} \\
+\texttt{security\_hotspots} & 2 & 0 & \textbf{0} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ----------------------------------------------------------------------------
+\section{Teslimat Paketi}
+
+Aşağıdaki dosyalar Aşama~3 teslim paketini oluşturur:
+
+\begin{itemize}
+\item \texttt{asama\_3/GUNCELLEME\_RAPORU.md} -- Markdown sürümü.
+\item \texttt{asama\_3/GUNCELLEME\_RAPORU.tex} -- bu LaTeX kaynağı.
+\item \texttt{asama\_3/reports/stage2/eslint.json} -- ESLint çıktısı
+  (0~bulgu).
+\item \texttt{asama\_3/reports/stage2/sonarqube-issues.json} -- SonarQube
+  çıktısı (0 OPEN issue).
+\item \texttt{asama\_3/reports/stage2/sonarqube-measures.json} --
+  13~SonarQube metriği.
+\item \texttt{asama\_3/reports/stage2/regression-tests.log} -- 98/98
+  test çıktısı.
+\item Düzeltilmiş kod tabanı -- \texttt{src/}, \texttt{client/src/},
+  \texttt{tests/} ve \texttt{sonar-project.properties}.
+\end{itemize}
+
+% ----------------------------------------------------------------------------
+\section{Sonuç}
+
+Aşama~2 raporundaki 124 bulgunun tamamı kod üzerinde kapatılmış;
+yalnızca HTML5 native drag-and-drop için 1~suppression kullanılmıştır.
+\texttt{reliability\_rating} D'den A'ya yükselmiş, teknik borç (\texttt{sqale\_index})
+348~dakikadan 0'a inmiş, güvenlik incelemesi gerektiren noktalar gerçek
+düzeltmelerle (regex backtracking ve framework version disclosure)
+ortadan kaldırılmıştır. 98~birim ve smoke testinin tamamı Aşama~3
+düzeltmeleri sonrası başarıyla geçmektedir; regresyon yoktur. Aşama~4'te
+yapılacak son statik analiz, aynı kod tabanı üzerinde aynı komut zinciri
+ile (\texttt{npm run analyze:stage2}) tekrarlanacaktır.
+
+% ----------------------------------------------------------------------------
+\begin{thebibliography}{00}
+\bibitem{b1} SonarSource, ``SonarQube Documentation,''
+  \url{https://docs.sonarsource.com/sonarqube/}, Erişim: 2026-05-07.
+\bibitem{b2} ESLint, ``ESLint -- Pluggable JavaScript Linter,''
+  \url{https://eslint.org/}, Erişim: 2026-05-07.
+\bibitem{b3} G. A. Campbell, ``Cognitive Complexity: A New Way of
+  Measuring Understandability,'' SonarSource S.A., Teknik Rapor, 2018.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,469 @@
+%%% Task Manager — Yazılım Kalite Güvencesi
+%%% Aşama 2: İlk Statik Analiz Raporu
+%%% IEEE Conference / IEEEtran formatı
+%%% Overleaf'te "New Project -> Blank Project" -> bu dosyayı yapıştır ve derle.
+%%% Derleyici: pdfLaTeX (Overleaf -> Menu -> Compiler: pdfLaTeX).
+
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% --- Türkçe karakter ve font desteği ----------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{lmodern}
+
+% --- Tablo, listeleme ve dizgi paketleri ------------------------------------
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{caption}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black
+}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+% ----------------------------------------------------------------------------
+\title{Task Manager Uygulaması Üzerinde\\
+İlk Statik Analiz Raporu (Aşama 2)%
+\thanks{Yazılım Kalite Güvencesi Dersi Dönem Projesi Aşama~2 Teslimi.}}
+
+\author{\IEEEauthorblockN{Furkan Öztürk}
+\IEEEauthorblockA{\textit{Yazılım Mühendisliği Bölümü} \\
+\textit{Öğrenci No: 230229083}\\
+2026-04-22}}
+
+\maketitle
+
+% ----------------------------------------------------------------------------
+\begin{abstract}
+Bu çalışma, Yazılım Kalite Güvencesi dönem projesinin ikinci
+aşaması kapsamında geliştirilen \emph{Task Manager} web uygulamasının ilk
+statik analizini sunmaktadır. Uygulama; \texttt{Node.js}, \texttt{Express}
+tabanlı bir REST API sunucusu ve \texttt{React/TypeScript} tabanlı bir
+istemci uygulamasından oluşmaktadır. Analiz, endüstride yaygın kullanılan
+\textbf{SonarQube~10.6 Community} ve \textbf{ESLint~8.57} araçları ile,
+yalnızca proje kaynak kodu üzerinde gerçekleştirilmiştir. Sonuç olarak
+5153~NCLOC üzerinden SonarQube~83 bulgu (14~BUG ve 69~CODE\_SMELL) ve
+ESLint~41 bulgu raporlamıştır. Güvenlik tarafı stabil
+(\texttt{vulnerabilities}=0, \texttt{security\_rating}=A) iken
+güvenilirlik derecelendirmesi \emph{D} seviyesindedir. Aşama~3 kod
+güncelleme sürecinde önceliklendirmek üzere somut aksiyon planı
+oluşturulmuştur.
+\end{abstract}
+
+\begin{IEEEkeywords}
+yazılım kalite güvencesi, statik analiz, SonarQube, ESLint, teknik borç,
+TypeScript, React
+\end{IEEEkeywords}
+
+% ----------------------------------------------------------------------------
+\section{Giriş}
+
+Yazılım kalite güvencesinin temel pratiklerinden biri, kod tabanı üzerinde
+periyodik olarak statik analiz araçlarını çalıştırarak ölçülebilir
+metrikler elde etmek ve bu metrikler üzerinden iyileştirme döngülerini
+yönetmektir~\cite{b1,b2}. Bu dönem projesi dört aşamalı bir
+süreç olarak planlanmış olup bu rapor \emph{Aşama~2 — İlk Statik Analiz}
+çıktısıdır. Aşama~2'de elde edilen taban çizgisi (\emph{baseline}),
+Aşama~3'te yapılacak kod güncellemelerinin ardından Aşama~4'te aynı
+komut ve ayarlar ile tekrarlanacak ve iki ölçüm karşılaştırılacaktır.
+
+\section{Kullanılan Araçlar ve Konfigürasyon}
+
+\subsection{Çalışma Ortamı}
+
+\begin{table}[htbp]
+\caption{Çalışma ortamı bileşenleri}
+\label{tab:env}
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Bileşen} & \textbf{Versiyon} \\
+\midrule
+İşletim sistemi & Windows 11 Pro \\
+Node.js & 22.15.0 \\
+npm & 10.9.2 \\
+Java (sonar-scanner için) & Eclipse Adoptium JDK 21.0.8 \\
+Docker Engine & 28.3.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{ESLint Konfigürasyonu}
+
+ESLint~8.57.0 sürümü, TypeScript ve React için resmi eklentilerle
+kullanılmıştır. Kullanılan kural seti Tablo~\ref{tab:eslint-rules}
+ve Tablo~\ref{tab:eslint-deps}'de özetlenmiştir.
+
+\begin{table}[htbp]
+\caption{ESLint bağımlılıkları}
+\label{tab:eslint-deps}
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Paket} & \textbf{Versiyon} \\
+\midrule
+\texttt{eslint} & 8.57.0 \\
+\texttt{@typescript-eslint/parser} & 7.18.0 \\
+\texttt{@typescript-eslint/eslint-plugin} & 7.18.0 \\
+\texttt{eslint-plugin-react} & 7.35.0 \\
+\texttt{eslint-plugin-react-hooks} & 4.6.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Kullanılan kural setleri (extends)}
+\label{tab:eslint-rules}
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Kural Seti} & \textbf{Kapsam} \\
+\midrule
+\texttt{eslint:recommended} & tüm kod tabanı \\
+\texttt{plugin:@typescript-eslint/recommended} & tüm kod tabanı \\
+\texttt{plugin:react/recommended} & yalnızca \texttt{client/src/} \\
+\texttt{plugin:react-hooks/recommended} & yalnızca \texttt{client/src/} \\
+\texttt{plugin:react/jsx-runtime} & yalnızca \texttt{client/src/} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ek olarak \texttt{no-var}=\textit{error},
+\texttt{prefer-const}=\textit{warn},
+\texttt{eqeqeq}=\textit{smart/warn},
+\texttt{@typescript-eslint/no-unused-vars}=\textit{warn}
+(\texttt{\_} ön ekli olanlar hariç) ve
+\texttt{@typescript-eslint/no-explicit-any}=\textit{warn} olarak
+tanımlanmıştır. Test dosyalarında \texttt{no-explicit-any} kuralı
+bilinçli olarak devre dışı bırakılmıştır.
+
+\textbf{Kapsam:} \texttt{src/}, \texttt{client/src/}, \texttt{tests/}
+(\texttt{.ts}, \texttt{.tsx} uzantıları). \texttt{node\_modules/},
+\texttt{dist/}, \texttt{build/}, \texttt{coverage/}, \texttt{client/dist/},
+\texttt{data/}, \texttt{reports/} ve config dosyaları hariç tutulmuştur.
+
+\textbf{Komut:}
+\begin{small}
+\begin{verbatim}
+npm run lint:stage1
+# eslint --ext .ts,.tsx --format json \
+#   --output-file reports/stage1/eslint.json \
+#   src client/src tests
+\end{verbatim}
+\end{small}
+
+\subsection{SonarQube Konfigürasyonu}
+
+SonarQube~10.6 Community sürümü, yerel Docker konteynerinde
+(\texttt{sonarqube:10.6-community}) çalıştırılmıştır. Tarayıcı olarak
+\texttt{sonar-scanner~3.1.0} (npm paketi) ve Java~21 kullanılmıştır.
+Kalite profili olarak SonarQube'un yerleşik \textbf{Sonar way} profili
+(TypeScript/JavaScript) seçilmiştir.
+
+\texttt{sonar-project.properties} dosyasındaki temel ayarlar:
+\begin{itemize}
+\item \texttt{sonar.projectKey = task-manager}
+\item \texttt{sonar.sources = src,client/src}
+\item \texttt{sonar.tests = tests}
+\item \texttt{sonar.exclusions = **/node\_modules/**,\
+  **/dist/**,**/build/**,**/coverage/**,\
+  reports/**,data/**,client/dist/**}
+\item \texttt{sonar.typescript.tsconfigPaths =\
+  tsconfig.json,client/tsconfig.json}
+\end{itemize}
+
+Yönerge gereği BUG ve CODE\_SMELL issue tipleri; BLOCKER, CRITICAL,
+MAJOR, MINOR, INFO severity seviyeleri ve on üç adet metrik
+raporlanmıştır (bkz. Bölüm~\ref{sec:bulgular}).
+
+Raporlar SonarQube Web API'si aracılığıyla JSON formatında çekilmiştir:
+\texttt{/api/issues/search} ile issue listesi ve
+\texttt{/api/measures/component} ile metrikler alınmıştır. Bu işlem
+projenin \texttt{scripts/fetch-sonar-reports.mjs} script'i ile
+otomatikleştirilmiştir.
+
+% ----------------------------------------------------------------------------
+\section{Bulgular}
+\label{sec:bulgular}
+
+\subsection{ESLint Bulguları}
+
+Toplam 7 dosyada 15 hata (\textit{error}) ve 26 uyarı (\textit{warning}),
+yani 41~bulgu raporlanmıştır. Bulguların kural bazında dağılımı
+Tablo~\ref{tab:eslint-rules-hit}'de, dosya bazında dağılımı
+Tablo~\ref{tab:eslint-files}'de sunulmuştur.
+
+\begin{table}[htbp]
+\caption{ESLint — kural bazında bulgu dağılımı}
+\label{tab:eslint-rules-hit}
+\centering
+\begin{tabular}{@{}lrl@{}}
+\toprule
+\textbf{Kural} & \textbf{Adet} & \textbf{Seviye} \\
+\midrule
+\texttt{@typescript-eslint/no-explicit-any} & 36 & error/warn \\
+\texttt{react/no-unescaped-entities}        &  2 & error \\
+\texttt{@typescript-eslint/no-unused-vars}  &  2 & warn \\
+\texttt{react-hooks/exhaustive-deps}        &  1 & warn \\
+\midrule
+\textbf{Toplam} & \textbf{41} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{ESLint — dosya bazında bulgu dağılımı}
+\label{tab:eslint-files}
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Dosya} & \textbf{Hata} & \textbf{Uyarı} \\
+\midrule
+\texttt{client/src/pages/AdminPage.tsx}        &  5 &  0 \\
+\texttt{client/src/pages/TasksPage.tsx}        & 10 &  1 \\
+\texttt{src/routes/tasks.ts}                   &  0 &  1 \\
+\texttt{src/services/projectService.ts}        &  0 & 19 \\
+\texttt{src/services/taskService.ts}           &  0 &  3 \\
+\texttt{tests/unit/projectService.test.ts}     &  0 &  1 \\
+\texttt{tests/unit/taskService.test.ts}        &  0 &  1 \\
+\midrule
+\textbf{Toplam} & \textbf{15} & \textbf{26} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{SonarQube Bulguları}
+
+SonarQube tarafında toplam 83 issue (14 BUG ve 69 CODE\_SMELL)
+raporlanmıştır. Ölçülen metrikler Tablo~\ref{tab:sonar-measures}'de,
+severity dağılımı Tablo~\ref{tab:sonar-severity}'de, en çok tetiklenen
+kurallar Tablo~\ref{tab:sonar-rules}'de ve en çok bulgu üreten dosyalar
+Tablo~\ref{tab:sonar-files}'de sunulmuştur.
+
+\begin{table}[htbp]
+\caption{SonarQube metrikleri}
+\label{tab:sonar-measures}
+\centering
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Metrik} & \textbf{Değer} \\
+\midrule
+\texttt{ncloc}                    & 5153 \\
+\texttt{complexity}               & 776 \\
+\texttt{cognitive\_complexity}    & 2 \\
+\texttt{bugs}                     & 14 \\
+\texttt{code\_smells}             & 69 \\
+\texttt{vulnerabilities}          & 0 \\
+\texttt{security\_hotspots}       & 2 \\
+\texttt{duplicated\_lines\_density} & \%1.3 \\
+\texttt{reliability\_rating}      & 4.0 (D) \\
+\texttt{sqale\_rating}            & 1.0 (A) \\
+\texttt{security\_rating}         & 1.0 (A) \\
+\texttt{sqale\_index}             & 348 dk \\
+\texttt{sqale\_debt\_ratio}       & \%0.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{SonarQube severity dağılımı}
+\label{tab:sonar-severity}
+\centering
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+\textbf{Tip} & \textbf{BLOCKER} & \textbf{CRITICAL} & \textbf{MAJOR} & \textbf{MINOR} & \textbf{INFO} & \textbf{Top.} \\
+\midrule
+BUG         & 0 & 1 & 0 & 13 & 0 & 14 \\
+CODE\_SMELL & 0 & 1 & 9 & 59 & 0 & 69 \\
+\midrule
+\textbf{Genel} & 0 & 2 & 9 & 72 & 0 & \textbf{83} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{En çok tetiklenen SonarQube kuralları (Top~10)}
+\label{tab:sonar-rules}
+\centering
+\begin{tabular}{@{}rll@{}}
+\toprule
+\textbf{Adet} & \textbf{Kural} & \textbf{Kısa anlamı} \\
+\midrule
+25 & \texttt{typescript:S6606} & \texttt{??} yerine \texttt{||} kullanımı \\
+15 & \texttt{typescript:S6853} & Etiket / form kontrol bağlaması \\
+14 & \texttt{typescript:S6848} & Non-interactive element handler'ı \\
+13 & \texttt{typescript:S1082} & DOM event handler tip uyumsuzluğu \\
+ 6 & \texttt{typescript:S6759} & Eksik \texttt{readonly} React prop'u \\
+ 4 & \texttt{typescript:S3863} & Yinelenen \texttt{import} \\
+ 2 & \texttt{typescript:S3358} & İç içe ternary ifade \\
+ 1 & \texttt{typescript:S2871} & \texttt{sort()} için karşılaştırıcı eksik \\
+ 1 & \texttt{typescript:S3696} & Literal değer \texttt{throw} edilmiş \\
+ 1 & \texttt{typescript:S3626} & Gereksiz \texttt{return/break/continue} \\
+ 1 & \texttt{typescript:S3776} & Cognitive complexity eşiği aşımı \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{SonarQube — dosya bazında bulgu dağılımı}
+\label{tab:sonar-files}
+\centering
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Dosya} & \textbf{Issue} \\
+\midrule
+\texttt{client/src/pages/TasksPage.tsx}     & 51 \\
+\texttt{client/src/pages/AdminPage.tsx}     &  8 \\
+\texttt{src/routes/tasks.ts}                &  6 \\
+\texttt{client/src/pages/RegisterPage.tsx}  &  5 \\
+\texttt{client/src/pages/LoginPage.tsx}     &  4 \\
+\texttt{client/src/pages/ReportsPage.tsx}   &  3 \\
+\texttt{src/server.ts}                      &  2 \\
+Diğer dosyalar (4 adet) & 4 \\
+\midrule
+\textbf{Toplam} & \textbf{83} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Kritik Bulgular}
+İki adet CRITICAL severity bulgu tespit edilmiştir ve her ikisi de
+\texttt{src/routes/tasks.ts} dosyasındadır:
+
+\begin{itemize}
+\item \texttt{src/routes/tasks.ts:130} (BUG, \texttt{S2871}):
+  \texttt{.sort()} çağrısına karşılaştırıcı fonksiyon verilmemiştir;
+  elementler alfabetik sıralanacak, sayısal alanlarda yanlış sonuç
+  üretecektir.
+\item \texttt{src/routes/tasks.ts:113} (CODE\_SMELL, \texttt{S3776}):
+  Bir fonksiyonun cognitive complexity değeri 23 olup izin verilen
+  eşik 15'tir.
+\end{itemize}
+
+\subsubsection{Öne çıkan gözlemler}
+\begin{itemize}
+\item \texttt{reliability\_rating=D} derecelendirmesinin başlıca sebebi,
+  BUG kategorisindeki 1~CRITICAL bulgudur. Bu bulgunun kapatılması
+  Aşama~3'ün en öncelikli hedefidir.
+\item \texttt{sqale\_rating=A} ve \texttt{sqale\_debt\_ratio=\%0.2}
+  değerleri teknik borcun kontrol altında olduğunu göstermektedir
+  (toplam 348~dk tahmini borç).
+\item \texttt{duplicated\_lines\_density=\%1.3} değeri makuldür; yine de
+  Aşama~3'te düşürülmesi hedeflenmektedir.
+\item Güvenlik tarafı stabildir: \texttt{vulnerabilities=0},
+  \texttt{security\_rating=A}, yalnızca 2 adet güvenlik incelemesi
+  gerektiren nokta mevcuttur.
+\item \texttt{client/src/pages/TasksPage.tsx} dosyası tek başına
+  tüm SonarQube bulgularının yaklaşık \%61'ini (51/83) üretmektedir.
+\end{itemize}
+
+% ----------------------------------------------------------------------------
+\section{Planlanan Aksiyonlar}
+
+Aşama~3 (Kod Güncelleme) sürecinde aşağıdaki aksiyonlar önceliklendirme
+sırasına göre uygulanacaktır.
+
+\subsection{ESLint Kaynaklı Aksiyonlar}
+\begin{enumerate}
+\item \textbf{\texttt{@typescript-eslint/no-explicit-any} (36 adet):}
+  \texttt{any} yerine proje içindeki mevcut tipler, generic'ler veya
+  \texttt{unknown}~+~daraltma (\emph{narrowing}) kullanılacaktır.
+\item \textbf{\texttt{react/no-unescaped-entities} (2 adet):}
+  JSX içindeki \texttt{'} karakterleri \texttt{\&apos;} veya string
+  literali olarak kaçırılacaktır.
+\item \textbf{\texttt{react-hooks/exhaustive-deps} (1 adet):}
+  \texttt{useEffect} bağımlılık dizisi doğru doldurulacak veya
+  \texttt{useCallback} ile stabil referans üretilecektir.
+\item \textbf{\texttt{@typescript-eslint/no-unused-vars} (2 adet):}
+  Kullanılmayan sembol/importlar temizlenecektir.
+\end{enumerate}
+
+\subsection{SonarQube Kaynaklı Aksiyonlar}
+\begin{enumerate}
+\item \textbf{CRITICAL BUG} \texttt{src/routes/tasks.ts:130}:
+  \texttt{sort()} çağrısına karşılaştırıcı fonksiyon eklenecektir;
+  \texttt{reliability\_rating} D'den A'ya çıkartılmasının önündeki en
+  büyük engel budur.
+\item \textbf{CRITICAL CODE\_SMELL} \texttt{src/routes/tasks.ts:113}:
+  Fonksiyon yardımcı fonksiyonlara bölünerek cognitive complexity
+  değeri $\leq 15$ seviyesine düşürülecektir.
+\item \textbf{Yoğunluk merkezli refaktör:}
+  \texttt{client/src/pages/TasksPage.tsx} küçük bileşenlere bölünecektir.
+\item \textbf{Mekanik kural bazlı temizlik:}
+  \texttt{S6606} (25), \texttt{S6853} (15), \texttt{S6848} (14),
+  \texttt{S1082} (13), \texttt{S6759} (6), \texttt{S3863} (4) kurallarına
+  karşılık gelen değişiklikler toplu olarak uygulanacaktır.
+\item \textbf{\texttt{security\_hotspots=2}:} SonarQube UI üzerinden
+  inceleme yapılıp \emph{Reviewed} statüsüne geçirilecektir.
+\end{enumerate}
+
+\subsection{Ölçüm Hedefleri}
+
+Aşama~4 sonunda, Aşama~2'ye kıyasla hedeflenen iyileşmeler
+Tablo~\ref{tab:targets}'de verilmiştir.
+
+\begin{table}[htbp]
+\caption{Aşama~4 ölçüm hedefleri}
+\label{tab:targets}
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Metrik} & \textbf{Aşama 2} & \textbf{Aşama 4 Hedef} \\
+\midrule
+ESLint error  & 15 & 0 \\
+ESLint warning & 26 & $\leq$ 5 \\
+SonarQube BUG & 14 & $\leq$ 2 (CRITICAL=0) \\
+SonarQube CODE\_SMELL & 69 & $\leq$ 20 \\
+CODE\_SMELL (BLOCKER+CRITICAL) & 1 & 0 \\
+\texttt{duplicated\_lines\_density} & \%1.3 & $\leq$ \%1.0 \\
+\texttt{reliability\_rating} & D (4.0) & A (1.0) \\
+\texttt{sqale\_rating} & A (1.0) & A (korunur) \\
+\texttt{security\_rating} & A (1.0) & A (korunur) \\
+\texttt{sqale\_index} & 348 dk & $\leq$ 120 dk \\
+\texttt{security\_hotspots} & 2 & 0 (reviewed) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ----------------------------------------------------------------------------
+\section{Sonuç}
+
+Bu rapor, Task Manager uygulamasının Aşama~2 kapsamındaki ilk statik
+analiz sonuçlarını sunmuştur. SonarQube ve ESLint çıktıları yönergede
+istenen tüm metrik, issue tipi ve severity seviyeleri bakımından tam
+olarak raporlanmıştır. Taban çizgisi metrikleri toplam 83~SonarQube ve
+41~ESLint bulgusu, \%61'i tek bir dosyada yoğunlaşan bir dağılım ve D
+seviyesinde bir \texttt{reliability\_rating} ortaya koymaktadır. Bu
+bulgular Aşama~3 kod güncelleme aşamasının önceliklerini netleştirmekte
+ve Aşama~4'teki karşılaştırmalı son analizin dayanacağı ölçüm setini
+oluşturmaktadır. Tutarlı bir karşılaştırma sağlamak için Aşama~4,
+aynı konfigürasyon dosyaları ve aynı \texttt{npm} komutlarıyla
+(\texttt{analyze:stage2}) yürütülecektir.
+
+% ----------------------------------------------------------------------------
+\begin{thebibliography}{00}
+\bibitem{b1} SonarSource, ``SonarQube Documentation,''
+  \url{https://docs.sonarsource.com/sonarqube/}, Erişim: 2026-04-22.
+\bibitem{b2} ESLint, ``ESLint — Pluggable JavaScript Linter,''
+  \url{https://eslint.org/}, Erişim: 2026-04-22.
+\bibitem{b3} G. A. Campbell, ``Cognitive Complexity: A New Way of
+  Measuring Understandability,'' SonarSource S.A., Teknik Rapor, 2018.
+\end{thebibliography}
+
+\end{document}

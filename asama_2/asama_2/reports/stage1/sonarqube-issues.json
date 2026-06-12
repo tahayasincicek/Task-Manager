@@ -1,0 +1,3807 @@
+﻿{
+  "generatedAt": "2026-04-22T20:12:28.145Z",
+  "host": "http://localhost:9000",
+  "projectKey": "task-manager",
+  "stage": "stage1",
+  "total": 83,
+  "severityBreakdown": {
+    "BUG": {
+      "MINOR": 13,
+      "CRITICAL": 1
+    },
+    "CODE_SMELL": {
+      "MAJOR": 9,
+      "MINOR": 59,
+      "CRITICAL": 1
+    }
+  },
+  "issues": [
+    {
+      "key": "b6bdf6eb-690f-43be-b8c0-83f96671e96c",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 229,
+      "hash": "8fd133b116d13a5951eae512badf59b9",
+      "textRange": {
+        "startLine": 229,
+        "endLine": 229,
+        "startOffset": 4,
+        "endOffset": 53
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "7b62d7c6-e4a6-4525-b015-0f178dc46572",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 230,
+      "hash": "be341d12feed83d99dc11c579af6cf23",
+      "textRange": {
+        "startLine": 230,
+        "endLine": 230,
+        "startOffset": 6,
+        "endOffset": 77
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "9406233d-6a17-42fb-bbdb-c967e6143efd",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 618,
+      "hash": "ffeeaafc953e42715a20c6faa7e08b0c",
+      "textRange": {
+        "startLine": 618,
+        "endLine": 618,
+        "startOffset": 22,
+        "endOffset": 95
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "d589fa6c-846c-46f9-a925-2ec48a5d7cb8",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 629,
+      "hash": "d90c26198ff23a5c54f81269ceed5c01",
+      "textRange": {
+        "startLine": 629,
+        "endLine": 632,
+        "startOffset": 10,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "0843ed4b-6641-406b-bd02-a444c7fb3190",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 637,
+      "hash": "d90c26198ff23a5c54f81269ceed5c01",
+      "textRange": {
+        "startLine": 637,
+        "endLine": 641,
+        "startOffset": 12,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "ff0d705f-17db-4b0c-b2e1-3529ba10bebc",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 860,
+      "hash": "d90c26198ff23a5c54f81269ceed5c01",
+      "textRange": {
+        "startLine": 860,
+        "endLine": 868,
+        "startOffset": 22,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "ba0cfce9-d0b8-4a0c-bcc8-165f8a79c7ca",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 901,
+      "hash": "49944a8f68dcb24f8e4499ad613a6a64",
+      "textRange": {
+        "startLine": 901,
+        "endLine": 901,
+        "startOffset": 26,
+        "endOffset": 99
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "2a32bcd1-c53f-4102-ada8-5a6f0dffb964",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 928,
+      "hash": "e2a13aa5cd52ed8ea5880dcdb03507c9",
+      "textRange": {
+        "startLine": 928,
+        "endLine": 928,
+        "startOffset": 8,
+        "endOffset": 100
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "e69fa041-2d4d-4932-9faa-020474ea5f8b",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 929,
+      "hash": "50b61aeded81d2dce2af26ccfa967bf8",
+      "textRange": {
+        "startLine": 929,
+        "endLine": 929,
+        "startOffset": 10,
+        "endOffset": 68
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "95eacf01-ea08-49f7-9364-f75309f40d7a",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 953,
+      "hash": "9aa5bf38751c0fc48aa78c1be21d8d84",
+      "textRange": {
+        "startLine": 953,
+        "endLine": 953,
+        "startOffset": 8,
+        "endOffset": 88
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "d9b98f2f-9a0c-4de2-8773-3c9e45f57f0f",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 954,
+      "hash": "b4de02d88b392981bb45f1aa63fbbbce",
+      "textRange": {
+        "startLine": 954,
+        "endLine": 954,
+        "startOffset": 10,
+        "endOffset": 98
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "2b1737fb-204b-4168-8d57-9a1175c2211f",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 999,
+      "hash": "7ce60f0a9a0dc5e5574f3546b073db7f",
+      "textRange": {
+        "startLine": 999,
+        "endLine": 999,
+        "startOffset": 8,
+        "endOffset": 82
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "3a0afd87-398e-4600-aeea-84a78d7559cd",
+      "rule": "typescript:S1082",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 1000,
+      "hash": "b4de02d88b392981bb45f1aa63fbbbce",
+      "textRange": {
+        "startLine": 1000,
+        "endLine": 1000,
+        "startOffset": 10,
+        "endOffset": 98
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Visible, non-interactive elements with click handlers must have at least one keyboard listener.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "4476f253-9953-48b9-a72c-78196949d641",
+      "rule": "typescript:S2871",
+      "severity": "CRITICAL",
+      "component": "task-manager:src/routes/tasks.ts",
+      "project": "task-manager",
+      "line": 130,
+      "hash": "b7b94af06a058b0bf11be99b7bedff28",
+      "textRange": {
+        "startLine": 130,
+        "endLine": 130,
+        "startOffset": 50,
+        "endOffset": 54
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Provide a compare function to avoid sorting elements alphabetically.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "bad-practice"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "74c6c4c1-9cb9-463f-965b-6aaa7528d264",
+      "rule": "typescript:S3696",
+      "severity": "MAJOR",
+      "component": "task-manager:client/src/api.ts",
+      "project": "task-manager",
+      "line": 11,
+      "hash": "be877e7c91a8a63aec24c96a3aa180f2",
+      "textRange": {
+        "startLine": 11,
+        "endLine": 11,
+        "startOffset": 4,
+        "endOffset": 39
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Expected an error object to be thrown.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "",
+      "tags": [
+        "error-handling",
+        "api-design",
+        "type-dependent"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "65e5da9b-73d4-4edc-a733-8cae4360cfaf",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/AdminPage.tsx",
+      "project": "task-manager",
+      "line": 71,
+      "hash": "9d24926b02da2ff723afd130281d58fd",
+      "textRange": {
+        "startLine": 71,
+        "endLine": 71,
+        "startOffset": 62,
+        "endOffset": 64
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "337ff8a2-fe03-484e-9c7f-63be92674a97",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/AdminPage.tsx",
+      "project": "task-manager",
+      "line": 73,
+      "hash": "c9c4d8ee0808f1ce0cf6eeb806883de3",
+      "textRange": {
+        "startLine": 73,
+        "endLine": 73,
+        "startOffset": 69,
+        "endOffset": 71
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "bbc19993-1495-41cf-b1fa-15259b575d33",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/AdminPage.tsx",
+      "project": "task-manager",
+      "line": 78,
+      "hash": "2e2eaabfbc68aed9aee0cb5af487ce61",
+      "textRange": {
+        "startLine": 78,
+        "endLine": 78,
+        "startOffset": 38,
+        "endOffset": 40
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "3e21b776-0d6a-4c98-a6c5-562916f7ecea",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/AdminPage.tsx",
+      "project": "task-manager",
+      "line": 166,
+      "hash": "8ddff9a06a1190f46fa9b4583905ae4d",
+      "textRange": {
+        "startLine": 166,
+        "endLine": 166,
+        "startOffset": 66,
+        "endOffset": 68
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "ab5641f2-68d9-441b-bf5e-79468d70e0a2",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/AdminPage.tsx",
+      "project": "task-manager",
+      "line": 175,
+      "hash": "c3d18caff3ad0206ce5b8fc34a6e1531",
+      "textRange": {
+        "startLine": 175,
+        "endLine": 175,
+        "startOffset": 66,
+        "endOffset": 68
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "a427e90b-6b83-47a4-8d55-6c678c308891",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/AdminPage.tsx",
+      "project": "task-manager",
+      "line": 193,
+      "hash": "ac9634492ff30b62dd35697009ebc7f5",
+      "textRange": {
+        "startLine": 193,
+        "endLine": 193,
+        "startOffset": 78,
+        "endOffset": 80
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "fbc2e25b-5857-46ae-8abf-2e942ef40a51",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/AdminPage.tsx",
+      "project": "task-manager",
+      "line": 203,
+      "hash": "2078ffe50b20ba625a15145e2e291ef0",
+      "textRange": {
+        "startLine": 203,
+        "endLine": 203,
+        "startOffset": 51,
+        "endOffset": 53
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "f0564e78-25ba-401e-8f30-025f47648813",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/AdminPage.tsx",
+      "project": "task-manager",
+      "line": 207,
+      "hash": "50e06d3bf836925ff8e154b62c244c5a",
+      "textRange": {
+        "startLine": 207,
+        "endLine": 207,
+        "startOffset": 52,
+        "endOffset": 54
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "e12772cb-dcbe-49bd-aae6-a27a73ed188c",
+      "rule": "typescript:S6759",
+      "severity": "MAJOR",
+      "component": "task-manager:client/src/pages/LoginPage.tsx",
+      "project": "task-manager",
+      "line": 11,
+      "hash": "2b0cb822aa1d5c05f8ed3217b975c766",
+      "textRange": {
+        "startLine": 11,
+        "endLine": 11,
+        "startOffset": 34,
+        "endOffset": 52
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Mark the props of the component as read-only.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "86f4fef8-5042-4bef-b594-5fa56479e35d",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/LoginPage.tsx",
+      "project": "task-manager",
+      "line": 27,
+      "hash": "14906e9fb870e8b76a85aa21078c62dd",
+      "textRange": {
+        "startLine": 27,
+        "endLine": 27,
+        "startOffset": 29,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "b21c34b5-43f1-4fc2-a722-9b86eb02424a",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/LoginPage.tsx",
+      "project": "task-manager",
+      "line": 46,
+      "hash": "2e9d8d8f55616f9e65b4faf5849d10f7",
+      "textRange": {
+        "startLine": 46,
+        "endLine": 46,
+        "startOffset": 13,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "a465f3bc-0d92-4727-b3f5-3222ae4f89c9",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/LoginPage.tsx",
+      "project": "task-manager",
+      "line": 60,
+      "hash": "140f785c7af4a3177b3d748d1c83bb07",
+      "textRange": {
+        "startLine": 60,
+        "endLine": 60,
+        "startOffset": 13,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "341f5b1d-43ea-472a-bf7c-7b31226e79f6",
+      "rule": "typescript:S6759",
+      "severity": "MAJOR",
+      "component": "task-manager:client/src/pages/RegisterPage.tsx",
+      "project": "task-manager",
+      "line": 11,
+      "hash": "8917baf2c270b9ccd0fb66695b848109",
+      "textRange": {
+        "startLine": 11,
+        "endLine": 11,
+        "startOffset": 37,
+        "endOffset": 55
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Mark the props of the component as read-only.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "e1f71b34-f2ca-4b2d-a802-0bf3f13ffd0e",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/RegisterPage.tsx",
+      "project": "task-manager",
+      "line": 32,
+      "hash": "7318956264e9d6d0539a12611af4e565",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 77,
+        "endOffset": 79
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "7e017b7c-dbcc-42ca-8b52-a0d4a4130a11",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/RegisterPage.tsx",
+      "project": "task-manager",
+      "line": 51,
+      "hash": "2e9d8d8f55616f9e65b4faf5849d10f7",
+      "textRange": {
+        "startLine": 51,
+        "endLine": 51,
+        "startOffset": 13,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "9a3d99e7-61aa-42be-9c92-c6a76264cce2",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/RegisterPage.tsx",
+      "project": "task-manager",
+      "line": 65,
+      "hash": "b70b3d72fda00a064f9e528c07a25260",
+      "textRange": {
+        "startLine": 65,
+        "endLine": 65,
+        "startOffset": 13,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "f116de8a-ec01-47ba-9044-7c110f714a5b",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/RegisterPage.tsx",
+      "project": "task-manager",
+      "line": 79,
+      "hash": "140f785c7af4a3177b3d748d1c83bb07",
+      "textRange": {
+        "startLine": 79,
+        "endLine": 79,
+        "startOffset": 13,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "927b2281-daab-4797-9c57-3dc46dbaf8bd",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/ReportsPage.tsx",
+      "project": "task-manager",
+      "line": 271,
+      "hash": "4d965e827813f3a8ca659e9a72114a08",
+      "textRange": {
+        "startLine": 271,
+        "endLine": 271,
+        "startOffset": 40,
+        "endOffset": 42
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "6da6712d-97fd-4f3b-9d8a-77acd85563d2",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/ReportsPage.tsx",
+      "project": "task-manager",
+      "line": 276,
+      "hash": "798dfa1149a6e1a1b16f3659973422f6",
+      "textRange": {
+        "startLine": 276,
+        "endLine": 276,
+        "startOffset": 46,
+        "endOffset": 48
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "1624668f-9596-4bc5-9dc2-99e2aeae7dff",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/ReportsPage.tsx",
+      "project": "task-manager",
+      "line": 278,
+      "hash": "1f5f13fd3b033e0ff8436b97149ac0ba",
+      "textRange": {
+        "startLine": 278,
+        "endLine": 278,
+        "startOffset": 43,
+        "endOffset": 45
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "8559ab4d-2e34-4469-8701-10ce70e7b62e",
+      "rule": "typescript:S3863",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 3,
+      "hash": "b8304256491e3d81423b010db2ef8d49",
+      "textRange": {
+        "startLine": 3,
+        "endLine": 3,
+        "startOffset": 50,
+        "endOffset": 60
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "'../types' imported multiple times.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "es2015"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "adf3377d-d81d-492a-bfdb-44b89db69391",
+      "rule": "typescript:S6759",
+      "severity": "MAJOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 50,
+      "hash": "92d633778583b32eb5756244d231457d",
+      "textRange": {
+        "startLine": 50,
+        "endLine": 50,
+        "startOffset": 21,
+        "endOffset": 51
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Mark the props of the component as read-only.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "8f073125-e628-4c09-909c-bbb2f215f773",
+      "rule": "typescript:S3358",
+      "severity": "MAJOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 51,
+      "hash": "3190c64a0f55b6ea2d801a55ab041a2a",
+      "textRange": {
+        "startLine": 51,
+        "endLine": 51,
+        "startOffset": 49,
+        "endOffset": 110
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Extract this nested ternary operation into an independent statement.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "confusing"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "525c753d-090b-4f70-ab7d-99e738b29d0e",
+      "rule": "typescript:S6759",
+      "severity": "MAJOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 55,
+      "hash": "cdcc05b3fe6f4f3e27ec789874a04911",
+      "textRange": {
+        "startLine": 55,
+        "endLine": 55,
+        "startOffset": 23,
+        "endOffset": 57
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Mark the props of the component as read-only.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "123d74ab-b853-40e0-9f68-0f8888cffcd6",
+      "rule": "typescript:S6759",
+      "severity": "MAJOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 69,
+      "hash": "e9080dc32000c211247077d0c50b54f7",
+      "textRange": {
+        "startLine": 69,
+        "endLine": 69,
+        "startOffset": 18,
+        "endOffset": 92
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Mark the props of the component as read-only.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "ab09503c-ad31-4230-929e-16bc30c501bd",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 70,
+      "hash": "900ab027ae59448a5e2206b38109ed6d",
+      "textRange": {
+        "startLine": 70,
+        "endLine": 70,
+        "startOffset": 52,
+        "endOffset": 54
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "fe5f962c-e7dd-4aa7-9f7e-95f2809a0b42",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 71,
+      "hash": "a5aa017cc42ebdd6ca82f0ec1743ed96",
+      "textRange": {
+        "startLine": 71,
+        "endLine": 71,
+        "startOffset": 70,
+        "endOffset": 72
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "1338e153-657b-4912-b237-64159f57c030",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 72,
+      "hash": "3eb32fe0d62b396ddb21d357415944f6",
+      "textRange": {
+        "startLine": 72,
+        "endLine": 72,
+        "startOffset": 55,
+        "endOffset": 57
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "5469726a-554b-42e7-9661-5b245bdc83ab",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 73,
+      "hash": "dded0c1d409067a2f93086ca31d6afb9",
+      "textRange": {
+        "startLine": 73,
+        "endLine": 73,
+        "startOffset": 61,
+        "endOffset": 63
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "3d4d3609-0060-4599-bbf2-42901cc16bfa",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 74,
+      "hash": "a5be03bfcf0b83c3deb055b4969769d1",
+      "textRange": {
+        "startLine": 74,
+        "endLine": 74,
+        "startOffset": 59,
+        "endOffset": 61
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "151494cd-0ebe-4be6-b0eb-ad019ab11bf1",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 109,
+      "hash": "5d461dcc570cf8cf00b16c726cc4fa8a",
+      "textRange": {
+        "startLine": 109,
+        "endLine": 109,
+        "startOffset": 9,
+        "endOffset": 14
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "8f904d3b-980e-4003-9b0e-73fa7b2176bb",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 113,
+      "hash": "7bc6b7c1045d02416bf2ac6ed396de75",
+      "textRange": {
+        "startLine": 113,
+        "endLine": 113,
+        "startOffset": 9,
+        "endOffset": 14
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "de33cd61-722d-46e3-a200-a3cccd3de1ef",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 118,
+      "hash": "138bef0f831ec26d3b23d4831ae437f7",
+      "textRange": {
+        "startLine": 118,
+        "endLine": 118,
+        "startOffset": 11,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "bf919fb3-91ee-4cf9-9b6f-4ee5d61c4aaf",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 126,
+      "hash": "6bd59bb918bd1189909da6b4d7ac0ef4",
+      "textRange": {
+        "startLine": 126,
+        "endLine": 126,
+        "startOffset": 11,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "a91d9505-136a-4dee-8f6a-139ede8ddae8",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 137,
+      "hash": "c63e21a83002cf7bc251a26b214c808d",
+      "textRange": {
+        "startLine": 137,
+        "endLine": 137,
+        "startOffset": 11,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "a717f7e2-c071-4540-8f9f-3df022fb9486",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 141,
+      "hash": "c471dcd738ab44926449fa3aac914819",
+      "textRange": {
+        "startLine": 141,
+        "endLine": 141,
+        "startOffset": 11,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "7e404802-0b67-48e0-aa08-c5b616edfc55",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 161,
+      "hash": "8b8a317cc9b1c39d3829f63cdf7945cd",
+      "textRange": {
+        "startLine": 161,
+        "endLine": 161,
+        "startOffset": 11,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "812fd7e9-86b6-4dc7-a6f1-b289c6ada12b",
+      "rule": "typescript:S6759",
+      "severity": "MAJOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 194,
+      "hash": "828ceea468d01eae02bb13bf242f4394",
+      "textRange": {
+        "startLine": 194,
+        "endLine": 194,
+        "startOffset": 20,
+        "endOffset": 54
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Mark the props of the component as read-only.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "d342f532-3cc8-4d7d-b9d5-d58e79debfbe",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 229,
+      "hash": "8fd133b116d13a5951eae512badf59b9",
+      "textRange": {
+        "startLine": 229,
+        "endLine": 229,
+        "startOffset": 4,
+        "endOffset": 53
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "8853f538-9e7e-4386-8604-40fea866f321",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 230,
+      "hash": "be341d12feed83d99dc11c579af6cf23",
+      "textRange": {
+        "startLine": 230,
+        "endLine": 230,
+        "startOffset": 6,
+        "endOffset": 77
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "ff841121-ea2c-4335-abda-1acc75307e22",
+      "rule": "typescript:S3863",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 354,
+      "hash": "2f397256a3dfc20c7ab5f6ef6596c521",
+      "textRange": {
+        "startLine": 354,
+        "endLine": 354,
+        "startOffset": 24,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "'../types' imported multiple times.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "es2015"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "4d3cddb5-97a5-4f33-9a97-ad0c848f7c53",
+      "rule": "typescript:S3626",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 407,
+      "hash": "505b97969baa28c3f607a38ee02f4f2d",
+      "textRange": {
+        "startLine": 407,
+        "endLine": 407,
+        "startOffset": 6,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this redundant jump.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "redundant",
+        "clumsy"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "8533ca1e-b5e5-4fee-8fee-0b9741f8490e",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 606,
+      "hash": "de3bddfbd8cfdd71f53590b58a1336c4",
+      "textRange": {
+        "startLine": 606,
+        "endLine": 606,
+        "startOffset": 50,
+        "endOffset": 52
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "57ca99df-f108-4324-b406-30627bd25d56",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 618,
+      "hash": "ffeeaafc953e42715a20c6faa7e08b0c",
+      "textRange": {
+        "startLine": 618,
+        "endLine": 618,
+        "startOffset": 22,
+        "endOffset": 95
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "20e74336-69b7-435e-8409-f3472f6b5979",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 629,
+      "hash": "d90c26198ff23a5c54f81269ceed5c01",
+      "textRange": {
+        "startLine": 629,
+        "endLine": 632,
+        "startOffset": 10,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "971a9bbb-eecc-4772-bb58-58595f9e9bf9",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 637,
+      "hash": "d90c26198ff23a5c54f81269ceed5c01",
+      "textRange": {
+        "startLine": 637,
+        "endLine": 641,
+        "startOffset": 12,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "1f59ebc8-3043-4214-a50c-925004e43d34",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 845,
+      "hash": "d90c26198ff23a5c54f81269ceed5c01",
+      "textRange": {
+        "startLine": 845,
+        "endLine": 850,
+        "startOffset": 16,
+        "endOffset": 17
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "74c21afa-511a-498c-8ecd-e48d9a0a573f",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 860,
+      "hash": "d90c26198ff23a5c54f81269ceed5c01",
+      "textRange": {
+        "startLine": 860,
+        "endLine": 868,
+        "startOffset": 22,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "d56be531-9133-42c4-91f5-16083bcb5d60",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 901,
+      "hash": "49944a8f68dcb24f8e4499ad613a6a64",
+      "textRange": {
+        "startLine": 901,
+        "endLine": 901,
+        "startOffset": 26,
+        "endOffset": 99
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "76b4b6b9-b388-4839-b54e-dc2ee8f0712c",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 928,
+      "hash": "e2a13aa5cd52ed8ea5880dcdb03507c9",
+      "textRange": {
+        "startLine": 928,
+        "endLine": 928,
+        "startOffset": 8,
+        "endOffset": 100
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "58412440-a6fd-4d14-bc81-700a0d6c1fb6",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 929,
+      "hash": "50b61aeded81d2dce2af26ccfa967bf8",
+      "textRange": {
+        "startLine": 929,
+        "endLine": 929,
+        "startOffset": 10,
+        "endOffset": 68
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "a51822aa-fc48-4b5c-8d0f-06c3e6bca8a0",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 953,
+      "hash": "9aa5bf38751c0fc48aa78c1be21d8d84",
+      "textRange": {
+        "startLine": 953,
+        "endLine": 953,
+        "startOffset": 8,
+        "endOffset": 88
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "05d150e5-0068-46cb-ad07-5f115551f329",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 954,
+      "hash": "b4de02d88b392981bb45f1aa63fbbbce",
+      "textRange": {
+        "startLine": 954,
+        "endLine": 954,
+        "startOffset": 10,
+        "endOffset": 98
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "b2ed4a62-b100-4926-bbbd-2f9b9a39b077",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 957,
+      "hash": "4bd9474753a9ed51defba2ebe8082a63",
+      "textRange": {
+        "startLine": 957,
+        "endLine": 957,
+        "startOffset": 15,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "43b4b1fb-9c1c-44b0-a9c8-15665d434e7e",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 999,
+      "hash": "7ce60f0a9a0dc5e5574f3546b073db7f",
+      "textRange": {
+        "startLine": 999,
+        "endLine": 999,
+        "startOffset": 8,
+        "endOffset": 82
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "1495babb-a7ab-426a-993a-579eceed3d07",
+      "rule": "typescript:S6848",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 1000,
+      "hash": "b4de02d88b392981bb45f1aa63fbbbce",
+      "textRange": {
+        "startLine": 1000,
+        "endLine": 1000,
+        "startOffset": 10,
+        "endOffset": 98
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "86c4dcdd-a44a-4c57-bce3-a48d5183ff14",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 1004,
+      "hash": "73dfcf77380f2e89e4cc7a7568297519",
+      "textRange": {
+        "startLine": 1004,
+        "endLine": 1004,
+        "startOffset": 17,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "8ef9dfea-ae62-4d7d-beb4-69a6fac3f961",
+      "rule": "typescript:S6853",
+      "severity": "MINOR",
+      "component": "task-manager:client/src/pages/TasksPage.tsx",
+      "project": "task-manager",
+      "line": 1015,
+      "hash": "f9d5c8f9a5f06f3dc0e90d2d4b7e4c7c",
+      "textRange": {
+        "startLine": 1015,
+        "endLine": 1015,
+        "startOffset": 19,
+        "endOffset": 24
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "A form label must be associated with a control.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "edcca2c3-c197-4002-a25a-323ee677bc9f",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:src/app.ts",
+      "project": "task-manager",
+      "line": 17,
+      "hash": "0220155fa1000be567e4120d9732845f",
+      "textRange": {
+        "startLine": 17,
+        "endLine": 17,
+        "startOffset": 50,
+        "endOffset": 52
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "fdf5031e-ace1-4aab-86f7-4d8b2a4d6cf0",
+      "rule": "typescript:S3863",
+      "severity": "MINOR",
+      "component": "task-manager:src/routes/tasks.ts",
+      "project": "task-manager",
+      "line": 7,
+      "hash": "e637a921dfb7cf13dd8e12987c84d2c3",
+      "textRange": {
+        "startLine": 7,
+        "endLine": 7,
+        "startOffset": 28,
+        "endOffset": 57
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "'../services/activityService' imported multiple times.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "es2015"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "6c5bf557-64e3-4909-8992-747c65ec6ec8",
+      "rule": "typescript:S3863",
+      "severity": "MINOR",
+      "component": "task-manager:src/routes/tasks.ts",
+      "project": "task-manager",
+      "line": 8,
+      "hash": "816af90606e7894840a4a4d1767d98d4",
+      "textRange": {
+        "startLine": 8,
+        "endLine": 8,
+        "startOffset": 36,
+        "endOffset": 65
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "'../services/activityService' imported multiple times.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "",
+      "tags": [
+        "es2015"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "749f4e19-9194-4d3d-8c3d-c6b97902a2bf",
+      "rule": "typescript:S3358",
+      "severity": "MAJOR",
+      "component": "task-manager:src/routes/tasks.ts",
+      "project": "task-manager",
+      "line": 31,
+      "hash": "ecda0510e6f10b1ab40178fd9cc0eb90",
+      "textRange": {
+        "startLine": 31,
+        "endLine": 31,
+        "startOffset": 60,
+        "endOffset": 119
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Extract this nested ternary operation into an independent statement.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "confusing"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "ca32ebf8-9b54-4bf8-8abe-0273da705be5",
+      "rule": "typescript:S3776",
+      "severity": "CRITICAL",
+      "component": "task-manager:src/routes/tasks.ts",
+      "project": "task-manager",
+      "line": 113,
+      "hash": "d4534a0129d2aa135375da26ac0fb3bd",
+      "textRange": {
+        "startLine": 113,
+        "endLine": 113,
+        "startOffset": 57,
+        "endOffset": 59
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 115,
+                "endLine": 115,
+                "startOffset": 2,
+                "endOffset": 4
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 119,
+                "endLine": 119,
+                "startOffset": 4,
+                "endOffset": 6
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 122,
+                "endLine": 122,
+                "startOffset": 4,
+                "endOffset": 6
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 124,
+                "endLine": 124,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+2 (incl. 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 124,
+                "endLine": 124,
+                "startOffset": 25,
+                "endOffset": 27
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 125,
+                "endLine": 125,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+2 (incl. 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 125,
+                "endLine": 125,
+                "startOffset": 26,
+                "endOffset": 28
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 126,
+                "endLine": 126,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+2 (incl. 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 126,
+                "endLine": 126,
+                "startOffset": 28,
+                "endOffset": 30
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 127,
+                "endLine": 127,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+2 (incl. 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 127,
+                "endLine": 127,
+                "startOffset": 42,
+                "endOffset": 44
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 128,
+                "endLine": 128,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+2 (incl. 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 131,
+                "endLine": 131,
+                "startOffset": 8,
+                "endOffset": 10
+              },
+              "msg": "+3 (incl. 2 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 133,
+                "endLine": 133,
+                "startOffset": 6,
+                "endOffset": 8
+              },
+              "msg": "+2 (incl. 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "task-manager:src/routes/tasks.ts",
+              "textRange": {
+                "startLine": 139,
+                "endLine": 139,
+                "startOffset": 4,
+                "endOffset": 9
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.",
+      "effort": "13min",
+      "debt": "13min",
+      "author": "",
+      "tags": [
+        "brain-overload"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "FOCUSED",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "74625cfa-886c-43e9-8659-1ac67fdee2c5",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:src/routes/tasks.ts",
+      "project": "task-manager",
+      "line": 129,
+      "hash": "86211e0330ff3cc65bf7ac26f5dc37b3",
+      "textRange": {
+        "startLine": 129,
+        "endLine": 129,
+        "startOffset": 86,
+        "endOffset": 88
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "43bd2ac5-dc8b-479a-8ce9-574e9abe4033",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:src/server.ts",
+      "project": "task-manager",
+      "line": 3,
+      "hash": "a85b59ea270a92a296a80a72d0757f93",
+      "textRange": {
+        "startLine": 3,
+        "endLine": 3,
+        "startOffset": 30,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "a1f46f6a-03b1-41ff-96c1-5e146b85de39",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:src/server.ts",
+      "project": "task-manager",
+      "line": 7,
+      "hash": "e0649821e0df7fbddc0a03de31bf508f",
+      "textRange": {
+        "startLine": 7,
+        "endLine": 7,
+        "startOffset": 51,
+        "endOffset": 53
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "cbaf3f57-4766-48e0-b67f-b5d90625f822",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:src/services/labelService.ts",
+      "project": "task-manager",
+      "line": 29,
+      "hash": "b77a31183bc69ed00832b47ff72fb5ea",
+      "textRange": {
+        "startLine": 29,
+        "endLine": 29,
+        "startOffset": 39,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    },
+    {
+      "key": "f5cceae0-672f-4b37-b293-6350d9a18743",
+      "rule": "typescript:S6606",
+      "severity": "MINOR",
+      "component": "task-manager:src/services/projectService.ts",
+      "project": "task-manager",
+      "line": 35,
+      "hash": "32441376df027c63af3675a6d0823b92",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 43,
+        "endOffset": 45
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "",
+      "tags": [
+        "type-dependent",
+        "nullish-coalescing",
+        "es2020"
+      ],
+      "creationDate": "2026-04-22T20:00:39+0000",
+      "updateDate": "2026-04-22T20:00:39+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false
+    }
+  ]
+}

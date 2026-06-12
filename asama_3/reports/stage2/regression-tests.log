@@ -1,0 +1,111 @@
+
+> task-manager@1.0.0 test
+> vitest run --reporter verbose
+
+
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90mC:/Users/furkn/Desktop/230229083_ykg/yazilimkaliteguvencesi[39m
+
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m1. Register → 201
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m2. Login → 200 with session cookie
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m3. Auth required endpoint without login → 401
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m4. Create task → 201
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m5. List tasks → 200 with created task
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m6. Get single task → 200
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m7. Update task → 200 with changed field
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m8. Delete task → 204, then 404
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m9. Validation: empty title create → 400
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m10a. Admin-only endpoint: user → 403
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m10b. Admin-only endpoint: admin → 200
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m11. Create task with priority and due_date → 201
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m12. Create comment on task → 201
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m13. List comments for task → 200
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m14. Delete comment → 204
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m15. Create label → 201
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m16. Add label to task → 200
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m17. List labels for task → includes the label
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m18. Remove label from task → 200
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m19. Create subtask → 201 with parent_id
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m20. Filter tasks by priority → 200
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m21. Invalid priority on create → 400
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m22. Create project → 201
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m23. Create task with project_id → 201
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m24. Get projects list → 200
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m25. Add member to project → 201
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m26. Get project members → 200
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m27. Remove member from project → 204
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m28. Reports summary without auth → 401
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m29. Reports summary with auth → 200 with expected fields
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m30. Reports summary contains userStats array
+ [32m✓[39m tests/smoke/api.smoke.test.ts[2m > [22mSmoke Tests[2m > [22m31. Reports summary contains projectProgress array
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m1. validateCreateTaskInput: empty title → error
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m2. validateCreateTaskInput: missing title → error
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m3. validateCreateTaskInput: title too long → error
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m4. validateCreateTaskInput: valid input → no errors
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m5. validateCreateTaskInput: invalid status → error
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m6. validateUpdateTaskInput: empty title → error
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m7. validateUpdateTaskInput: valid status → no errors
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m8. validateCreateTaskInput: invalid priority → error
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m9. validateCreateTaskInput: valid priority → no errors
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m10. validateCreateTaskInput: invalid due_date format → error
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m11. validateUpdateTaskInput: invalid priority → error
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Validation[2m > [22m12. validateUpdateTaskInput: valid priority → no errors
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m13. createTask: creates task with correct fields
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m14. createTask: creates task with priority and due_date
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m15. getTaskById: returns null for non-existent id
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m16. getTaskById: returns task for valid id
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m17. updateTask: returns null for non-existent task
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m18. updateTask: updates title correctly
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m19. updateTask: updates priority correctly
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m20. deleteTask: returns false for non-existent task
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m21. deleteTask: deletes task and returns true
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m22. createTask: creates subtask with parent_id
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m23. getSubtasks: returns subtasks for parent
+ [32m✓[39m tests/unit/taskService.test.ts[2m > [22mTask Service CRUD[2m > [22m24. createTask: creates with project_id
+ [32m✓[39m tests/unit/reportService.test.ts[2m > [22mReport Service[2m > [22m1. getUserTaskStats: returns stats per user
+ [32m✓[39m tests/unit/reportService.test.ts[2m > [22mReport Service[2m > [22m2. getUserTaskStats: returns empty stats with no tasks
+ [32m✓[39m tests/unit/reportService.test.ts[2m > [22mReport Service[2m > [22m3. getProjectProgress: returns progress per project
+ [32m✓[39m tests/unit/reportService.test.ts[2m > [22mReport Service[2m > [22m4. getProjectProgress: calculates completion rate correctly
+ [32m✓[39m tests/unit/reportService.test.ts[2m > [22mReport Service[2m > [22m5. getOverdueTasks: returns overdue tasks only
+ [32m✓[39m tests/unit/reportService.test.ts[2m > [22mReport Service[2m > [22m6. getOverdueTasks: excludes done tasks even if past due
+ [32m✓[39m tests/unit/reportService.test.ts[2m > [22mReport Service[2m > [22m7. getTeamSummary: returns overall stats
+ [32m✓[39m tests/unit/reportService.test.ts[2m > [22mReport Service[2m > [22m8. getTeamSummary: returns zero with no data
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Validation[2m > [22m1. validateLabelInput: empty name → error
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Validation[2m > [22m2. validateLabelInput: missing name → error
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Validation[2m > [22m3. validateLabelInput: valid input → no errors
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Service CRUD[2m > [22m4. createLabel: creates with name and color
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Service CRUD[2m > [22m5. getAllLabels: returns all labels
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Service CRUD[2m > [22m6. deleteLabel: deletes and returns true
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Service CRUD[2m > [22m7. addLabelToTask: links label to task
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Service CRUD[2m > [22m8. getLabelsForTask: returns labels for task
+ [32m✓[39m tests/unit/labelService.test.ts[2m > [22mLabel Service CRUD[2m > [22m9. removeLabelFromTask: removes link
+ [32m✓[39m tests/unit/commentService.test.ts[2m > [22mComment Validation[2m > [22m1. validateCommentInput: empty content → error
+ [32m✓[39m tests/unit/commentService.test.ts[2m > [22mComment Validation[2m > [22m2. validateCommentInput: missing content → error
+ [32m✓[39m tests/unit/commentService.test.ts[2m > [22mComment Validation[2m > [22m3. validateCommentInput: valid content → no errors
+ [32m✓[39m tests/unit/commentService.test.ts[2m > [22mComment Service CRUD[2m > [22m4. createComment: creates comment with correct fields
+ [32m✓[39m tests/unit/commentService.test.ts[2m > [22mComment Service CRUD[2m > [22m5. getCommentsByTask: returns comments for task
+ [32m✓[39m tests/unit/commentService.test.ts[2m > [22mComment Service CRUD[2m > [22m6. getCommentsByTask: returns empty for no comments
+ [32m✓[39m tests/unit/commentService.test.ts[2m > [22mComment Service CRUD[2m > [22m7. deleteComment: deletes and returns true
+ [32m✓[39m tests/unit/commentService.test.ts[2m > [22mComment Service CRUD[2m > [22m8. deleteComment: returns false for non-existent
+ [32m✓[39m tests/unit/projectService.test.ts[2m > [22mProject Service Validation[2m > [22m1. validateCreate: empty name -> error
+ [32m✓[39m tests/unit/projectService.test.ts[2m > [22mProject Service Validation[2m > [22m2. validateCreate: valid -> no error
+ [32m✓[39m tests/unit/projectService.test.ts[2m > [22mProject Service CRUD[2m > [22m3. createProject: creates and returns
+ [32m✓[39m tests/unit/projectService.test.ts[2m > [22mProject Service CRUD[2m > [22m4. getProjects: retrieves for user
+ [32m✓[39m tests/unit/projectService.test.ts[2m > [22mProject Service CRUD[2m > [22m5. updateProject: updates name and description
+ [32m✓[39m tests/unit/projectService.test.ts[2m > [22mProject Service CRUD[2m > [22m6. deleteProject: removes project
+ [32m✓[39m tests/unit/projectService.test.ts[2m > [22mProject Service CRUD[2m > [22m7. add/remove/get members
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m1. validateRegisterInput: all empty → multiple errors
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m2. validateRegisterInput: invalid email format → error
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m3. validateRegisterInput: short password → error
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m4. validateRegisterInput: valid input → no errors
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m5. validateLoginInput: empty fields → errors
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m6. isAdmin: returns true for admin role
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m7. isAdmin: returns false for user role
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m8. canAccess: user can access user-level endpoints
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m9. canAccess: user cannot access admin-only endpoints
+ [32m✓[39m tests/unit/authService.test.ts[2m > [22mAuth Validation[2m > [22m10. canAccess: admin can access admin-only endpoints
+
+[2m Test Files [22m [1m[32m7 passed[39m[22m[90m (7)[39m
+[2m      Tests [22m [1m[32m98 passed[39m[22m[90m (98)[39m
+[2m   Start at [22m 17:00:50
+[2m   Duration [22m 1.56s[2m (transform 243ms, setup 0ms, collect 693ms, tests 511ms, environment 0ms, prepare 148ms)[22m
+

@@ -1,0 +1,2078 @@
+[
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\App.tsx",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\api.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\main.tsx",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\pages\\AdminPage.tsx",
+        "messages": [
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 33,
+                "column": 33,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 33,
+                "endColumn": 36,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                862,
+                                865
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                862,
+                                865
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 120,
+                "column": 57,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 120,
+                "endColumn": 60,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3964,
+                                3967
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3964,
+                                3967
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 120,
+                "column": 87,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 120,
+                "endColumn": 90,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3994,
+                                3997
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3994,
+                                3997
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 285,
+                "column": 66,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 285,
+                "endColumn": 69,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                11026,
+                                11029
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                11026,
+                                11029
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 337,
+                "column": 41,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 337,
+                "endColumn": 44,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                13438,
+                                13441
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                13438,
+                                13441
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 5,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import { useState, useEffect, useMemo } from 'react';\nimport { api } from '../api';\nimport { User } from '../types';\n\ninterface Stats {\n  userCount: number;\n  taskCount: number;\n  statusCounts: { status: string; count: number }[];\n  priorityCounts: { priority: string; count: number }[];\n  labelCount: number;\n  commentCount: number;\n  overdueCount: number;\n}\n\ntype SortKey = 'id' | 'username' | 'email' | 'role' | 'created_at';\ntype SortDir = 'asc' | 'desc';\n\nconst PAGE_SIZE = 5;\n\nfunction priorityLabel(p: string) {\n  switch (p) {\n    case 'urgent': return 'Acil';\n    case 'high': return 'Yüksek';\n    case 'medium': return 'Orta';\n    case 'low': return 'Düşük';\n    default: return p;\n  }\n}\n\nfunction exportCSV(users: User[]) {\n  const header = 'ID,Kullanıcı Adı,E-posta,Rol,Kayıt Tarihi\\n';\n  const rows = users.map(u => {\n    const date = new Date((u as any).created_at).toLocaleDateString('tr-TR');\n    return `${u.id},\"${u.username}\",\"${u.email}\",${u.role},\"${date}\"`;\n  }).join('\\n');\n  const blob = new Blob(['\\uFEFF' + header + rows], { type: 'text/csv;charset=utf-8;' });\n  const url = URL.createObjectURL(blob);\n  const a = document.createElement('a');\n  a.href = url;\n  a.download = `kullanıcılar_${new Date().toISOString().slice(0, 10)}.csv`;\n  a.click();\n  URL.revokeObjectURL(url);\n}\n\nimport { \n  ShieldCheck, Users, FileText, CheckCircle2, AlertCircle, \n  Tag, MessageSquare, BarChart3, ArrowUp, \n  ArrowDown, Minus, Search, X, Download, ChevronLeft, \n  ChevronRight, Filter\n} from 'lucide-react';\n\nexport default function AdminPage() {\n  const [users, setUsers] = useState<User[]>([]);\n  const [stats, setStats] = useState<Stats | null>(null);\n  const [loading, setLoading] = useState(true);\n\n  const [search, setSearch] = useState('');\n  const [roleFilter, setRoleFilter] = useState<'all' | 'admin' | 'user'>('all');\n  const [sortKey, setSortKey] = useState<SortKey>('id');\n  const [sortDir, setSortDir] = useState<SortDir>('asc');\n  const [page, setPage] = useState(1);\n\n  useEffect(() => {\n    Promise.all([api.admin.users(), api.admin.stats()])\n      .then(([u, s]) => { setUsers(u); setStats(s); })\n      .catch(console.error)\n      .finally(() => setLoading(false));\n  }, []);\n\n  const getCount = (status: string) =>\n    stats?.statusCounts.find(s => s.status === status)?.count || 0;\n  const getPriorityCount = (priority: string) =>\n    stats?.priorityCounts?.find(p => p.priority === priority)?.count || 0;\n\n  const todoCount = getCount('todo');\n  const inProgressCount = getCount('in-progress');\n  const doneCount = getCount('done');\n  const totalTasks = stats?.taskCount || 0;\n\n  const handleSort = (key: SortKey) => {\n    if (sortKey === key) {\n      setSortDir(d => d === 'asc' ? 'desc' : 'asc');\n    } else {\n      setSortKey(key);\n      setSortDir('asc');\n    }\n    setPage(1);\n  };\n\n  const sortArrow = (key: SortKey) => {\n    if (sortKey !== key) return <Minus size={14} className=\"text-muted opacity-30\" />;\n    return sortDir === 'asc' \n      ? <ArrowUp size={14} className=\"text-primary\" /> \n      : <ArrowDown size={14} className=\"text-primary\" />;\n  };\n\n  const processedUsers = useMemo(() => {\n    let result = [...users];\n\n    if (roleFilter !== 'all') {\n      result = result.filter(u => u.role === roleFilter);\n    }\n\n    if (search.trim()) {\n      const q = search.toLowerCase();\n      result = result.filter(u =>\n        u.username.toLowerCase().includes(q) ||\n        u.email.toLowerCase().includes(q)\n      );\n    }\n\n    result.sort((a, b) => {\n      let aVal: string | number = '';\n      let bVal: string | number = '';\n\n      if (sortKey === 'id') { aVal = a.id; bVal = b.id; }\n      else if (sortKey === 'username') { aVal = a.username.toLowerCase(); bVal = b.username.toLowerCase(); }\n      else if (sortKey === 'email') { aVal = a.email.toLowerCase(); bVal = b.email.toLowerCase(); }\n      else if (sortKey === 'role') { aVal = a.role; bVal = b.role; }\n      else if (sortKey === 'created_at') { aVal = (a as any).created_at; bVal = (b as any).created_at; }\n\n      if (aVal < bVal) return sortDir === 'asc' ? -1 : 1;\n      if (aVal > bVal) return sortDir === 'asc' ? 1 : -1;\n      return 0;\n    });\n\n    return result;\n  }, [users, search, roleFilter, sortKey, sortDir]);\n\n  const totalPages = Math.max(1, Math.ceil(processedUsers.length / PAGE_SIZE));\n  const pagedUsers = processedUsers.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);\n\n  useEffect(() => { setPage(1); }, [search, roleFilter]);\n\n  if (loading) return (\n    <div className=\"admin-skeleton-container\" style={{marginTop: '2rem'}}>\n      <div className=\"skeleton-grid\" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '2rem' }}>\n        {[1, 2, 3, 4].map(i => <div key={i} className=\"skeleton-box skeleton-card\" style={{height:'100px', borderRadius: '12px'}} />)}\n      </div>\n      <div className=\"skeleton-box skeleton-card\" style={{height:'400px', borderRadius: '12px'}} />\n    </div>\n  );\n\n  return (\n    <div className=\"admin-container\">\n      <div className=\"page-header\">\n        <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>\n          <ShieldCheck size={28} className=\"text-primary\" />\n          Sistem Yönetimi\n        </h2>\n        <div className=\"header-actions\">\n          <button className=\"btn-outline-pill\" onClick={() => exportCSV(processedUsers)}>\n            <Download size={16} />\n            <span>Verileri Dışa Aktar</span>\n          </button>\n        </div>\n      </div>\n\n      {/* Stat Cards */}\n      <div className=\"admin-stats-grid\">\n        <div className=\"admin-stat-card-modern\">\n          <div className=\"admin-stat-icon-box bg-purple-soft\">\n            <Users size={24} className=\"text-purple\" />\n          </div>\n          <div className=\"admin-stat-info\">\n            <span className=\"admin-stat-number\">{stats?.userCount || 0}</span>\n            <span className=\"admin-stat-label\">Toplam Kullanıcı</span>\n          </div>\n        </div>\n        <div className=\"admin-stat-card-modern\">\n          <div className=\"admin-stat-icon-box bg-blue-soft\">\n            <FileText size={24} className=\"text-blue\" />\n          </div>\n          <div className=\"admin-stat-info\">\n            <span className=\"admin-stat-number\">{stats?.taskCount || 0}</span>\n            <span className=\"admin-stat-label\">Toplam Görev</span>\n          </div>\n        </div>\n        <div className=\"admin-stat-card-modern\">\n          <div className=\"admin-stat-icon-box bg-green-soft\">\n            <CheckCircle2 size={24} className=\"text-green\" />\n          </div>\n          <div className=\"admin-stat-info\">\n            <span className=\"admin-stat-number\">{doneCount}</span>\n            <span className=\"admin-stat-label\">Tamamlanan</span>\n          </div>\n        </div>\n        <div className=\"admin-stat-card-modern\">\n          <div className=\"admin-stat-icon-box bg-red-soft\">\n            <AlertCircle size={24} className=\"text-red\" />\n          </div>\n          <div className=\"admin-stat-info\">\n            <span className=\"admin-stat-number text-red\">{stats?.overdueCount || 0}</span>\n            <span className=\"admin-stat-label\">Geciken</span>\n          </div>\n        </div>\n      </div>\n\n      {/* Detail Stats Row */}\n      <div className=\"admin-meta-info-bar\">\n        <div className=\"meta-item\">\n          <Tag size={14} />\n          <span>Etiket: <strong>{stats?.labelCount || 0}</strong></span>\n        </div>\n        <div className=\"meta-item\">\n          <MessageSquare size={14} />\n          <span>Yorum: <strong>{stats?.commentCount || 0}</strong></span>\n        </div>\n        <div className=\"divider-v\"></div>\n        <div className=\"meta-priority-group\">\n          {['urgent', 'high', 'medium', 'low'].map(p => (\n            <div key={p} className=\"meta-priority-item\">\n              <span className={`dot-prio prio-${p}`}></span>\n              <span>{priorityLabel(p)}: <strong>{getPriorityCount(p)}</strong></span>\n            </div>\n          ))}\n        </div>\n      </div>\n\n      {/* Visual Charts & Table Area */}\n      <div className=\"admin-content-layout\">\n        {/* Status Distribution */}\n        {totalTasks > 0 && (\n          <div className=\"admin-chart-section\">\n            <h3 className=\"section-title-sm\">\n              <BarChart3 size={16} />\n              Görev Durum Analizi\n            </h3>\n            <div className=\"modern-status-bar\">\n              {todoCount > 0 && (\n                <div className=\"status-segment todo\" style={{ width: `${(todoCount / totalTasks) * 100}%` }}>\n                  <span className=\"segment-label\">{Math.round((todoCount / totalTasks) * 100)}%</span>\n                </div>\n              )}\n              {inProgressCount > 0 && (\n                <div className=\"status-segment progress\" style={{ width: `${(inProgressCount / totalTasks) * 100}%` }}>\n                  <span className=\"segment-label\">{Math.round((inProgressCount / totalTasks) * 100)}%</span>\n                </div>\n              )}\n              {doneCount > 0 && (\n                <div className=\"status-segment done\" style={{ width: `${(doneCount / totalTasks) * 100}%` }}>\n                  <span className=\"segment-label\">{Math.round((doneCount / totalTasks) * 100)}%</span>\n                </div>\n              )}\n            </div>\n            <div className=\"status-legend-modern\">\n              <div className=\"legend-pill\">\n                <span className=\"pill-dot bg-orange\"></span>\n                <span>Yapılacak ({todoCount})</span>\n              </div>\n              <div className=\"legend-pill\">\n                <span className=\"pill-dot bg-blue\"></span>\n                <span>Devam Ediyor ({inProgressCount})</span>\n              </div>\n              <div className=\"legend-pill\">\n                <span className=\"pill-dot bg-green\"></span>\n                <span>Tamamlandı ({doneCount})</span>\n              </div>\n            </div>\n          </div>\n        )}\n\n        {/* User Management Section */}\n        <div className=\"admin-table-section\">\n          <div className=\"table-header-modern\">\n            <div className=\"header-left\">\n              <h3 className=\"section-title-sm\">Kullanıcı Yönetimi</h3>\n              <span className=\"result-count\">{processedUsers.length} kişi bulundu</span>\n            </div>\n            <div className=\"header-right\">\n              <div className=\"search-box-modern\">\n                <Search size={18} className=\"search-icon\" />\n                <input\n                  type=\"text\"\n                  placeholder=\"İsim veya e-posta ara...\"\n                  value={search}\n                  onChange={e => setSearch(e.target.value)}\n                />\n                {search && <button className=\"clear-search\" onClick={() => setSearch('')}><X size={14} /></button>}\n              </div>\n              <div className=\"filter-box-modern\">\n                <Filter size={18} className=\"filter-icon\" />\n                <select\n                  value={roleFilter}\n                  onChange={e => setRoleFilter(e.target.value as any)}\n                >\n                  <option value=\"all\">Tüm Roller</option>\n                  <option value=\"admin\">Admin</option>\n                  <option value=\"user\">Kullanıcı</option>\n                </select>\n              </div>\n            </div>\n          </div>\n\n          <div className=\"table-container-modern\">\n            <table className=\"admin-data-table\">\n              <thead>\n                <tr>\n                  <th onClick={() => handleSort('id')}>ID {sortArrow('id')}</th>\n                  <th onClick={() => handleSort('username')}>Kullanıcı {sortArrow('username')}</th>\n                  <th onClick={() => handleSort('email')}>E-posta {sortArrow('email')}</th>\n                  <th onClick={() => handleSort('role')}>Rol {sortArrow('role')}</th>\n                  <th onClick={() => handleSort('created_at')}>Tarih {sortArrow('created_at')}</th>\n                </tr>\n              </thead>\n              <tbody>\n                {pagedUsers.length === 0 ? (\n                  <tr>\n                    <td colSpan={5}>\n                      <div className=\"empty-state-table\">\n                        <Search size={48} className=\"text-muted opacity-20\" />\n                        <h4>Arama kriterine uygun sonuç bulunamadı</h4>\n                        <p>Lütfen farklı bir kelime deneyin veya filtreleri sıfırlayın.</p>\n                      </div>\n                    </td>\n                  </tr>\n                ) : (\n                  pagedUsers.map(u => (\n                    <tr key={u.id}>\n                      <td className=\"text-muted font-mono\">{u.id}</td>\n                      <td>\n                        <div className=\"user-info-cell\">\n                          <div className=\"user-avatar-mini\">\n                            {u.username.substring(0, 1).toUpperCase()}\n                          </div>\n                          <span className=\"username-bold\">{u.username}</span>\n                        </div>\n                      </td>\n                      <td>{u.email}</td>\n                      <td>\n                        <span className={`role-badge ${u.role}`}>\n                          {u.role === 'admin' ? <ShieldCheck size={12} /> : <Users size={12} />}\n                          {u.role}\n                        </span>\n                      </td>\n                      <td className=\"text-muted text-sm\">\n                        {new Date((u as any).created_at).toLocaleDateString('tr-TR')}\n                      </td>\n                    </tr>\n                  ))\n                )}\n              </tbody>\n            </table>\n          </div>\n\n          {/* New Pagination */}\n          {totalPages > 1 && (\n            <div className=\"pagination-modern\">\n              <button className=\"page-nav-btn\" disabled={page === 1} onClick={() => setPage(p => p - 1)}>\n                <ChevronLeft size={18} />\n                <span>Önceki</span>\n              </button>\n              <div className=\"page-numbers\">\n                {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (\n                  <button \n                    key={p} \n                    className={`page-num-btn ${p === page ? 'active' : ''}`} \n                    onClick={() => setPage(p)}\n                  >\n                    {p}\n                  </button>\n                ))}\n              </div>\n              <button className=\"page-nav-btn\" disabled={page === totalPages} onClick={() => setPage(p => p + 1)}>\n                <span>Sonraki</span>\n                <ChevronRight size={18} />\n              </button>\n            </div>\n          )}\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\pages\\DashboardPage.tsx",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\pages\\LoginPage.tsx",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\pages\\RegisterPage.tsx",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\pages\\ReportsPage.tsx",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\pages\\TasksPage.tsx",
+        "messages": [
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 65,
+                "column": 18,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 65,
+                "endColumn": 21,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                2111,
+                                2114
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                2111,
+                                2114
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 119,
+                "column": 77,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 119,
+                "endColumn": 80,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                4247,
+                                4250
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                4247,
+                                4250
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 127,
+                "column": 81,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 127,
+                "endColumn": 84,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                4606,
+                                4609
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                4606,
+                                4609
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 168,
+                "column": 56,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 168,
+                "endColumn": 59,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                6485,
+                                6488
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                6485,
+                                6488
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 422,
+                "column": 23,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 422,
+                "endColumn": 26,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                17175,
+                                17178
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                17175,
+                                17178
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "react-hooks/exhaustive-deps",
+                "severity": 1,
+                "message": "React Hook useEffect has a missing dependency: 'loadTasks'. Either include it or remove the dependency array.",
+                "line": 484,
+                "column": 6,
+                "nodeType": "ArrayExpression",
+                "endLine": 484,
+                "endColumn": 38,
+                "suggestions": [
+                    {
+                        "desc": "Update the dependencies array to be: [selectedProjectId, filterLabel, loadTasks]",
+                        "fix": {
+                            "range": [
+                                19244,
+                                19276
+                            ],
+                            "text": "[selectedProjectId, filterLabel, loadTasks]"
+                        }
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 495,
+                "column": 23,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 495,
+                "endColumn": 26,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                19635,
+                                19638
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                19635,
+                                19638
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 521,
+                "column": 37,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 521,
+                "endColumn": 40,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                20473,
+                                20476
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                20473,
+                                20476
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 2,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 536,
+                "column": 37,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 536,
+                "endColumn": 40,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                20888,
+                                20891
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                20888,
+                                20891
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "react/no-unescaped-entities",
+                "severity": 2,
+                "message": "`\"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.",
+                "line": 821,
+                "column": 23,
+                "nodeType": "JSXText",
+                "messageId": "unescapedEntityAlts"
+            },
+            {
+                "ruleId": "react/no-unescaped-entities",
+                "severity": 2,
+                "message": "`\"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.",
+                "line": 821,
+                "column": 37,
+                "nodeType": "JSXText",
+                "messageId": "unescapedEntityAlts"
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 10,
+        "fatalErrorCount": 0,
+        "warningCount": 1,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import { useState, useEffect, useCallback, useRef, FormEvent, DragEvent } from 'react';\nimport { api } from '../api';\nimport { Task, Label, Comment, ActivityLog } from '../types';\n\n/* ---- Helpers ---- */\nfunction priorityLabel(p: string) {\n  switch (p) {\n    case 'urgent': return 'Acil';\n    case 'high': return 'Yüksek';\n    case 'medium': return 'Orta';\n    case 'low': return 'Düşük';\n    default: return p;\n  }\n}\n\nfunction statusLabel(s: string) {\n  switch (s) {\n    case 'todo': return 'Yapılacak';\n    case 'in-progress': return 'Devam ediyor';\n    case 'done': return 'Tamamlandı';\n    default: return s;\n  }\n}\n\nfunction isOverdue(dueDate: string | null, status: string): boolean {\n  if (!dueDate || status === 'done') return false;\n  return new Date(dueDate) < new Date(new Date().toISOString().split('T')[0]);\n}\n\nfunction timeAgo(dateStr: string): string {\n  const now = new Date();\n  const date = new Date(dateStr);\n  const diffMs = now.getTime() - date.getTime();\n  const diffMins = Math.floor(diffMs / 60000);\n  const diffHours = Math.floor(diffMins / 60);\n  const diffDays = Math.floor(diffHours / 24);\n  if (diffMins < 1) return 'Az önce';\n  if (diffMins < 60) return `${diffMins} dk önce`;\n  if (diffHours < 24) return `${diffHours} saat önce`;\n  if (diffDays === 1) return 'Dün';\n  if (diffDays < 7) return `${diffDays} gün önce`;\n  return new Date(dateStr).toLocaleDateString('tr-TR');\n}\n\nfunction formatDate(d: string) {\n  return new Date(d).toLocaleDateString('tr-TR');\n}\n\n/* ---- StatusBadge ---- */\nfunction StatusBadge({ status }: { status: string }) {\n  const cls = status === 'todo' ? 'badge-todo' : status === 'in-progress' ? 'badge-in-progress' : 'badge-done';\n  return <span className={`badge ${cls}`}>{statusLabel(status)}</span>;\n}\n\nfunction PriorityBadge({ priority }: { priority: string }) {\n  return <span className={`badge badge-priority-${priority}`}>{priorityLabel(priority)}</span>;\n}\n\n/* ---- Task Form ---- */\ninterface TaskFormProps {\n  initial?: Partial<Task>;\n  allLabels: Label[];\n  taskLabels?: Label[];\n  users: { id: number; username: string }[];\n  onSave: (data: any) => Promise<void>;\n  onCancel: () => void;\n}\n\nfunction TaskForm({ initial, allLabels, taskLabels, users, onSave, onCancel }: TaskFormProps) {\n  const [title, setTitle] = useState(initial?.title || '');\n  const [description, setDescription] = useState(initial?.description || '');\n  const [status, setStatus] = useState(initial?.status || 'todo');\n  const [priority, setPriority] = useState(initial?.priority || 'medium');\n  const [dueDate, setDueDate] = useState(initial?.due_date || '');\n  const [assigneeIds, setAssigneeIds] = useState<number[]>(\n    initial?.assigned_users?.map(u => u.id) || []\n  );\n  const [selectedLabels, setSelectedLabels] = useState<number[]>(taskLabels?.map(l => l.id) || []);\n  const [error, setError] = useState('');\n  const [loading, setLoading] = useState(false);\n\n  const handleSubmit = async (e: FormEvent) => {\n    e.preventDefault();\n    setError('');\n    setLoading(true);\n    try {\n      await onSave({\n        title, description, status, priority,\n        due_date: dueDate || undefined,\n        assignee_ids: assigneeIds,\n        labelIds: selectedLabels,\n      });\n    } catch (err: unknown) {\n      const e = err as { body?: { errors?: { message: string }[] } };\n      const errs = e.body?.errors;\n      setError(errs ? errs.map((x) => x.message).join(', ') : 'Bir hata olustu');\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  const toggleLabel = (id: number) => {\n    setSelectedLabels(prev => prev.includes(id) ? prev.filter(l => l !== id) : [...prev, id]);\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <div className=\"form-group\">\n        <label>Başlık *</label>\n        <input value={title} onChange={e => setTitle(e.target.value)} placeholder=\"Görev başlığı\" required />\n      </div>\n      <div className=\"form-group\">\n        <label>Açıklama</label>\n        <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder=\"İsteğe bağlı açıklama\" />\n      </div>\n      <div className=\"form-row\">\n        <div className=\"form-group\">\n          <label>Durum</label>\n          <select value={status} onChange={e => setStatus(e.target.value as any)}>\n            <option value=\"todo\">Yapılacak</option>\n            <option value=\"in-progress\">Devam ediyor</option>\n            <option value=\"done\">Tamamlandı</option>\n          </select>\n        </div>\n        <div className=\"form-group\">\n          <label>Öncelik</label>\n          <select value={priority} onChange={e => setPriority(e.target.value as any)}>\n            <option value=\"low\">Düşük</option>\n            <option value=\"medium\">Orta</option>\n            <option value=\"high\">Yüksek</option>\n            <option value=\"urgent\">Acil</option>\n          </select>\n        </div>\n      </div>\n      <div className=\"form-row\">\n        <div className=\"form-group\">\n          <label>Bitiş Tarihi</label>\n          <input type=\"date\" value={dueDate} onChange={e => setDueDate(e.target.value)} />\n        </div>\n        <div className=\"form-group\">\n          <label>Atanan Kişiler (İsteğe Bağlı)</label>\n          <div style={{ maxHeight: '120px', overflowY: 'auto', border: '1px solid var(--border)', borderRadius: 'var(--radius-sm)', padding: '0.4rem', display: 'flex', flexDirection: 'column', gap: '0.3rem', background: 'var(--bg-card)' }}>\n            {users.map(u => (\n              <label key={u.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', margin: 0, fontWeight: 'normal', fontSize: '0.9rem' }}>\n                <input \n                  type=\"checkbox\" \n                  checked={assigneeIds.includes(u.id)}\n                  onChange={(e) => {\n                    if (e.target.checked) setAssigneeIds([...assigneeIds, u.id]);\n                    else setAssigneeIds(assigneeIds.filter(id => id !== u.id));\n                  }}\n                />\n                {u.username}\n              </label>\n            ))}\n          </div>\n        </div>\n      </div>\n      {allLabels.length > 0 && (\n        <div className=\"form-group\">\n          <label>Etiketler</label>\n          <div className=\"label-picker\">\n            {allLabels.map(l => (\n              <button\n                key={l.id}\n                type=\"button\"\n                className={`label-chip ${selectedLabels.includes(l.id) ? 'label-chip-selected' : ''}`}\n                style={{ '--label-color': l.color } as any}\n                onClick={() => toggleLabel(l.id)}\n              >\n                {l.name}\n              </button>\n            ))}\n          </div>\n        </div>\n      )}\n      {error && <div className=\"error\">{error}</div>}\n      <div className=\"modal-actions\">\n        <button type=\"button\" className=\"btn btn-secondary\" onClick={onCancel}>İptal</button>\n        <button type=\"submit\" className=\"btn btn-primary\" style={{ width: 'auto' }} disabled={loading}>\n          {loading ? 'Kaydediliyor...' : 'Kaydet'}\n        </button>\n      </div>\n    </form>\n  );\n}\n\n/* ---- Task Detail Modal ---- */\ninterface TaskDetailProps {\n  task: Task;\n  onClose: () => void;\n}\n\nfunction TaskDetail({ task, onClose }: TaskDetailProps) {\n  const [comments, setComments] = useState<Comment[]>([]);\n  const [activities, setActivities] = useState<ActivityLog[]>([]);\n  const [subtasks, setSubtasks] = useState<Task[]>([]);\n  const [labels, setLabels] = useState<Label[]>([]);\n  const [newComment, setNewComment] = useState('');\n  const [tab, setTab] = useState<'comments' | 'activity' | 'subtasks'>('comments');\n  const [loading, setLoading] = useState(false);\n\n  useEffect(() => {\n    api.comments.list(task.id).then(setComments).catch(console.error);\n    api.tasks.activities(task.id).then(setActivities).catch(console.error);\n    api.tasks.subtasks(task.id).then(setSubtasks).catch(console.error);\n    api.tasks.labels(task.id).then(setLabels).catch(console.error);\n  }, [task.id]);\n\n  const handleAddComment = async (e: FormEvent) => {\n    e.preventDefault();\n    if (!newComment.trim()) return;\n    setLoading(true);\n    try {\n      await api.comments.create(task.id, newComment);\n      setNewComment('');\n      const updated = await api.comments.list(task.id);\n      setComments(updated);\n    } catch { /* ignore */ }\n    setLoading(false);\n  };\n\n  const handleDeleteComment = async (commentId: number) => {\n    await api.comments.delete(task.id, commentId);\n    setComments(prev => prev.filter(c => c.id !== commentId));\n  };\n\n  return (\n    <div className=\"modal-overlay\" onClick={onClose}>\n      <div className=\"modal modal-detail\" onClick={e => e.stopPropagation()}>\n        <div className=\"detail-header\">\n          <h3>{task.title}</h3>\n          <button className=\"modal-close-btn\" onClick={onClose} aria-label=\"Kapat\">\n            <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"/><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"/></svg>\n          </button>\n        </div>\n\n        <div className=\"detail-badges\">\n          <StatusBadge status={task.status} />\n          <PriorityBadge priority={task.priority} />\n          {task.due_date && (\n            <span className={`badge badge-due ${isOverdue(task.due_date, task.status) ? 'badge-overdue' : ''}`}>\n              {isOverdue(task.due_date, task.status) ? 'Gecikti: ' : 'Tarih: '}{formatDate(task.due_date)}\n            </span>\n          )}\n        </div>\n\n        {labels.length > 0 && (\n          <div className=\"detail-labels\">\n            {labels.map(l => (\n              <span key={l.id} className=\"label-tag\" style={{ background: l.color + '22', color: l.color, borderColor: l.color + '55' }}>\n                {l.name}\n              </span>\n            ))}\n          </div>\n        )}\n\n        {task.description && <p className=\"detail-desc\">{task.description}</p>}\n\n        <div className=\"detail-meta\">\n          <span>{timeAgo(task.created_at)}</span>\n        </div>\n\n        <div className=\"detail-tabs\">\n          <button className={`tab-btn ${tab === 'comments' ? 'tab-active' : ''}`} onClick={() => setTab('comments')}>\n            Yorumlar ({comments.length})\n          </button>\n          <button className={`tab-btn ${tab === 'subtasks' ? 'tab-active' : ''}`} onClick={() => setTab('subtasks')}>\n            Alt Görevler ({subtasks.length})\n          </button>\n          <button className={`tab-btn ${tab === 'activity' ? 'tab-active' : ''}`} onClick={() => setTab('activity')}>\n            Geçmiş ({activities.length})\n          </button>\n        </div>\n\n        <div className=\"detail-tab-content\">\n          {tab === 'comments' && (\n            <div className=\"comments-section\">\n              {comments.length === 0 && <div className=\"empty-tab\">Henüz yorum yok</div>}\n              {comments.map(c => (\n                <div key={c.id} className=\"comment-item\">\n                  <div className=\"comment-header\">\n                    <strong>{c.username}</strong>\n                    <span className=\"comment-time\">{timeAgo(c.created_at)}</span>\n                    <button className=\"comment-delete\" onClick={() => handleDeleteComment(c.id)}>Sil</button>\n                  </div>\n                  <p>{c.content}</p>\n                </div>\n              ))}\n              <form className=\"comment-form\" onSubmit={handleAddComment}>\n                <input\n                  value={newComment}\n                  onChange={e => setNewComment(e.target.value)}\n                  placeholder=\"Yorum yaz...\"\n                  required\n                />\n                <button type=\"submit\" className=\"btn btn-sm btn-primary\" style={{ width: 'auto', marginTop: 0, padding: '0.5rem 1rem' }} disabled={loading}>\n                  Gonder\n                </button>\n              </form>\n            </div>\n          )}\n\n          {tab === 'subtasks' && (\n            <div className=\"subtasks-section\">\n              {subtasks.length === 0 && <div className=\"empty-tab\">Alt görev yok</div>}\n              {subtasks.map(st => (\n                <div key={st.id} className=\"subtask-item\">\n                  <span className={`subtask-check ${st.status === 'done' ? 'subtask-done' : ''}`} style={{ display: 'flex', alignItems: 'center' }}>\n                    {st.status === 'done' \n                      ? <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><polyline points=\"9 11 12 14 22 4\"/><path d=\"M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11\"/></svg>\n                      : <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"/></svg>\n                    }\n                  </span>\n                  <span className={st.status === 'done' ? 'subtask-title-done' : ''}>{st.title}</span>\n                  <StatusBadge status={st.status} />\n                </div>\n              ))}\n              {subtasks.length > 0 && (\n                <div className=\"subtask-progress\">\n                  {subtasks.filter(s => s.status === 'done').length}/{subtasks.length} tamamlandı\n                </div>\n              )}\n            </div>\n          )}\n\n          {tab === 'activity' && (\n            <div className=\"activity-section\">\n              {activities.length === 0 && <div className=\"empty-tab\">Geçmiş kaydı yok</div>}\n              {activities.map(a => (\n                <div key={a.id} className=\"activity-item\">\n                  <div className=\"activity-dot\"></div>\n                  <div className=\"activity-content\">\n                    <strong>{a.username}</strong> <span className=\"activity-action\">{a.action}</span>\n                    {a.detail && <span className=\"activity-detail\"> - {a.detail}</span>}\n                    <div className=\"activity-time\">{timeAgo(a.created_at)}</div>\n                  </div>\n                </div>\n              ))}\n            </div>\n          )}\n        </div>\n      </div>\n    </div>\n  );\n}\n\nimport { \n  Globe, Folder, Plus, Trash2, Search, X, Download, \n  LayoutGrid, List, Calendar, AlertTriangle, \n  MoreVertical, CheckCircle2, Circle, Clock, Activity,\n  Check, BarChart3\n} from 'lucide-react';\nimport { Project } from '../types';\n\n/* ---- Main TasksPage ---- */\nexport default function TasksPage() {\n  const [tasks, setTasks] = useState<Task[]>([]);\n  const [projects, setProjects] = useState<Project[]>([]);\n  const [selectedProjectId, setSelectedProjectId] = useState<number | null>(null);\n  const [showProjectModal, setShowProjectModal] = useState(false);\n  const [showManageMembersModal, setShowManageMembersModal] = useState(false);\n  const [newProjectName, setNewProjectName] = useState('');\n  const [newProjectMembers, setNewProjectMembers] = useState<number[]>([]);\n  const [activeProjectMembers, setActiveProjectMembers] = useState<{ id: number; username: string }[]>([]);\n  const [allLabels, setAllLabels] = useState<Label[]>([]);\n  const [users, setUsers] = useState<{ id: number; username: string }[]>([]);\n  const [currentUser, setCurrentUser] = useState<{ userId: number; role: string; username: string } | null>(null);\n  const [loading, setLoading] = useState(true);\n  const [showCreate, setShowCreate] = useState(false);\n  const [editTask, setEditTask] = useState<Task | null>(null);\n  const [detailTask, setDetailTask] = useState<Task | null>(null);\n  const [editLabels, setEditLabels] = useState<Label[]>([]);\n  const [searchQuery, setSearchQuery] = useState('');\n  const [filterPriority, setFilterPriority] = useState('');\n  const [filterLabel, setFilterLabel] = useState('');\n  const [draggedId, setDraggedId] = useState<number | null>(null);\n  const [sidebarOpen, setSidebarOpen] = useState(false);\n  const [quickAddTitle, setQuickAddTitle] = useState('');\n  const [quickAddLoading, setQuickAddLoading] = useState(false);\n  const searchInputRef = useRef<HTMLInputElement>(null);\n\n  /* Keyboard Shortcuts */\n  const handleKeyDown = useCallback((e: KeyboardEvent) => {\n    const target = e.target as HTMLElement;\n    const isInput = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT' || target.isContentEditable;\n\n    if (e.key === 'Escape') {\n      setShowCreate(false);\n      setEditTask(null);\n      setDetailTask(null);\n      setShowProjectModal(false);\n      setShowManageMembersModal(false);\n      return;\n    }\n\n    if (isInput) return;\n\n    if (e.key === 'n' || e.key === 'N') {\n      e.preventDefault();\n      setShowCreate(true);\n      return;\n    }\n    if (e.key === '/') {\n      e.preventDefault();\n      searchInputRef.current?.focus();\n      return;\n    }\n  }, []);\n\n  useEffect(() => {\n    window.addEventListener('keydown', handleKeyDown);\n    return () => window.removeEventListener('keydown', handleKeyDown);\n  }, [handleKeyDown]);\n\n  /* Quick Add */\n  const handleQuickAdd = async (e: FormEvent) => {\n    e.preventDefault();\n    if (!quickAddTitle.trim()) return;\n    setQuickAddLoading(true);\n    try {\n      const taskData: any = { title: quickAddTitle.trim() };\n      if (selectedProjectId !== null) taskData.project_id = selectedProjectId;\n      await api.tasks.create(taskData);\n      setQuickAddTitle('');\n      loadTasks();\n    } catch { /* ignore */ }\n    setQuickAddLoading(false);\n  };\n\n  /* CSV Export */\n  const exportTasksCSV = () => {\n    const header = 'ID,Başlık,Durum,Öncelik,Bitiş Tarihi,Oluşturma Tarihi\\n';\n    const rows = filteredTasks.map(t => {\n      const due = t.due_date ? formatDate(t.due_date) : '-';\n      const created = formatDate(t.created_at);\n      return `${t.id},\"${t.title}\",\"${statusLabel(t.status)}\",\"${priorityLabel(t.priority)}\",\"${due}\",\"${created}\"`;\n    }).join('\\n');\n    const blob = new Blob(['\\uFEFF' + header + rows], { type: 'text/csv;charset=utf-8;' });\n    const url = URL.createObjectURL(blob);\n    const a = document.createElement('a');\n    a.href = url;\n    a.download = `görevler_${new Date().toISOString().slice(0, 10)}.csv`;\n    a.click();\n    URL.revokeObjectURL(url);\n  };\n\n  const loadTasks = () => {\n    setLoading(true);\n    const filters: Record<string, string> = { label: filterLabel };\n    if (selectedProjectId !== null) {\n      filters.project_id = selectedProjectId.toString();\n    }\n    api.tasks.list(filters)\n      .then(setTasks)\n      .catch(console.error)\n      .finally(() => setLoading(false));\n  };\n\n  const loadProjects = () => {\n    api.projects.list().then(setProjects).catch(console.error);\n  };\n\n  useEffect(() => {\n    Promise.all([\n      api.projects.list().then(setProjects),\n      api.labels.list().then(setAllLabels),\n      api.auth.users().then(setUsers).catch(() => {\n        return [] as { id: number; username: string }[];\n      }),\n      api.auth.me().then(setCurrentUser).catch(() => setCurrentUser(null)),\n    ]).finally(() => setLoading(false));\n  }, []);\n\n  useEffect(() => {\n    loadTasks();\n    if (selectedProjectId) {\n      api.projects.members(selectedProjectId)\n        .then(setActiveProjectMembers)\n        .catch(console.error);\n    } else {\n      setActiveProjectMembers([]);\n    }\n  }, [selectedProjectId, filterLabel]);\n\n  const handleCreateProject = async (e: FormEvent) => {\n    e.preventDefault();\n    if (!newProjectName.trim()) return;\n    try {\n      const p = await api.projects.create(newProjectName);\n      let additionFailed = false;\n      for (const uid of newProjectMembers) {\n        try {\n          await api.projects.addMember(p.id, uid);\n        } catch (err: any) {\n          console.error(\"Failed to add member\", uid, err);\n          additionFailed = true;\n        }\n      }\n      if (additionFailed) {\n        alert(\"Bazı üyeler eklenemedi. Lütfen projenizi kontrol edin.\");\n      }\n      loadProjects();\n      setNewProjectName('');\n      setNewProjectMembers([]);\n      setShowProjectModal(false);\n      setSelectedProjectId(p.id);\n      \n      const mems = await api.projects.members(p.id).catch(() => []);\n      setActiveProjectMembers(mems);\n    } catch { /* ignore */ }\n  };\n\n  const handleDeleteProject = async (id: number) => {\n    if (!confirm('Bu projeyi ve içindeki tüm görevleri silmek istediğinize emin misiniz?')) return;\n    await api.projects.delete(id);\n    if (selectedProjectId === id) setSelectedProjectId(null);\n    loadProjects();\n  };\n\n  const handleCreate = async (data: any) => {\n    const { labelIds, ...taskData } = data;\n    if (selectedProjectId !== null) {\n      taskData.project_id = selectedProjectId;\n    }\n    const created = await api.tasks.create(taskData);\n    if (labelIds?.length) {\n      for (const lid of labelIds) {\n        await api.labels.addToTask(created.id, lid);\n      }\n    }\n    setShowCreate(false);\n    loadTasks();\n  };\n\n  const handleUpdate = async (data: any) => {\n    if (!editTask) return;\n    const { labelIds, ...taskData } = data;\n    await api.tasks.update(editTask.id, taskData);\n\n    // Sync labels\n    const currentLabels = editLabels.map(l => l.id);\n    const toAdd = (labelIds || []).filter((id: number) => !currentLabels.includes(id));\n    const toRemove = currentLabels.filter(id => !(labelIds || []).includes(id));\n    for (const lid of toAdd) await api.labels.addToTask(editTask.id, lid);\n    for (const lid of toRemove) await api.labels.removeFromTask(editTask.id, lid);\n\n    setEditTask(null);\n    loadTasks();\n  };\n\n  const handleDelete = async (id: number) => {\n    if (!confirm('Bu görevi silmek istediğinizden emin misiniz?')) return;\n    const el = document.getElementById(`task-${id}`);\n    if (el) el.classList.add('task-deleting');\n    await new Promise(r => setTimeout(r, 200));\n    await api.tasks.delete(id);\n    loadTasks();\n  };\n\n  const handleEdit = async (task: Task) => {\n    const labels = await api.tasks.labels(task.id);\n    setEditLabels(labels);\n    setEditTask(task);\n  };\n\n  /* Drag & Drop */\n  const handleDragStart = (e: DragEvent, taskId: number) => {\n    setDraggedId(taskId);\n    e.dataTransfer.effectAllowed = 'move';\n  };\n\n  const handleDragOver = (e: DragEvent) => {\n    e.preventDefault();\n    e.dataTransfer.dropEffect = 'move';\n  };\n\n  const handleDrop = async (e: DragEvent, newStatus: string) => {\n    e.preventDefault();\n    if (draggedId === null) return;\n    const task = tasks.find(t => t.id === draggedId);\n    if (task && task.status !== newStatus) {\n      await api.tasks.update(draggedId, { status: newStatus });\n      loadTasks();\n    }\n    setDraggedId(null);\n  };\n\n  /* Filtering */\n  const filteredTasks = tasks.filter(task => {\n    if (task.parent_id) return false; // Hide subtasks from main board\n    if (searchQuery.trim()) {\n      const q = searchQuery.toLowerCase();\n      if (!task.title.toLowerCase().includes(q) && !(task.description || '').toLowerCase().includes(q)) return false;\n    }\n    if (filterPriority && task.priority !== filterPriority) return false;\n    return true;\n  });\n\n  const todoCount = filteredTasks.filter(t => t.status === 'todo').length;\n  const inProgressCount = filteredTasks.filter(t => t.status === 'in-progress').length;\n  const doneCount = filteredTasks.filter(t => t.status === 'done').length;\n  const completionRate = filteredTasks.length > 0 ? Math.round((doneCount / filteredTasks.length) * 100) : 0;\n  const overdueCount = tasks.filter(t => isOverdue(t.due_date, t.status)).length;\n  const currentProject = selectedProjectId ? projects.find(p => p.id === selectedProjectId) : null;\n  const currentProjectName = currentProject?.name || 'Tüm Görevler';\n\n  return (\n    <div className=\"tasks-page-layout\">\n      {/* Mobile Hamburger */}\n      <button className=\"hamburger-btn\" onClick={() => setSidebarOpen(!sidebarOpen)} aria-label=\"Menu\">\n        <span className=\"hamburger-line\" />\n        <span className=\"hamburger-line\" />\n        <span className=\"hamburger-line\" />\n      </button>\n\n      {/* Sidebar Overlay (mobile) */}\n      {sidebarOpen && <div className=\"sidebar-overlay\" onClick={() => setSidebarOpen(false)} />}\n\n      {/* Sidebar */}\n      <div className={`projects-sidebar ${sidebarOpen ? 'sidebar-open' : ''}`}>\n        <div className=\"sidebar-header\">\n          <h3>Projeler</h3>\n          <button className=\"btn-icon\" onClick={() => setShowProjectModal(true)} title=\"Yeni Proje Oluştur\">\n            <Plus size={18} />\n          </button>\n        </div>\n        <div className=\"project-list\">\n          <div \n            className={`project-item ${selectedProjectId === null ? 'active' : ''}`}\n            onClick={() => { setSelectedProjectId(null); setSidebarOpen(false); }}\n          >\n            <Globe size={18} className=\"project-icon\" />\n            <span className=\"project-name\">Tüm Görevler</span>\n          </div>\n          {projects.map(p => (\n            <div \n              key={p.id} \n              className={`project-item ${selectedProjectId === p.id ? 'active' : ''}`}\n              onClick={() => { setSelectedProjectId(p.id); setSidebarOpen(false); }}\n            >\n              <Folder size={18} className=\"project-icon\" />\n              <span className=\"project-name\">{p.name}</span>\n              <button \n                className=\"project-delete-btn\" \n                onClick={(e) => { e.stopPropagation(); handleDeleteProject(p.id); }}\n                title=\"Projeyi Sil\"\n              >\n                <X size={14} />\n              </button>\n            </div>\n          ))}\n        </div>\n      </div>\n\n      {/* Main Content */}\n      <div className=\"tasks-main-content\">\n        <div className=\"page-header\">\n          <div>\n            <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>\n              <LayoutGrid size={24} className=\"text-secondary\" />\n              {currentProjectName} \n              <span className=\"task-count-badge\">{tasks.filter(t => !t.parent_id).length}</span>\n            </h2>\n            {selectedProjectId && (\n              <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', alignItems: 'center' }}>\n                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Proje Üyeleri:</span>\n                {activeProjectMembers.length === 0 ? (\n                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Sadece siz</span>\n                ) : (\n                  <div className=\"avatar-group\">\n                    {activeProjectMembers.map(m => (\n                      <div \n                        key={m.id} \n                        title={m.username} \n                        className=\"avatar-small\"\n                      >\n                        {m.username.substring(0,2).toUpperCase()}\n                      </div>\n                    ))}\n                  </div>\n                )}\n                {(currentUser?.role === 'admin' || currentProject?.user_id === currentUser?.userId) && (\n                  <button className=\"btn-text-sm\" onClick={() => setShowManageMembersModal(true)}>Üyeleri Yönet</button>\n                )}\n              </div>\n            )}\n          </div>\n          <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>\n            <button className=\"btn-outline-pill\" onClick={exportTasksCSV} title=\"CSV İndir\">\n              <Download size={16} />\n              <span>CSV Dışa Aktar</span>\n            </button>\n            <button className=\"btn-primary-gradient\" onClick={() => setShowCreate(true)}>\n              <Plus size={18} />\n              <span>Yeni Görev</span>\n            </button>\n          </div>\n        </div>\n\n        {loading ? (\n          <div className=\"kanban-board\">\n            {[1,2,3].map(col => (\n              <div key={col} className=\"kanban-column\">\n                <div className=\"skeleton-box\" style={{height:'32px', width:'140px', marginBottom:'1.5rem', borderRadius: '8px'}} />\n                <div className=\"skeleton-box skeleton-card\" />\n                <div className=\"skeleton-box skeleton-card\" style={{animationDelay: '0.1s'}} />\n              </div>\n            ))}\n          </div>\n        ) : (\n          <>\n            {/* Stat Cards */}\n            <div className=\"task-stats-grid\">\n              <div className=\"task-stat-card\">\n                <div className=\"task-stat-icon bg-orange\">\n                  <Clock size={24} />\n                </div>\n                <div className=\"task-stat-info\">\n                  <span className=\"task-stat-number\">{todoCount}</span>\n                  <span className=\"task-stat-label\">Yapılacak</span>\n                </div>\n              </div>\n              <div className=\"task-stat-card\">\n                <div className=\"task-stat-icon bg-blue\">\n                  <Activity size={24} />\n                </div>\n                <div className=\"task-stat-info\">\n                  <span className=\"task-stat-number\">{inProgressCount}</span>\n                  <span className=\"task-stat-label\">Devam Ediyor</span>\n                </div>\n              </div>\n              <div className=\"task-stat-card\">\n                <div className=\"task-stat-icon bg-green\">\n                  <CheckCircle2 size={24} />\n                </div>\n                <div className=\"task-stat-info\">\n                  <span className=\"task-stat-number\">{doneCount}</span>\n                  <span className=\"task-stat-label\">Tamamlandı</span>\n                </div>\n              </div>\n              <div className=\"task-stat-card\">\n                <div className=\"task-stat-icon bg-purple\">\n                  <BarChart3 size={24} />\n                </div>\n                <div className=\"task-stat-info\">\n                  <span className=\"task-stat-number\">%{completionRate}</span>\n                  <span className=\"task-stat-label\">Tamamlanma</span>\n                </div>\n                <div className=\"progress-bar-container\">\n                  <div className=\"progress-bar-fill\" style={{ width: `${completionRate}%` }} />\n                </div>\n              </div>\n            </div>\n\n            {overdueCount > 0 && (\n              <div className=\"overdue-alert\">\n                <AlertTriangle size={18} />\n                <span>{overdueCount} görev gecikti!</span>\n              </div>\n            )}\n\n            {/* Quick Add */}\n            <form className=\"quick-add-form\" onSubmit={handleQuickAdd}>\n              <div className=\"quick-add-container\">\n                <Plus size={18} className=\"quick-add-icon\" />\n                <input\n                  className=\"quick-add-input\"\n                  type=\"text\"\n                  placeholder=\"Hızlı görev ekle... (Enter ile oluştur)\"\n                  value={quickAddTitle}\n                  onChange={e => setQuickAddTitle(e.target.value)}\n                  disabled={quickAddLoading}\n                />\n                {quickAddTitle.trim() && (\n                  <button type=\"submit\" className=\"quick-add-btn\" disabled={quickAddLoading}>\n                    {quickAddLoading ? <div className=\"spinner-xs\" /> : <Check size={18} />}\n                  </button>\n                )}\n              </div>\n            </form>\n\n            {/* Filter Bar */}\n            <div className=\"filter-bar\">\n              <div className=\"search-container-modern\">\n                <Search size={18} className=\"search-icon-lucide\" />\n                <input\n                  ref={searchInputRef}\n                  type=\"text\"\n                  className=\"search-input-modern\"\n                  placeholder=\"Görevlerde ara...\"\n                  value={searchQuery}\n                  onChange={e => setSearchQuery(e.target.value)}\n                />\n                {searchQuery && (\n                  <button className=\"search-clear-btn\" onClick={() => setSearchQuery('')}>\n                    <X size={16} />\n                  </button>\n                )}\n              </div>\n              <div className=\"filter-actions\">\n                <select className=\"filter-select-modern\" value={filterPriority} onChange={e => setFilterPriority(e.target.value)}>\n                  <option value=\"\">Tum Oncelikler</option>\n                  <option value=\"urgent\">Acil</option>\n                  <option value=\"high\">Yuksek</option>\n                  <option value=\"medium\">Orta</option>\n                  <option value=\"low\">Dusuk</option>\n                </select>\n                {allLabels.length > 0 && (\n                  <select className=\"filter-select-modern\" value={filterLabel} onChange={e => setFilterLabel(e.target.value)}>\n                    <option value=\"\">Tum Etiketler</option>\n                    {allLabels.map(l => <option key={l.id} value={l.name}>{l.name}</option>)}\n                  </select>\n                )}\n              </div>\n            </div>\n\n            {searchQuery && (\n              <div className=\"search-results-info\">\n                <Search size={14} />\n                <span>\"{searchQuery}\" için <strong>{filteredTasks.length}</strong> sonuç bulundu</span>\n              </div>\n            )}\n\n            {tasks.length === 0 && (\n              <div className=\"empty-state-modern\">\n                <div className=\"empty-state-icon\">\n                  <List size={48} />\n                </div>\n                <h3>Henüz görev yok!</h3>\n                <p>Harika işler başarmak için ilk görevini oluştur.</p>\n                <button className=\"btn btn-primary\" onClick={() => setShowCreate(true)} style={{ marginTop: '1rem' }}>\n                  Görev Oluştur\n                </button>\n              </div>\n            )}\n\n            {/* Kanban Board with Drag & Drop */}\n            <div className=\"kanban-board\">\n              {[\n                { id: 'todo', label: 'Yapılacaklar', filter: 'todo', icon: <Circle size={18} className=\"text-orange\" /> },\n                { id: 'in-progress', label: 'Devam Ediyor', filter: 'in-progress', icon: <Activity size={18} className=\"text-blue\" /> },\n                { id: 'done', label: 'Tamamlandı', filter: 'done', icon: <CheckCircle2 size={18} className=\"text-green\" /> }\n              ].map(col => (\n                <div\n                  className=\"kanban-column\"\n                  key={col.id}\n                  onDragOver={handleDragOver}\n                  onDrop={e => handleDrop(e, col.filter)}\n                >\n                  <h3 className=\"column-title\">\n                    <span className=\"flex items-center gap-2\">\n                      {col.icon}\n                      {col.label}\n                    </span>\n                    <span className=\"column-count\">{filteredTasks.filter(t => t.status === col.filter).length}</span>\n                  </h3>\n                  <div className=\"kanban-task-list\">\n                    {filteredTasks.filter(task => task.status === col.filter).map((task, index) => (\n                      <div\n                        id={`task-${task.id}`}\n                        className={`task-card-modern prio-${task.priority} ${isOverdue(task.due_date, task.status) ? 'overdue' : ''} ${draggedId === task.id ? 'dragging' : ''}`}\n                        style={{ animationDelay: `${index * 50}ms` }}\n                        key={task.id}\n                        draggable\n                        onDragStart={e => handleDragStart(e, task.id)}\n                        onClick={() => setDetailTask(task)}\n                      >\n                        <div className=\"task-card-header\">\n                          <PriorityBadge priority={task.priority} />\n                          {task.due_date && (\n                            <span className={`due-date-badge ${isOverdue(task.due_date, task.status) ? 'overdue' : ''}`}>\n                              <Calendar size={12} />\n                              {formatDate(task.due_date)}\n                            </span>\n                          )}\n                        </div>\n                        <h4 className=\"task-card-title\">{task.title}</h4>\n                        {task.description && <p className=\"task-card-desc\">{task.description}</p>}\n                        <div className=\"task-card-footer-modern\" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.75rem' }}>\n                          <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>\n                            <span className=\"task-time\">\n                              <Clock size={12} />\n                              {timeAgo(task.created_at)}\n                            </span>\n                            {task.assigned_users && task.assigned_users.length > 0 && (\n                              <div className=\"avatar-group\" style={{ marginLeft: '0.5rem' }}>\n                                {task.assigned_users.slice(0, 3).map(u => (\n                                  <div key={u.id} title={u.username} className=\"avatar-small\">\n                                    {u.username.substring(0, 2).toUpperCase()}\n                                  </div>\n                                ))}\n                                {task.assigned_users.length > 3 && (\n                                  <div className=\"avatar-small\" style={{ background: 'var(--bg-subtle)' }}>\n                                    +{task.assigned_users.length - 3}\n                                  </div>\n                                )}\n                              </div>\n                            )}\n                          </div>\n                          <div className=\"task-actions-overlay\" onClick={e => e.stopPropagation()}>\n                            <button className=\"icon-btn-sm\" onClick={() => handleEdit(task)} title=\"Duzenle\">\n                              <MoreVertical size={16} />\n                            </button>\n                            <button className=\"icon-btn-sm text-danger\" onClick={() => handleDelete(task.id)} title=\"Sil\">\n                              <Trash2 size={16} />\n                            </button>\n                          </div>\n                        </div>\n                      </div>\n                    ))}\n                    {filteredTasks.filter(task => task.status === col.filter).length === 0 && (\n                      <div className=\"column-empty\">\n                        <Plus size={16} className=\"text-muted mb-1\" />\n                        Görev yok\n                      </div>\n                    )}\n                  </div>\n                </div>\n              ))}\n            </div>\n          </>\n        )}\n      </div>\n\n      {/* Create/Edit Modal */}\n      {(showCreate || editTask) && (\n        <div className=\"modal-overlay\" onClick={() => { setShowCreate(false); setEditTask(null); }}>\n          <div className=\"modal\" onClick={e => e.stopPropagation()}>\n            <h3>{editTask ? 'Görevi Düzenle' : 'Yeni Görev'}</h3>\n            <TaskForm\n              initial={editTask || undefined}\n              allLabels={allLabels}\n              taskLabels={editTask ? editLabels : []}\n              users={users}\n              onSave={editTask ? handleUpdate : handleCreate}\n              onCancel={() => { setShowCreate(false); setEditTask(null); }}\n            />\n          </div>\n        </div>\n      )}\n\n      {/* Detail Modal */}\n      {detailTask && (\n        <TaskDetail\n          task={detailTask}\n          onClose={() => setDetailTask(null)}\n        />\n      )}\n\n      {/* Manage Members Modal */}\n      {showManageMembersModal && selectedProjectId && (\n        <div className=\"modal-overlay\" onClick={() => setShowManageMembersModal(false)}>\n          <div className=\"modal\" style={{ maxWidth: '400px' }} onClick={e => e.stopPropagation()}>\n            <h3>Projeyi Yönet</h3>\n            <div className=\"form-group\" style={{ marginTop: '1rem' }}>\n              <label>Üyeleri Düzenle</label>\n              <div style={{ maxHeight: '200px', overflowY: 'auto', border: '1px solid var(--border)', borderRadius: 'var(--radius-sm)', padding: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', background: 'var(--bg-card)' }}>\n                {users.map(u => {\n                  const isMember = activeProjectMembers.some(m => m.id === u.id);\n                  const isProjectOwner = currentProject?.user_id === u.id;\n                  return (\n                    <label key={u.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', margin: 0, fontWeight: 'normal', fontSize: '0.9rem', opacity: isProjectOwner ? 0.6 : 1 }}>\n                      <input \n                        type=\"checkbox\" \n                        checked={isMember || isProjectOwner}\n                        disabled={isProjectOwner}\n                        onChange={async (e) => {\n                          try {\n                            if (e.target.checked) {\n                              await api.projects.addMember(selectedProjectId, u.id);\n                            } else {\n                              await api.projects.removeMember(selectedProjectId, u.id);\n                            }\n                            // Always fetch fresh list from server to ensure sync\n                            const updatedMems = await api.projects.members(selectedProjectId);\n                            setActiveProjectMembers(updatedMems);\n                          } catch (err) {\n                            console.error(err);\n                            alert(\"Islem basarisiz. Yetkiniz olmayabilir.\");\n                          }\n                        }}\n                      />\n                      {u.username} {isProjectOwner ? '(Sahibi)' : ''}\n                    </label>\n                  );\n                })}\n              </div>\n            </div>\n            <div className=\"modal-actions\" style={{ marginTop: '1rem' }}>\n              <button type=\"button\" className=\"btn btn-primary\" onClick={() => setShowManageMembersModal(false)} style={{ width: '100%' }}>Kapat</button>\n            </div>\n          </div>\n        </div>\n      )}\n\n      {/* Project Modal */}\n      {showProjectModal && (\n        <div className=\"modal-overlay\" onClick={() => setShowProjectModal(false)}>\n          <div className=\"modal\" style={{ maxWidth: '400px' }} onClick={e => e.stopPropagation()}>\n            <h3>Yeni Proje Oluştur</h3>\n            <form onSubmit={handleCreateProject}>\n              <div className=\"form-group\">\n                <label>Proje Adı *</label>\n                <input \n                  value={newProjectName} \n                  onChange={e => setNewProjectName(e.target.value)} \n                  placeholder=\"Proje adı\" \n                  autoFocus\n                  required \n                />\n              </div>\n              {users.length > 0 && (\n                <div className=\"form-group\">\n                  <label>Üyeler Ekle (İsteğe Bağlı)</label>\n                  <div style={{ maxHeight: '150px', overflowY: 'auto', border: '1px solid var(--border)', borderRadius: 'var(--radius-sm)', padding: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', background: 'var(--bg-card)' }}>\n                    {users.map(u => (\n                      <label key={u.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', margin: 0, fontWeight: 'normal', fontSize: '0.9rem' }}>\n                        <input \n                          type=\"checkbox\" \n                          checked={newProjectMembers.includes(u.id)}\n                          onChange={(e) => {\n                            if (e.target.checked) setNewProjectMembers([...newProjectMembers, u.id]);\n                            else setNewProjectMembers(newProjectMembers.filter(id => id !== u.id));\n                          }}\n                        />\n                        {u.username} {currentUser?.userId === u.id ? '(Siz - Otomatik Eklenecek)' : ''}\n                      </label>\n                    ))}\n                  </div>\n                </div>\n              )}\n              <div className=\"modal-actions\">\n                <button type=\"button\" className=\"btn btn-secondary\" onClick={() => setShowProjectModal(false)}>İptal</button>\n                <button type=\"submit\" className=\"btn btn-primary\" style={{ width: 'auto' }}>Oluştur</button>\n              </div>\n            </form>\n          </div>\n        </div>\n      )}\n    </div>\n  );\n}\n",
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\client\\src\\types.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\app.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\db.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\middleware\\auth.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\routes\\admin.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\routes\\auth.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\routes\\comments.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\routes\\labels.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\routes\\projects.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\routes\\reports.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\routes\\tasks.ts",
+        "messages": [
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 129,
+                "column": 56,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 129,
+                "endColumn": 59,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                5610,
+                                5613
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                5610,
+                                5613
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 1,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import { Router, Request, Response } from 'express';\nimport db from '../db';\nimport { requireAuth } from '../middleware/auth';\nimport { AppError } from '../types';\nimport { createTask, getAllTasks, getTaskById, getSubtasks, getFilteredTasks, updateTask, deleteTask } from '../services/taskService';\nimport { getLabelsForTask, addLabelToTask, removeLabelFromTask } from '../services/labelService';\nimport { logActivity } from '../services/activityService';\nimport { getActivitiesByTask } from '../services/activityService';\n\nconst router = Router();\n\nrouter.use(requireAuth);\n\nfunction parseId(raw: string): number | null {\n  const id = parseInt(raw, 10);\n  return isNaN(id) ? null : id;\n}\n\nfunction sendAppError(res: Response, err: unknown): void {\n  const appErr = err as AppError;\n  res.status(appErr.statusCode || 500).json({ errors: appErr.errors || [{ message: appErr.message }] });\n}\n\nrouter.get('/', (req, res): void => {\n  const { status, priority, assigned_to, project_id, search, due_before, label } = req.query;\n  const isAdmin = req.session.role === 'admin';\n\n  const hasFilters = status || priority || assigned_to || project_id !== undefined || search || due_before || label;\n\n  if (hasFilters) {\n    const parsedProjectId = project_id === 'null' ? null : (project_id ? parseInt(project_id as string, 10) : undefined);\n    const tasks = getFilteredTasks(db, {\n      status: status as string,\n      priority: priority as string,\n      assigned_to: assigned_to ? parseInt(assigned_to as string, 10) : undefined,\n      project_id: parsedProjectId,\n      search: search as string,\n      due_before: due_before as string,\n      label: label as string,\n    }, req.session.userId!, isAdmin);\n    res.status(200).json(tasks);\n  } else {\n    res.status(200).json(getAllTasks(db, req.session.userId!, isAdmin));\n  }\n});\n\nrouter.post('/', (req: Request, res: Response): void => {\n  try {\n    const task = createTask(db, req.body, req.session.userId!);\n    logActivity(db, task.id, req.session.userId!, 'created', `Task created: ${task.title}`);\n    res.status(201).json(task);\n  } catch (err) {\n    sendAppError(res, err);\n  }\n});\n\nrouter.get('/:id', (req, res): void => {\n  const id = parseId(req.params.id);\n  if (id === null) { res.status(400).json({ error: 'Invalid id' }); return; }\n  \n  const isAdmin = req.session.role === 'admin';\n  const task = db.prepare(`\n    SELECT t.* FROM tasks t\n    LEFT JOIN projects p ON t.project_id = p.id\n    LEFT JOIN project_members pm ON p.id = pm.project_id\n    WHERE t.id = ? AND (? OR t.user_id = ? OR p.user_id = ? OR pm.user_id = ?)\n    GROUP BY t.id\n  `).get(id, isAdmin ? 1 : 0, req.session.userId, req.session.userId, req.session.userId);\n  \n  if (!task) { res.status(404).json({ error: 'Task not found' }); return; }\n  res.status(200).json(task);\n});\n\nrouter.get('/:id/subtasks', (req, res): void => {\n  const id = parseId(req.params.id);\n  if (id === null) { res.status(400).json({ error: 'Invalid id' }); return; }\n  const isAdmin = req.session.role === 'admin';\n  res.status(200).json(getSubtasks(db, id, req.session.userId!, isAdmin));\n});\n\nrouter.get('/:id/labels', (req: Request, res: Response): void => {\n  const id = parseId(req.params.id);\n  if (id === null) { res.status(400).json({ error: 'Invalid id' }); return; }\n  res.status(200).json(getLabelsForTask(db, id));\n});\n\n// POST /api/tasks/:id/labels — add label to task\nrouter.post('/:id/labels', (req: Request, res: Response): void => {\n  const taskId = parseId(req.params.id);\n  if (taskId === null) { res.status(400).json({ error: 'Invalid task id' }); return; }\n  const { label_id } = req.body;\n  if (!label_id) { res.status(400).json({ error: 'label_id is required' }); return; }\n  const success = addLabelToTask(db, taskId, label_id);\n  if (!success) { res.status(409).json({ error: 'Label already attached or not found' }); return; }\n  res.status(200).json(getLabelsForTask(db, taskId));\n});\n\n// DELETE /api/tasks/:id/labels/:labelId — remove label from task\nrouter.delete('/:id/labels/:labelId', (req: Request, res: Response): void => {\n  const taskId = parseId(req.params.id);\n  const labelId = parseId(req.params.labelId);\n  if (taskId === null || labelId === null) { res.status(400).json({ error: 'Invalid id' }); return; }\n  removeLabelFromTask(db, taskId, labelId);\n  res.status(200).json(getLabelsForTask(db, taskId));\n});\n\nrouter.get('/:id/activities', (req: Request, res: Response): void => {\n  const id = parseId(req.params.id);\n  if (id === null) { res.status(400).json({ error: 'Invalid id' }); return; }\n  res.status(200).json(getActivitiesByTask(db, id));\n});\n\nrouter.patch('/:id', (req: Request, res: Response): void => {\n  const id = parseId(req.params.id);\n  if (id === null) { res.status(400).json({ error: 'Invalid id' }); return; }\n  try {\n    const oldTask = getTaskById(db, id);\n    const task = updateTask(db, id, req.body);\n    if (!task) { res.status(404).json({ error: 'Task not found' }); return; }\n\n    // Log changes\n    if (oldTask) {\n      const changes: string[] = [];\n      if (req.body.title && req.body.title !== oldTask.title) changes.push(`Title changed`);\n      if (req.body.status && req.body.status !== oldTask.status) changes.push(`Status: ${oldTask.status} -> ${req.body.status}`);\n      if (req.body.priority && req.body.priority !== oldTask.priority) changes.push(`Priority: ${oldTask.priority} -> ${req.body.priority}`);\n      if (req.body.due_date !== undefined && req.body.due_date !== oldTask.due_date) changes.push(`Due date updated`);\n      if (req.body.assignee_ids !== undefined) {\n        const oldIds = oldTask.assigned_users?.map((u: any) => u.id).sort().join(',') || '';\n        const newIds = [...req.body.assignee_ids].sort().join(',');\n        if (oldIds !== newIds) changes.push(`Assignees changed`);\n      }\n      if (changes.length > 0) {\n        logActivity(db, id, req.session.userId!, 'updated', changes.join('; '));\n      }\n    }\n\n    res.status(200).json(task);\n  } catch (err) {\n    sendAppError(res, err);\n  }\n});\n\nrouter.delete('/:id', (req: Request, res: Response): void => {\n  const id = parseId(req.params.id);\n  if (id === null) { res.status(400).json({ error: 'Invalid id' }); return; }\n  if (!deleteTask(db, id)) { res.status(404).json({ error: 'Task not found' }); return; }\n  res.status(204).send();\n});\n\nexport default router;\n",
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\seed.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\server.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\services\\activityService.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\services\\authService.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\services\\commentService.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\services\\labelService.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\services\\projectService.ts",
+        "messages": [
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 4,
+                "column": 51,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 4,
+                "endColumn": 54,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                183,
+                                186
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                183,
+                                186
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 14,
+                "column": 51,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 14,
+                "endColumn": 54,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                609,
+                                612
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                609,
+                                612
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 26,
+                "column": 89,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 26,
+                "endColumn": 92,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                1110,
+                                1113
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                1110,
+                                1113
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 42,
+                "column": 60,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 42,
+                "endColumn": 63,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                1567,
+                                1570
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                1567,
+                                1570
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 56,
+                "column": 59,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 56,
+                "endColumn": 62,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                2048,
+                                2051
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                2048,
+                                2051
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 62,
+                "column": 58,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 62,
+                "endColumn": 61,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                2288,
+                                2291
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                2288,
+                                2291
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 62,
+                "column": 98,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 62,
+                "endColumn": 101,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                2328,
+                                2331
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                2328,
+                                2331
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 69,
+                "column": 17,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 69,
+                "endColumn": 20,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                2579,
+                                2582
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                2579,
+                                2582
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 87,
+                "column": 58,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 87,
+                "endColumn": 61,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3081,
+                                3084
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3081,
+                                3084
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 87,
+                "column": 71,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 87,
+                "endColumn": 74,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3094,
+                                3097
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3094,
+                                3097
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 97,
+                "column": 69,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 97,
+                "endColumn": 72,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3468,
+                                3471
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3468,
+                                3471
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 104,
+                "column": 27,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 104,
+                "endColumn": 30,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3748,
+                                3751
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3748,
+                                3751
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 107,
+                "column": 70,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 107,
+                "endColumn": 73,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3827,
+                                3830
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3827,
+                                3830
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 107,
+                "column": 86,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 107,
+                "endColumn": 89,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3843,
+                                3846
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3843,
+                                3846
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 107,
+                "column": 109,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 107,
+                "endColumn": 112,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                3866,
+                                3869
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                3866,
+                                3869
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 123,
+                "column": 15,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 123,
+                "endColumn": 18,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                4512,
+                                4515
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                4512,
+                                4515
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 129,
+                "column": 75,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 129,
+                "endColumn": 78,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                4677,
+                                4680
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                4677,
+                                4680
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 129,
+                "column": 94,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 129,
+                "endColumn": 97,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                4696,
+                                4699
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                4696,
+                                4699
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 129,
+                "column": 117,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 129,
+                "endColumn": 120,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                4719,
+                                4722
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                4719,
+                                4722
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 19,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import Database from 'better-sqlite3';\nimport { Project, CreateProjectInput, UpdateProjectInput, ValidationError } from '../types';\n\nexport function validateCreateProjectInput(input: any): ValidationError[] {\n  const errors: ValidationError[] = [];\n  if (!input.name || typeof input.name !== 'string' || input.name.trim() === '') {\n    errors.push({ field: 'name', message: 'Project name is required' });\n  } else if (input.name.length > 100) {\n    errors.push({ field: 'name', message: 'Project name cannot exceed 100 characters' });\n  }\n  return errors;\n}\n\nexport function validateUpdateProjectInput(input: any): ValidationError[] {\n  const errors: ValidationError[] = [];\n  if (input.name !== undefined) {\n    if (typeof input.name !== 'string' || input.name.trim() === '') {\n      errors.push({ field: 'name', message: 'Project name cannot be empty' });\n    } else if (input.name.length > 100) {\n      errors.push({ field: 'name', message: 'Project name cannot exceed 100 characters' });\n    }\n  }\n  return errors;\n}\n\nexport function createProject(db: Database.Database, input: CreateProjectInput, userId: any): Project {\n  const userIdNum = Number(userId);\n  const stmt = db.prepare(`\n    INSERT INTO projects (name, description, user_id)\n    VALUES (@name, @description, @userId)\n  `);\n  \n  const result = stmt.run({\n    name: input.name.trim(),\n    description: input.description?.trim() || null,\n    userId: userIdNum\n  });\n\n  return getProjectById(db, Number(result.lastInsertRowid)) as Project;\n}\n\nexport function getProjects(db: Database.Database, userId: any, isAdmin: boolean = false): Project[] {\n  const userIdNum = Number(userId);\n  if (isAdmin) {\n    return db.prepare('SELECT * FROM projects ORDER BY created_at DESC').all() as Project[];\n  }\n  return db.prepare(`\n    SELECT * FROM projects \n    WHERE user_id = ? OR id IN (\n      SELECT project_id FROM project_members WHERE user_id = ?\n    )\n    ORDER BY created_at DESC\n  `).all(userIdNum, userIdNum) as Project[];\n}\n\nexport function getProjectById(db: Database.Database, id: any): Project | null {\n  const idNum = Number(id);\n  const project = db.prepare('SELECT * FROM projects WHERE id = ?').get(idNum) as Project | undefined;\n  return project || null;\n}\n\nexport function updateProject(db: Database.Database, id: any, input: UpdateProjectInput, userId: any): Project | null {\n  const idNum = Number(id);\n  const userIdNum = Number(userId);\n  const project = getProjectById(db, idNum);\n  if (!project || Number(project.user_id) !== userIdNum) return null;\n\n  const updates: string[] = [];\n  const values: any = { id: idNum };\n\n  if (input.name !== undefined) {\n    updates.push('name = @name');\n    values.name = input.name.trim();\n  }\n  if (input.description !== undefined) {\n    updates.push('description = @description');\n    values.description = input.description?.trim() || null;\n  }\n\n  if (updates.length > 0) {\n    db.prepare(`UPDATE projects SET ${updates.join(', ')} WHERE id = @id`).run(values);\n  }\n\n  return getProjectById(db, idNum);\n}\n\nexport function deleteProject(db: Database.Database, id: any, userId: any): boolean {\n  const idNum = Number(id);\n  const userIdNum = Number(userId);\n  const project = getProjectById(db, idNum);\n  if (!project || Number(project.user_id) !== userIdNum) return false;\n\n  const result = db.prepare('DELETE FROM projects WHERE id = ?').run(idNum);\n  return result.changes > 0;\n}\n\nexport function getProjectMembers(db: Database.Database, projectId: any): { id: number, username: string, email: string }[] {\n  const projectIdNum = Number(projectId);\n  return db.prepare(`\n    SELECT u.id, u.username, u.email \n    FROM users u\n    JOIN project_members pm ON u.id = pm.user_id\n    WHERE pm.project_id = ?\n  `).all(projectIdNum) as any[];\n}\n\nexport function addMemberToProject(db: Database.Database, projectId: any, newUserId: any, requestingUserId: any, isAdmin: boolean = false): boolean {\n  const projectIdNum = Number(projectId);\n  const newUserIdNum = Number(newUserId);\n  const requestingUserIdNum = Number(requestingUserId);\n\n  const project = getProjectById(db, projectIdNum);\n  if (!project) return false;\n  if (Number(project.user_id) !== requestingUserIdNum && !isAdmin) return false;\n\n  // verify user exists\n  const userExists = db.prepare('SELECT 1 FROM users WHERE id = ?').get(newUserIdNum);\n  if (!userExists) return false;\n\n  try {\n    db.prepare('INSERT INTO project_members (project_id, user_id) VALUES (?, ?)').run(projectIdNum, newUserIdNum);\n    return true;\n  } catch (e: any) {\n    if (e.code === 'SQLITE_CONSTRAINT_PRIMARYKEY') return true;\n    throw e;\n  }\n}\n\nexport function removeMemberFromProject(db: Database.Database, projectId: any, targetUserId: any, requestingUserId: any, isAdmin: boolean = false): boolean {\n  const projectIdNum = Number(projectId);\n  const targetUserIdNum = Number(targetUserId);\n  const requestingUserIdNum = Number(requestingUserId);\n\n  const project = getProjectById(db, projectIdNum);\n  if (!project) return false;\n  if (Number(project.user_id) !== requestingUserIdNum && !isAdmin) return false;\n\n  const result = db.prepare('DELETE FROM project_members WHERE project_id = ? AND user_id = ?').run(projectIdNum, targetUserIdNum);\n  return result.changes > 0;\n}\n",
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\services\\reportService.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\services\\taskService.ts",
+        "messages": [
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 73,
+                "column": 28,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 73,
+                "endColumn": 31,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                2868,
+                                2871
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                2868,
+                                2871
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 133,
+                "column": 13,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 133,
+                "endColumn": 16,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                4729,
+                                4732
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                4729,
+                                4732
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            },
+            {
+                "ruleId": "@typescript-eslint/no-explicit-any",
+                "severity": 1,
+                "message": "Unexpected any. Specify a different type.",
+                "line": 154,
+                "column": 13,
+                "nodeType": "TSAnyKeyword",
+                "messageId": "unexpectedAny",
+                "endLine": 154,
+                "endColumn": 16,
+                "suggestions": [
+                    {
+                        "messageId": "suggestUnknown",
+                        "fix": {
+                            "range": [
+                                5463,
+                                5466
+                            ],
+                            "text": "unknown"
+                        },
+                        "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+                    },
+                    {
+                        "messageId": "suggestNever",
+                        "fix": {
+                            "range": [
+                                5463,
+                                5466
+                            ],
+                            "text": "never"
+                        },
+                        "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+                    }
+                ]
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 3,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import { Task, TaskStatus, TaskPriority, CreateTaskInput, UpdateTaskInput, ValidationError, AppError } from '../types';\nimport Database from 'better-sqlite3';\n\nconst VALID_STATUSES: TaskStatus[] = ['todo', 'in-progress', 'done'];\nconst VALID_PRIORITIES: TaskPriority[] = ['low', 'medium', 'high', 'urgent'];\n\nfunction throwIfInvalid(errors: ValidationError[]): void {\n  if (errors.length === 0) return;\n  const err = new Error(errors[0].message) as AppError;\n  err.statusCode = 400;\n  err.errors = errors;\n  throw err;\n}\n\nexport function validateCreateTaskInput(input: Partial<CreateTaskInput>): ValidationError[] {\n  const errors: ValidationError[] = [];\n\n  if (!input.title || input.title.trim().length === 0) {\n    errors.push({ field: 'title', message: 'Title is required' });\n  } else if (input.title.trim().length > 200) {\n    errors.push({ field: 'title', message: 'Title must be at most 200 characters' });\n  }\n\n  if (input.status && !VALID_STATUSES.includes(input.status)) {\n    errors.push({ field: 'status', message: `Status must be one of: ${VALID_STATUSES.join(', ')}` });\n  }\n\n  if (input.priority && !VALID_PRIORITIES.includes(input.priority)) {\n    errors.push({ field: 'priority', message: `Priority must be one of: ${VALID_PRIORITIES.join(', ')}` });\n  }\n\n  if (input.due_date && isNaN(Date.parse(input.due_date))) {\n    errors.push({ field: 'due_date', message: 'Invalid date format for due_date' });\n  }\n\n  if (input.assignee_ids && !Array.isArray(input.assignee_ids)) {\n    errors.push({ field: 'assignee_ids', message: 'Assignees must be an array of IDs' });\n  }\n\n  return errors;\n}\n\nexport function validateUpdateTaskInput(input: Partial<UpdateTaskInput>): ValidationError[] {\n  const errors: ValidationError[] = [];\n\n  if (input.title !== undefined) {\n    if (input.title.trim().length === 0) {\n      errors.push({ field: 'title', message: 'Title cannot be empty' });\n    } else if (input.title.trim().length > 200) {\n      errors.push({ field: 'title', message: 'Title must be at most 200 characters' });\n    }\n  }\n\n  if (input.status !== undefined && !VALID_STATUSES.includes(input.status)) {\n    errors.push({ field: 'status', message: `Status must be one of: ${VALID_STATUSES.join(', ')}` });\n  }\n\n  if (input.priority !== undefined && !VALID_PRIORITIES.includes(input.priority)) {\n    errors.push({ field: 'priority', message: `Priority must be one of: ${VALID_PRIORITIES.join(', ')}` });\n  }\n\n  if (input.due_date !== undefined && input.due_date !== null && isNaN(Date.parse(input.due_date))) {\n    errors.push({ field: 'due_date', message: 'Invalid date format for due_date' });\n  }\n\n  if (input.assignee_ids !== undefined && input.assignee_ids !== null && !Array.isArray(input.assignee_ids)) {\n    errors.push({ field: 'assignee_ids', message: 'Assignees must be an array of IDs' });\n  }\n\n  return errors;\n}\n\nfunction parseTaskRow(row: any): Task {\n  if (!row) return row;\n  const task = { ...row };\n  if (task.assigned_users_json) {\n    task.assigned_users = JSON.parse(task.assigned_users_json);\n    delete task.assigned_users_json;\n  } else {\n    task.assigned_users = [];\n  }\n  return task;\n}\n\nconst selectTasksClause = `\n  SELECT t.*, \n    COALESCE(\n      (SELECT json_group_array(json_object('id', u.id, 'username', u.username))\n       FROM task_assignees ta\n       JOIN users u ON ta.user_id = u.id\n       WHERE ta.task_id = t.id), '[]'\n    ) as assigned_users_json\n`;\n\nexport function createTask(db: Database.Database, input: CreateTaskInput, userId: number): Task {\n  throwIfInvalid(validateCreateTaskInput(input));\n\n  let newId: number | bigint = 0;\n\n  db.transaction(() => {\n    const result = db.prepare(\n      'INSERT INTO tasks (title, description, status, priority, due_date, parent_id, project_id, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'\n    ).run(\n      input.title.trim(),\n      input.description?.trim() ?? null,\n      input.status ?? 'todo',\n      input.priority ?? 'medium',\n      input.due_date ?? null,\n      input.parent_id ?? null,\n      input.project_id ?? null,\n      userId\n    );\n\n    newId = result.lastInsertRowid;\n\n    if (input.assignee_ids && input.assignee_ids.length > 0) {\n      const stmt = db.prepare('INSERT OR IGNORE INTO task_assignees (task_id, user_id) VALUES (?, ?)');\n      for (const assigneeId of input.assignee_ids) {\n        stmt.run(newId, assigneeId);\n      }\n    }\n  })();\n\n  return getTaskById(db, Number(newId))!;\n}\n\nexport function getTaskById(db: Database.Database, id: number): Task | null {\n  const row = db.prepare(`${selectTasksClause} FROM tasks t WHERE t.id = ?`).get(id);\n  return row ? parseTaskRow(row) : null;\n}\n\nexport function getAllTasks(db: Database.Database, userId: number, isAdmin: boolean = false): Task[] {\n  let rows: any[];\n  if (isAdmin) {\n    rows = db.prepare(`${selectTasksClause} FROM tasks t ORDER BY t.created_at DESC`).all();\n  } else {\n    rows = db.prepare(`\n      ${selectTasksClause} FROM tasks t\n      LEFT JOIN projects p ON t.project_id = p.id\n      LEFT JOIN project_members pm ON p.id = pm.project_id\n      LEFT JOIN task_assignees ta ON ta.task_id = t.id\n      WHERE t.user_id = ? \n         OR p.user_id = ? \n         OR pm.user_id = ?\n         OR ta.user_id = ?\n      GROUP BY t.id\n      ORDER BY t.created_at DESC\n    `).all(userId, userId, userId, userId);\n  }\n  return rows.map(parseTaskRow);\n}\n\nexport function getSubtasks(db: Database.Database, parentId: number, userId: number, isAdmin: boolean = false): Task[] {\n  let rows: any[];\n  if (isAdmin) {\n    rows = db.prepare(`${selectTasksClause} FROM tasks t WHERE t.parent_id = ? ORDER BY t.created_at ASC`).all(parentId);\n  } else {\n    rows = db.prepare(`\n      ${selectTasksClause} FROM tasks t\n      LEFT JOIN projects p ON t.project_id = p.id\n      LEFT JOIN project_members pm ON p.id = pm.project_id\n      LEFT JOIN task_assignees ta ON ta.task_id = t.id\n      WHERE t.parent_id = ? AND (\n        t.user_id = ? OR p.user_id = ? OR pm.user_id = ? OR ta.user_id = ?\n      )\n      GROUP BY t.id\n      ORDER BY t.created_at ASC\n    `).all(parentId, userId, userId, userId, userId);\n  }\n  return rows.map(parseTaskRow);\n}\n\nexport interface TaskFilters {\n  status?: string;\n  priority?: string;\n  search?: string;\n  due_before?: string;\n  label?: string;\n  project_id?: number | null;\n  assigned_to?: number; // Filtering by a specific assignee ID\n}\n\nexport function getFilteredTasks(db: Database.Database, filters: TaskFilters, userId: number, isAdmin: boolean = false): Task[] {\n  const conditions: string[] = [];\n  const values: (string | number)[] = [];\n\n  if (filters.status) { conditions.push('t.status = ?'); values.push(filters.status); }\n  if (filters.priority) { conditions.push('t.priority = ?'); values.push(filters.priority); }\n  \n  if (filters.assigned_to) { \n    conditions.push('EXISTS (SELECT 1 FROM task_assignees ta_flt WHERE ta_flt.task_id = t.id AND ta_flt.user_id = ?)'); \n    values.push(filters.assigned_to); \n  }\n  \n  if (filters.project_id !== undefined) {\n    if (filters.project_id === null) {\n      conditions.push('t.project_id IS NULL');\n    } else {\n      conditions.push('t.project_id = ?');\n      values.push(filters.project_id);\n    }\n  }\n  if (filters.due_before) { conditions.push('t.due_date <= ?'); values.push(filters.due_before); }\n  if (filters.search) {\n    conditions.push('(t.title LIKE ? OR t.description LIKE ?)');\n    values.push(`%${filters.search}%`, `%${filters.search}%`);\n  }\n  if (filters.label) {\n    conditions.push('EXISTS (SELECT 1 FROM task_labels tl JOIN labels l ON tl.label_id = l.id WHERE tl.task_id = t.id AND l.name = ?)');\n    values.push(filters.label);\n  }\n\n  if (!isAdmin) {\n    conditions.push(`(t.user_id = ? OR p.user_id = ? OR pm.user_id = ? OR ta_auth.user_id = ?)`);\n    values.push(userId, userId, userId, userId);\n  }\n\n  const where = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';\n  const fromClause = !isAdmin \n    ? `tasks t \n       LEFT JOIN projects p ON t.project_id = p.id\n       LEFT JOIN project_members pm ON p.id = pm.project_id\n       LEFT JOIN task_assignees ta_auth ON ta_auth.task_id = t.id`\n    : `tasks t`;\n\n  const rows = db.prepare(`\n    ${selectTasksClause} FROM ${fromClause}\n    ${where} \n    GROUP BY t.id\n    ORDER BY t.created_at DESC\n  `).all(...values);\n  \n  return rows.map(parseTaskRow);\n}\n\nexport function updateTask(db: Database.Database, id: number, input: UpdateTaskInput): Task | null {\n  throwIfInvalid(validateUpdateTaskInput(input));\n\n  db.transaction(() => {\n    const updates: string[] = [];\n    const values: (string | number | null)[] = [];\n\n    if (input.title !== undefined) { updates.push('title = ?'); values.push(input.title.trim()); }\n    if (input.description !== undefined) { updates.push('description = ?'); values.push(input.description.trim()); }\n    if (input.status !== undefined) { updates.push('status = ?'); values.push(input.status); }\n    if (input.priority !== undefined) { updates.push('priority = ?'); values.push(input.priority); }\n    if (input.due_date !== undefined) { updates.push('due_date = ?'); values.push(input.due_date); }\n    if (input.project_id !== undefined) { updates.push('project_id = ?'); values.push(input.project_id); }\n\n    if (updates.length > 0) {\n      updates.push('updated_at = CURRENT_TIMESTAMP');\n      values.push(id);\n      db.prepare(`UPDATE tasks SET ${updates.join(', ')} WHERE id = ?`).run(...values);\n    }\n\n    if (input.assignee_ids !== undefined) {\n      db.prepare('DELETE FROM task_assignees WHERE task_id = ?').run(id);\n      if (input.assignee_ids !== null && input.assignee_ids.length > 0) {\n        const stmt = db.prepare('INSERT OR IGNORE INTO task_assignees (task_id, user_id) VALUES (?, ?)');\n        for (const assigneeId of input.assignee_ids) {\n          stmt.run(id, assigneeId);\n        }\n      }\n    }\n  })();\n\n  return getTaskById(db, id);\n}\n\nexport function deleteTask(db: Database.Database, id: number): boolean {\n  const result = db.prepare('DELETE FROM tasks WHERE id = ?').run(id);\n  return result.changes > 0;\n}\n",
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\src\\types.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\tests\\smoke\\api.smoke.test.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\tests\\unit\\authService.test.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\tests\\unit\\commentService.test.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\tests\\unit\\labelService.test.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\tests\\unit\\projectService.test.ts",
+        "messages": [
+            {
+                "ruleId": "@typescript-eslint/no-unused-vars",
+                "severity": 1,
+                "message": "'validateUpdateProjectInput' is defined but never used. Allowed unused vars must match /^_/u.",
+                "line": 10,
+                "column": 3,
+                "nodeType": null,
+                "messageId": "unusedVar",
+                "endLine": 10,
+                "endColumn": 29
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 1,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import { describe, it, expect, beforeEach } from 'vitest';\nimport Database from 'better-sqlite3';\nimport {\n  createProject,\n  getProjects,\n  getProjectById,\n  updateProject,\n  deleteProject,\n  validateCreateProjectInput,\n  validateUpdateProjectInput,\n  addMemberToProject,\n  removeMemberFromProject,\n  getProjectMembers\n} from '../../src/services/projectService';\n\nfunction createTestDb(): Database.Database {\n  const db = new Database(':memory:');\n  db.pragma('foreign_keys = ON');\n  db.exec(`\n    CREATE TABLE users (\n      id INTEGER PRIMARY KEY AUTOINCREMENT,\n      username TEXT NOT NULL UNIQUE,\n      email TEXT NOT NULL UNIQUE,\n      password_hash TEXT NOT NULL,\n      role TEXT NOT NULL DEFAULT 'user'\n    );\n      CREATE TABLE projects (\n        id INTEGER PRIMARY KEY AUTOINCREMENT,\n        name TEXT NOT NULL,\n        description TEXT,\n        user_id INTEGER NOT NULL,\n        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,\n        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE\n      );\n      CREATE TABLE project_members (\n        project_id INTEGER NOT NULL,\n        user_id INTEGER NOT NULL,\n        added_at DATETIME DEFAULT CURRENT_TIMESTAMP,\n        PRIMARY KEY (project_id, user_id),\n        FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE,\n        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE\n      );\n    `);\n  db.prepare('INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)').run('test', 'test@test.com', 'hash');\n  return db;\n}\n\ndescribe('Project Service Validation', () => {\n  it('1. validateCreate: empty name -> error', () => {\n    const errs = validateCreateProjectInput({ name: '' });\n    expect(errs.length).toBeGreaterThan(0);\n  });\n  it('2. validateCreate: valid -> no error', () => {\n    const errs = validateCreateProjectInput({ name: 'My Project' });\n    expect(errs.length).toBe(0);\n  });\n});\n\ndescribe('Project Service CRUD', () => {\n  let db: Database.Database;\n  beforeEach(() => { db = createTestDb(); });\n\n  it('3. createProject: creates and returns', () => {\n    const p = createProject(db, { name: 'Proj 1', description: 'Desc' }, 1);\n    expect(p.id).toBeDefined();\n    expect(p.name).toBe('Proj 1');\n  });\n\n  it('4. getProjects: retrieves for user', () => {\n    createProject(db, { name: 'P1' }, 1);\n    createProject(db, { name: 'P2' }, 1);\n    const list = getProjects(db, 1);\n    expect(list.length).toBe(2);\n  });\n\n  it('5. updateProject: updates name and description', () => {\n    const p1 = createProject(db, { name: 'P1' }, 1);\n    const updated = updateProject(db, p1.id, { name: 'Updated', description: 'New' }, 1);\n    expect(updated?.name).toBe('Updated');\n    expect(updated?.description).toBe('New');\n  });\n\n  it('6. deleteProject: removes project', () => {\n    const p = createProject(db, { name: 'P' }, 1);\n    const res = deleteProject(db, p.id, 1);\n    expect(res).toBe(true);\n    expect(getProjectById(db, p.id)).toBeNull();\n  });\n\n  it('7. add/remove/get members', () => {\n    db.prepare('INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)').run('user2', 'u2', 'h');\n    const p = createProject(db, { name: 'Proj' }, 1);\n    \n    // Add member\n    const added = addMemberToProject(db, p.id, 2, 1);\n    expect(added).toBe(true);\n\n    // Get members\n    const members = getProjectMembers(db, p.id);\n    expect(members.length).toBe(1);\n    expect(members[0].id).toBe(2);\n\n    // Remove member\n    const removed = removeMemberFromProject(db, p.id, 2, 1);\n    expect(removed).toBe(true);\n    expect(getProjectMembers(db, p.id).length).toBe(0);\n  });\n});\n",
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\tests\\unit\\reportService.test.ts",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    },
+    {
+        "filePath": "C:\\Users\\furkn\\Desktop\\230229083_ykg\\yazilimkaliteguvencesi\\tests\\unit\\taskService.test.ts",
+        "messages": [
+            {
+                "ruleId": "@typescript-eslint/no-unused-vars",
+                "severity": 1,
+                "message": "'getAllTasks' is defined but never used. Allowed unused vars must match /^_/u.",
+                "line": 8,
+                "column": 3,
+                "nodeType": null,
+                "messageId": "unusedVar",
+                "endLine": 8,
+                "endColumn": 14
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 1,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import { describe, it, expect, beforeEach } from 'vitest';\nimport Database from 'better-sqlite3';\nimport {\n  validateCreateTaskInput,\n  validateUpdateTaskInput,\n  createTask,\n  getTaskById,\n  getAllTasks,\n  getSubtasks,\n  updateTask,\n  deleteTask,\n} from '../../src/services/taskService';\n\n// Setup in-memory DB for service tests\nfunction createTestDb(): Database.Database {\n  const db = new Database(':memory:');\n  db.pragma('foreign_keys = ON');\n  db.exec(`\n    CREATE TABLE users (\n      id INTEGER PRIMARY KEY AUTOINCREMENT,\n      username TEXT NOT NULL UNIQUE,\n      email TEXT NOT NULL UNIQUE,\n      password_hash TEXT NOT NULL,\n      role TEXT NOT NULL DEFAULT 'user',\n      created_at DATETIME DEFAULT CURRENT_TIMESTAMP\n    );\n    CREATE TABLE projects (\n      id INTEGER PRIMARY KEY AUTOINCREMENT,\n      name TEXT NOT NULL,\n      description TEXT,\n      user_id INTEGER NOT NULL,\n      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,\n      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE\n    );\n    CREATE TABLE project_members (\n      project_id INTEGER NOT NULL,\n      user_id INTEGER NOT NULL,\n      added_at DATETIME DEFAULT CURRENT_TIMESTAMP,\n      PRIMARY KEY (project_id, user_id),\n      FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE,\n      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE\n    );\n    CREATE TABLE tasks (\n      id INTEGER PRIMARY KEY AUTOINCREMENT,\n      title TEXT NOT NULL,\n      description TEXT,\n      status TEXT NOT NULL DEFAULT 'todo',\n      priority TEXT NOT NULL DEFAULT 'medium',\n      due_date TEXT,\n      parent_id INTEGER,\n      assigned_to INTEGER,\n      project_id INTEGER,\n      user_id INTEGER NOT NULL,\n      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,\n      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,\n      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,\n      FOREIGN KEY (parent_id) REFERENCES tasks(id) ON DELETE CASCADE,\n      FOREIGN KEY (assigned_to) REFERENCES users(id) ON DELETE SET NULL,\n      FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE\n    );\n    CREATE TABLE labels (\n      id INTEGER PRIMARY KEY AUTOINCREMENT,\n      name TEXT NOT NULL UNIQUE,\n      color TEXT NOT NULL DEFAULT '#6366f1'\n    );\n    CREATE TABLE task_labels (\n      task_id INTEGER NOT NULL,\n      label_id INTEGER NOT NULL,\n      PRIMARY KEY (task_id, label_id),\n      FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE,\n      FOREIGN KEY (label_id) REFERENCES labels(id) ON DELETE CASCADE\n    );\n    CREATE TABLE comments (\n      id INTEGER PRIMARY KEY AUTOINCREMENT,\n      task_id INTEGER NOT NULL,\n      user_id INTEGER NOT NULL,\n      content TEXT NOT NULL,\n      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,\n      FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE,\n      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE\n    );\n    CREATE TABLE task_assignees ( task_id INTEGER NOT NULL, user_id INTEGER NOT NULL, assigned_at DATETIME DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (task_id, user_id), FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE, FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE );\n    CREATE TABLE activity_log (\n      id INTEGER PRIMARY KEY AUTOINCREMENT,\n      task_id INTEGER NOT NULL,\n      user_id INTEGER NOT NULL,\n      action TEXT NOT NULL,\n      detail TEXT,\n      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,\n      FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE,\n      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE\n    );\n  `);\n  // Insert a test user\n  db.prepare('INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, ?)').run('testuser', 'test@test.com', 'hash', 'user');\n  return db;\n}\n\ndescribe('Task Validation', () => {\n  it('1. validateCreateTaskInput: empty title → error', () => {\n    const errors = validateCreateTaskInput({ title: '' });\n    expect(errors.length).toBeGreaterThan(0);\n    expect(errors[0].field).toBe('title');\n  });\n\n  it('2. validateCreateTaskInput: missing title → error', () => {\n    const errors = validateCreateTaskInput({});\n    expect(errors.some(e => e.field === 'title')).toBe(true);\n  });\n\n  it('3. validateCreateTaskInput: title too long → error', () => {\n    const errors = validateCreateTaskInput({ title: 'a'.repeat(201) });\n    expect(errors.some(e => e.field === 'title')).toBe(true);\n  });\n\n  it('4. validateCreateTaskInput: valid input → no errors', () => {\n    const errors = validateCreateTaskInput({ title: 'Valid Task' });\n    expect(errors.length).toBe(0);\n  });\n\n  it('5. validateCreateTaskInput: invalid status → error', () => {\n    const errors = validateCreateTaskInput({ title: 'Task', status: 'invalid-status' as any });\n    expect(errors.some(e => e.field === 'status')).toBe(true);\n  });\n\n  it('6. validateUpdateTaskInput: empty title → error', () => {\n    const errors = validateUpdateTaskInput({ title: '' });\n    expect(errors.some(e => e.field === 'title')).toBe(true);\n  });\n\n  it('7. validateUpdateTaskInput: valid status → no errors', () => {\n    const errors = validateUpdateTaskInput({ status: 'done' });\n    expect(errors.length).toBe(0);\n  });\n\n  it('8. validateCreateTaskInput: invalid priority → error', () => {\n    const errors = validateCreateTaskInput({ title: 'Task', priority: 'invalid-priority' as any });\n    expect(errors.some(e => e.field === 'priority')).toBe(true);\n  });\n\n  it('9. validateCreateTaskInput: valid priority → no errors', () => {\n    const errors = validateCreateTaskInput({ title: 'Task', priority: 'high' });\n    expect(errors.length).toBe(0);\n  });\n\n  it('10. validateCreateTaskInput: invalid due_date format → error', () => {\n    const errors = validateCreateTaskInput({ title: 'Task', due_date: 'not-a-date' });\n    expect(errors.some(e => e.field === 'due_date')).toBe(true);\n  });\n\n  it('11. validateUpdateTaskInput: invalid priority → error', () => {\n    const errors = validateUpdateTaskInput({ priority: 'super' as any });\n    expect(errors.some(e => e.field === 'priority')).toBe(true);\n  });\n\n  it('12. validateUpdateTaskInput: valid priority → no errors', () => {\n    const errors = validateUpdateTaskInput({ priority: 'urgent' });\n    expect(errors.length).toBe(0);\n  });\n});\n\ndescribe('Task Service CRUD', () => {\n  let db: Database.Database;\n\n  beforeEach(() => {\n    db = createTestDb();\n  });\n\n  it('13. createTask: creates task with correct fields', () => {\n    const task = createTask(db, { title: 'Test Task', description: 'Desc' }, 1);\n    expect(task.id).toBeDefined();\n    expect(task.title).toBe('Test Task');\n    expect(task.description).toBe('Desc');\n    expect(task.status).toBe('todo');\n    expect(task.priority).toBe('medium');\n    expect(task.user_id).toBe(1);\n  });\n\n  it('14. createTask: creates task with priority and due_date', () => {\n    const task = createTask(db, { title: 'Urgent Task', priority: 'urgent', due_date: '2026-04-01' }, 1);\n    expect(task.priority).toBe('urgent');\n    expect(task.due_date).toBe('2026-04-01');\n  });\n\n  it('15. getTaskById: returns null for non-existent id', () => {\n    const task = getTaskById(db, 9999);\n    expect(task).toBeNull();\n  });\n\n  it('16. getTaskById: returns task for valid id', () => {\n    const created = createTask(db, { title: 'Find Me' }, 1);\n    const found = getTaskById(db, created.id);\n    expect(found).not.toBeNull();\n    expect(found!.title).toBe('Find Me');\n  });\n\n  it('17. updateTask: returns null for non-existent task', () => {\n    const result = updateTask(db, 9999, { title: 'New Title' });\n    expect(result).toBeNull();\n  });\n\n  it('18. updateTask: updates title correctly', () => {\n    const task = createTask(db, { title: 'Original' }, 1);\n    const updated = updateTask(db, task.id, { title: 'Updated' });\n    expect(updated!.title).toBe('Updated');\n  });\n\n  it('19. updateTask: updates priority correctly', () => {\n    const task = createTask(db, { title: 'Task' }, 1);\n    const updated = updateTask(db, task.id, { priority: 'high' });\n    expect(updated!.priority).toBe('high');\n  });\n\n  it('20. deleteTask: returns false for non-existent task', () => {\n    const result = deleteTask(db, 9999);\n    expect(result).toBe(false);\n  });\n\n  it('21. deleteTask: deletes task and returns true', () => {\n    const task = createTask(db, { title: 'To Delete' }, 1);\n    const result = deleteTask(db, task.id);\n    expect(result).toBe(true);\n    expect(getTaskById(db, task.id)).toBeNull();\n  });\n\n  it('22. createTask: creates subtask with parent_id', () => {\n    const parent = createTask(db, { title: 'Parent Task' }, 1);\n    const child = createTask(db, { title: 'Child Task', parent_id: parent.id }, 1);\n    expect(child.parent_id).toBe(parent.id);\n  });\n\n  it('23. getSubtasks: returns subtasks for parent', () => {\n    const parent = createTask(db, { title: 'Parent' }, 1);\n    createTask(db, { title: 'Sub 1', parent_id: parent.id }, 1);\n    createTask(db, { title: 'Sub 2', parent_id: parent.id }, 1);\n    const subs = getSubtasks(db, parent.id, 1);\n    expect(subs.length).toBe(2);\n  });\n\n  it('24. createTask: creates with project_id', () => {\n    db.prepare('INSERT INTO projects (name, user_id) VALUES (?, ?)').run('Test Proj', 1);\n    const t = createTask(db, { title: 'Task in proj', project_id: 1 }, 1);\n    expect(t.project_id).toBe(1);\n  });\n});\n",
+        "usedDeprecatedRules": [
+            {
+                "ruleId": "no-extra-semi",
+                "replacedBy": []
+            },
+            {
+                "ruleId": "no-mixed-spaces-and-tabs",
+                "replacedBy": []
+            }
+        ]
+    }
+]

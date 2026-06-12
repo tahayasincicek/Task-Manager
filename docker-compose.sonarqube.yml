@@ -1,0 +1,27 @@
+# Yerel SonarQube sunucusu — statik analiz için
+#
+# Kullanım:
+#   docker compose -f docker-compose.sonarqube.yml up -d
+#   http://localhost:9000  (ilk giriş: admin / admin — parola değiştirilir)
+#   Account -> Security -> Generate Token -> SONAR_TOKEN
+#
+# Durdurmak için:
+#   docker compose -f docker-compose.sonarqube.yml down
+
+services:
+  sonarqube:
+    image: sonarqube:10.6-community
+    container_name: task-manager-sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_extensions:/opt/sonarqube/extensions
+
+volumes:
+  sonarqube_data:
+  sonarqube_logs:
+  sonarqube_extensions:
