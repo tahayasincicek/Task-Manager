@@ -872,7 +872,6 @@ export default function TasksPage() {
                 <button className="btn btn-primary" onClick={() => setShowCreate(true)} style={{ marginTop: '1rem' }}>
                   Create Task
                 </button>
-                </button>
               </div>
             )}
 
