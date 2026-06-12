@@ -16,6 +16,9 @@ app.disable('x-powered-by');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Trust the reverse proxy (Render) so secure cookies work
+app.set('trust proxy', 1);
+
 // Session configuration
 const SESSION_SECRET = process.env.SESSION_SECRET ?? 'task-manager-secret-key-change-in-production';
 
