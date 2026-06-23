@@ -1,4 +1,5 @@
-const BASE = import.meta.env.VITE_API_URL || '/api';
+const envUrl = import.meta.env.VITE_API_URL || '';
+const BASE = envUrl.endsWith('/api') ? envUrl : (envUrl ? `${envUrl}/api` : '/api');
 
 export class ApiError extends Error {
   status: number;
