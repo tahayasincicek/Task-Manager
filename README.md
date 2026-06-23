@@ -7,11 +7,11 @@ This project is a task management (Task Manager) REST API application developed 
 ## Screenshots
 
 <div align="center">
-  <img src="assets/screenshots/dashboard.png" alt="Dashboard" style="max-width: 100%; height: auto;"/>
+  <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="800"/>
   <br/><br/>
-  <img src="assets/screenshots/tasks.png" alt="Tasks" style="max-width: 100%; height: auto;"/>
+  <img src="assets/screenshots/tasks.png" alt="Tasks" width="800"/>
   <br/><br/>
-  <img src="assets/screenshots/reports.png" alt="Reports" style="max-width: 100%; height: auto;"/>
+  <img src="assets/screenshots/reports.png" alt="Reports" width="800"/>
 </div>
 
 ## Architecture Overview
