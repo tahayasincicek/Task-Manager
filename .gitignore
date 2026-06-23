@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Database files
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# SonarQube local
+.scannerwork/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+!reports/**/*.log
+!asama_3/**/*.log
+!asama_4/**/*.log
+npm-debug.log*

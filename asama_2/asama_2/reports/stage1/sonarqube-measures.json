@@ -1,0 +1,241 @@
+﻿{
+  "generatedAt": "2026-04-22T20:12:28.159Z",
+  "host": "http://localhost:9000",
+  "projectKey": "task-manager",
+  "stage": "stage1",
+  "requestedMetrics": [
+    "bugs",
+    "code_smells",
+    "duplicated_lines_density",
+    "ncloc",
+    "complexity",
+    "cognitive_complexity",
+    "reliability_rating",
+    "sqale_rating",
+    "vulnerabilities",
+    "security_hotspots",
+    "security_rating",
+    "sqale_index",
+    "sqale_debt_ratio"
+  ],
+  "component": {
+    "key": "task-manager",
+    "name": "Task Manager",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "complexity",
+        "value": "776"
+      },
+      {
+        "metric": "duplicated_lines_density",
+        "value": "1.3",
+        "bestValue": false
+      },
+      {
+        "metric": "code_smells",
+        "value": "69",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_debt_ratio",
+        "value": "0.2",
+        "bestValue": false
+      },
+      {
+        "metric": "bugs",
+        "value": "14",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_index",
+        "value": "348",
+        "bestValue": false
+      },
+      {
+        "metric": "security_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "cognitive_complexity",
+        "value": "2",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "reliability_rating",
+        "value": "4.0",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "2",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "5153"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "key": "bugs",
+      "name": "Bugs",
+      "description": "Bugs",
+      "domain": "Reliability",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false,
+      "bestValue": "0"
+    },
+    {
+      "key": "code_smells",
+      "name": "Code Smells",
+      "description": "Code Smells",
+      "domain": "Maintainability",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false,
+      "bestValue": "0"
+    },
+    {
+      "key": "cognitive_complexity",
+      "name": "Cognitive Complexity",
+      "description": "Cognitive complexity",
+      "domain": "Complexity",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false,
+      "bestValue": "0"
+    },
+    {
+      "key": "complexity",
+      "name": "Cyclomatic Complexity",
+      "description": "Cyclomatic complexity",
+      "domain": "Complexity",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false
+    },
+    {
+      "key": "duplicated_lines_density",
+      "name": "Duplicated Lines (%)",
+      "description": "Duplicated lines balanced by statements",
+      "domain": "Duplications",
+      "type": "PERCENT",
+      "higherValuesAreBetter": false,
+      "qualitative": true,
+      "hidden": false,
+      "decimalScale": 1,
+      "bestValue": "0.0",
+      "worstValue": "100.0"
+    },
+    {
+      "key": "ncloc",
+      "name": "Lines of Code",
+      "description": "Non commenting lines of code",
+      "domain": "Size",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false
+    },
+    {
+      "key": "reliability_rating",
+      "name": "Reliability Rating",
+      "description": "Reliability rating",
+      "domain": "Reliability",
+      "type": "RATING",
+      "higherValuesAreBetter": false,
+      "qualitative": true,
+      "hidden": false,
+      "bestValue": "1.0",
+      "worstValue": "5.0"
+    },
+    {
+      "key": "security_hotspots",
+      "name": "Security Hotspots",
+      "description": "Security Hotspots",
+      "domain": "SecurityReview",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false,
+      "bestValue": "0"
+    },
+    {
+      "key": "security_rating",
+      "name": "Security Rating",
+      "description": "Security rating",
+      "domain": "Security",
+      "type": "RATING",
+      "higherValuesAreBetter": false,
+      "qualitative": true,
+      "hidden": false,
+      "bestValue": "1.0",
+      "worstValue": "5.0"
+    },
+    {
+      "key": "sqale_debt_ratio",
+      "name": "Technical Debt Ratio",
+      "description": "Ratio of the actual technical debt compared to the estimated cost to develop the whole source code from scratch",
+      "domain": "Maintainability",
+      "type": "PERCENT",
+      "higherValuesAreBetter": false,
+      "qualitative": true,
+      "hidden": false,
+      "decimalScale": 1,
+      "bestValue": "0.0",
+      "worstValue": "100.0"
+    },
+    {
+      "key": "sqale_index",
+      "name": "Technical Debt",
+      "description": "Total effort (in minutes) to fix all the issues on the component and therefore to comply to all the requirements.",
+      "domain": "Maintainability",
+      "type": "WORK_DUR",
+      "higherValuesAreBetter": false,
+      "qualitative": true,
+      "hidden": false,
+      "bestValue": "0"
+    },
+    {
+      "key": "sqale_rating",
+      "name": "Maintainability Rating",
+      "description": "A-to-E rating based on the technical debt ratio",
+      "domain": "Maintainability",
+      "type": "RATING",
+      "higherValuesAreBetter": false,
+      "qualitative": true,
+      "hidden": false,
+      "bestValue": "1.0",
+      "worstValue": "5.0"
+    },
+    {
+      "key": "vulnerabilities",
+      "name": "Vulnerabilities",
+      "description": "Vulnerabilities",
+      "domain": "Security",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false,
+      "bestValue": "0"
+    }
+  ]
+}
