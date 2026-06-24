@@ -1,5 +1,8 @@
 # Term Project - Task Manager API
 
+## Live Demo
+🚀 **[Click here to view the Live Demo](https://task-manager-theta-hazel-72.vercel.app/)**
+
 ## Project Description
 
 This project is a task management (Task Manager) REST API application developed as part of the Software Quality Assurance course. Built using TypeScript, Node.js, and the Express framework, this API allows users to create, update, list, and delete tasks. It provides a fully functional backend service including authentication and authorization mechanisms.
