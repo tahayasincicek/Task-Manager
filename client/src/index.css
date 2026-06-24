@@ -859,11 +859,12 @@ tr:hover td { background: var(--bg-color); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .task-stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .admin-stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .task-stats-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  .admin-stats-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
   .kanban-column { min-width: 260px; }
-  .dash-summary { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .dash-grid { grid-template-columns: 1fr; }
+  .dash-summary, .dash-summary-modern { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  .dash-grid, .dash-grid-modern { grid-template-columns: 1fr; }
+  .report-summary-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -932,8 +933,10 @@ tr:hover td { background: var(--bg-color); }
   
   .dash-summary, .dash-summary-modern { grid-template-columns: 1fr; }
   .dash-grid, .dash-grid-modern { grid-template-columns: 1fr; }
-  .report-summary-grid { grid-template-columns: 1fr 1fr; }
+  .report-summary-grid { grid-template-columns: 1fr; }
   .report-grid { grid-template-columns: 1fr; }
+  
+  .skeleton-grid { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 480px) {
