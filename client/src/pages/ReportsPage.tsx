@@ -249,7 +249,7 @@ export default function ReportsPage() {
             <p>Great job, all tasks are progressing on time.</p>
           </div>
         ) : (
-          <div className="table-responsive">
+          <div className="table-container-modern">
             <table className="modern-table">
               <thead>
                 <tr>
