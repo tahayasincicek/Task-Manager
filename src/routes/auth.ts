@@ -20,8 +20,11 @@ router.post('/register', async (req: Request, res: Response): Promise<void> => {
     return;
   }
 
+  const cleanUsername = username.trim().toLowerCase();
+  const cleanEmail = email.trim().toLowerCase();
+
   // Check username/email uniqueness
-  const existing = db.prepare('SELECT id FROM users WHERE username = ? OR email = ?').get(username, email);
+  const existing = db.prepare('SELECT id FROM users WHERE LOWER(username) = ? OR LOWER(email) = ?').get(cleanUsername, cleanEmail);
   if (existing) {
     res.status(409).json({ error: 'Username or email already exists' });
     return;
@@ -29,7 +32,7 @@ router.post('/register', async (req: Request, res: Response): Promise<void> => {
 
   const password_hash = await hashPassword(password);
   const stmt = db.prepare('INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, ?)');
-  const result = stmt.run(username.trim(), email.trim().toLowerCase(), password_hash, 'user');
+  const result = stmt.run(cleanUsername, cleanEmail, password_hash, 'user');
 
   const user = db.prepare('SELECT id, username, email, role, created_at FROM users WHERE id = ?').get(result.lastInsertRowid) as Omit<User, 'password_hash'>;
 
@@ -46,7 +49,8 @@ router.post('/login', async (req: Request, res: Response): Promise<void> => {
     return;
   }
 
-  const user = db.prepare('SELECT * FROM users WHERE username = ?').get(username) as User | undefined;
+  const cleanUsername = username.trim().toLowerCase();
+  const user = db.prepare('SELECT * FROM users WHERE LOWER(username) = ?').get(cleanUsername) as User | undefined;
   if (!user) {
     res.status(401).json({ error: 'Invalid credentials' });
     return;

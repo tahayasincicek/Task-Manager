@@ -41,7 +41,7 @@ app.use(session({
     httpOnly: true,
     secure: isProduction,
     maxAge: 24 * 60 * 60 * 1000, // 24 hours
-    sameSite: isProduction ? 'none' : 'lax'
+    sameSite: 'lax' // Enforce Lax to ensure it works across all Safari/Incognito modes behind Vercel proxy
   }
 }));
 

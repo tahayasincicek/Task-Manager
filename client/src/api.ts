@@ -1,5 +1,7 @@
+const isProd = import.meta.env.PROD;
 const envUrl = import.meta.env.VITE_API_URL || '';
-const BASE = envUrl.endsWith('/api') ? envUrl : (envUrl ? `${envUrl}/api` : '/api');
+// In production, force relative path to use vercel.json proxy and avoid Safari third-party cookie blocking (ITP)
+const BASE = isProd ? '/api' : (envUrl.endsWith('/api') ? envUrl : (envUrl ? `${envUrl}/api` : '/api'));
 
 export class ApiError extends Error {
   status: number;
